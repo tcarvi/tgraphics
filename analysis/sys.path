@@ -1,0 +1,16 @@
+[
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\scripts\\addons_contrib', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\scripts\\addons',
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\scripts\\startup', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\scripts\\modules', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\python37.zip', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\python\\DLLs', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\python\\lib', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\python', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\python\\lib\\site-packages', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\scripts\\freestyle\\modules', 
+    'C:\\libs\\apps\\blender-2.80rc1-windows64\\2.80\\scripts\\addons\\modules', 
+    'C:\\Users\\tcarv\\AppData\\Roaming\\Blender Foundation\\Blender\\2.80\\scripts\\addons\\modules',
+    'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts'
+]
