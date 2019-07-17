@@ -1,47 +1,30 @@
-# This script is an example of how you can run blender from the command line
-# (in background mode with no interface) to automate tasks, in this example it
-# creates a text object, camera and light, then renders and/or saves it.
-# This example also shows how you can parse command line options to scripts.
-#
-# Example usage for this test.
+# Features implemented:
+# To run blender from the command line (in background mode with no interface), 
+# It creates and adds:
+# - a mesh object 
+# - a curve object
+# - a surface object
+# - a text object
+# - a light
+# - a camera
+# Then it renders a graphics product
+# And finally it saves the generated blend file.
+# 
+# Coomand line executions:
+# 
 # Linux
-# blender --background --factory-startup --python $HOME/background_job.py -- \
-#         --text="Hello World" \
-#         --render="/tmp/hello" \
-#         --save="/tmp/hello.blend"
+# blender --background --factory-startup --python /libs/python/src/github.com/tgraphics/scripts/background_jobs/add_path.py --python /libs/python/src/github.com/tgraphics/scripts/background_jobs/adding-objects_job.py -- --render="/libs/python/src/github.com/tgraphics/render_output/r1" --save="/libs/python/src/github.com/tgraphics/blender_projects/f1.blend"
+# 
 # Windows
-# blender --background --factory-startup --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\add_path.py
-# blender --background --factory-startup --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\1.py -- --text="Teste" --render="C:\libs\python\src\github.com\tgraphics\render_output\r1" --save="C:\libs\python\src\github.com\tgraphics\blender_projects\f1.blend"
-# blender --background --factory-startup --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\add_path.py --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\1.py -- --text="Teste" --render="C:\libs\python\src\github.com\tgraphics\render_output\r1" --save="C:\libs\python\src\github.com\tgraphics\blender_projects\f1.blend"
+# blender --background --factory-startup --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\add_path.py --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\adding-objects_job.py -- --render="C:\libs\python\src\github.com\tgraphics\render_output\r1" --save="C:\libs\python\src\github.com\tgraphics\blender_projects\f1.blend"
 #
 # Notice:
-# '--factory-startup' is used to avoid the user default settings from
-#                     interfering with automated scene generation.
-#
+# '--factory-startup' is used to avoid the user default settings from interfering with automated scene generation.
 # '--' causes blender to ignore all following arguments so python can use them.
-#
 # See blender --help for details.
 
 import bpy
 import sys
-# _thread
-# _io
-# '__main__': <module '__main__' from 'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\background_jobs\\1.py'>, 
-# io
-# os
-# os.path
-# _bpy
-# bl_operators
-# mathutils
-# math
-# collections
-# operator
-# cycles
-# enum
-# types
-# array
-# time
-# string
 from add_mesh import ADD_mesh_from_data
 from add_light import ADD_light_with_location
 from add_camera import ADD_camera_with_location
@@ -52,17 +35,23 @@ def example_function(save_path, render_path):
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
+    # Mesh
+    ADD_mesh_from_data.execute()
+
+    # Curve
+    # ADD_curve_from_data.execute()
+
+    # Surface
+    # ADD_surface_from_data.execute()
+
     # Text Object
     ADD_text_from_data.execute()
 
-    # Camera
-    ADD_camera_with_location.execute()
-
     # Light
-    ADD_light_with_location.execute()  
+    ADD_light_with_location.execute()
 
-    # Mesh
-    ADD_mesh_from_data.execute()
+    # Camera
+    ADD_camera_with_location.execute()  
 
     bpy.context.view_layer.update()
 

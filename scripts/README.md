@@ -1,0 +1,19 @@
+for script import:
+- \_thread
+- \_io
+- \_\_main\_\_
+- io
+- os
+- os.path
+- \_bpy
+- bl\_operators
+- mathutils
+- math
+- collections
+- operator
+- cycles
+- enum
+- types
+- array
+- time
+- string
