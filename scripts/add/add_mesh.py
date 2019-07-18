@@ -1,6 +1,7 @@
 import bpy
 from mathutils import Vector
 
+# padrão de inicialização
 def setInitialCursorPosition(rotation_mode, location, rotation_euler):
     # rotation_mode. Default value = 'XYZ'
     # location. Default value = [0.00, 0.00, 0.00]
@@ -12,23 +13,28 @@ def setInitialCursorPosition(rotation_mode, location, rotation_euler):
     bpy.context.scene.cursor.rotation_euler[0]= rotation_euler[0]
     bpy.context.scene.cursor.rotation_euler[1]= rotation_euler[1]
     bpy.context.scene.cursor.rotation_euler[2]= rotation_euler[2]
-    bpy.context.view_layer.update()
 
 def incrementCursorLocation(xLocPlus, yLocPlus, zLocPlus):
     bpy.context.scene.cursor.location[0] += xLocPlus
     bpy.context.scene.cursor.location[1] += yLocPlus
     bpy.context.scene.cursor.location[2] += zLocPlus
+    bpy.context.view_layer.update()
     
 def incrementCursorRotationEuler(xRotEulerPlus, yRotEulerPlus, zRotEulerPlus):
     bpy.context.scene.cursor.rotation_euler[0] += xRotEulerPlus
     bpy.context.scene.cursor.rotation_euler[1] += yRotEulerPlus
     bpy.context.scene.cursor.rotation_euler[2] += zRotEulerPlus
+    bpy.context.view_layer.update()
 
 # Internal method execution
 def add_mesh_from_data():
 
+    # store the location of current 3d cursor
+    saved_location = bpy.context.scene.cursor.location.copy()
+    saved_rotation = bpy.context.scene.cursor.rotation_euler.copy()
+
     # TODO - To define input values from same origin
-    # Input data: vectors
+    # Mesh data:
     # Vertex1 = Vector((x, y, z))
     # Vertex2 = Vector((x, y, z))
     # Vertex3 = Vector((x, y, z))
@@ -39,51 +45,64 @@ def add_mesh_from_data():
     #     Vertex3,
     #     Vertex4,
     # ]
+    # edges = []
+    # faces = [[0, 1, 2, 3]]
+
     originX = 0.00
     originY = 0.00
     originZ = 0.00
     setInitialCursorPosition('XYZ', [originX, originY, originZ], [0.00, 0.00, 0.00])
+
     verticesParede1Coluna1 = [
-        Vector((originX + 0.00, originY + 0.00, originZ + 0.00)),
-        Vector((originX + 0.00, originY + 0.15, originZ + 0.00)),
-        Vector((originX + 0.15, originY + 0.15, originZ + 0.00)),
-        Vector((originX + 0.15, originY + 0.00, originZ + 0.00))
+        Vector((0.00, 0.00, 0.00)),
+        Vector((0.00, 0.15, 0.00)),
+        Vector((0.15, 0.15, 0.00)),
+        Vector((0.15, 0.00, 0.00))
     ]
     edgesParede1Coluna1 = []
     facesParede1Coluna1 = [[0, 1, 2, 3]]
     mesh_data_P1C1 = bpy.data.meshes.new(name="meshData_P1C1")
     mesh_data_P1C1.from_pydata(verticesParede1Coluna1, edgesParede1Coluna1, facesParede1Coluna1)
     mesh_object_P1C1 = bpy.data.objects.new(name="meshObject_P1C1", object_data=mesh_data_P1C1)
+    # set the origin on the current object to the 3dcursor location
+    bpy.ops.object.origin_set(type='ORIGIN_CURSOR')
     bpy.context.scene.collection.objects.link(mesh_object_P1C1)
 
-    originY += 0.15
     incrementCursorLocation(0.0, 0.15, 0.0)
     verticesParede1 = [
-        Vector((originX + 0.00, originY + 0.00, originZ + 0.00)),
-        Vector((originX + 0.00, originY + 8.20, originZ + 0.00)),
-        Vector((originX + 0.15, originY + 8.20, originZ + 0.00)),
-        Vector((originX + 0.15, originY + 0.00, originZ + 0.00))
+        Vector((0.00, 0.00, 0.00)),
+        Vector((0.00, 8.20, 0.00)),
+        Vector((0.15, 8.20, 0.00)),
+        Vector((0.15, 0.00, 0.00))
     ]
     edgesParede1 = []
     facesParede1 = [[0, 1, 2, 3]]
     mesh_data_P1 = bpy.data.meshes.new(name="meshData_P1")
     mesh_data_P1.from_pydata(verticesParede1, edgesParede1, facesParede1)
     mesh_object_P1 = bpy.data.objects.new(name="meshObject_P1", object_data=mesh_data_P1)
+    # set the origin on the current object to the 3dcursor location
+    bpy.ops.object.origin_set(type='ORIGIN_CURSOR')
     bpy.context.scene.collection.objects.link(mesh_object_P1)
 
-    originY += 8.20
+    incrementCursorLocation(0.0, 8.20, 0.00)
     verticesParede1Coluna2 = [
-        Vector((originX + 0.00, originY + 0.00, originZ + 0.00)),
-        Vector((originX + 0.00, originY + 0.15, originZ + 0.00)),
-        Vector((originX + 0.15, originY + 0.15, originZ + 0.00)),
-        Vector((originX + 0.15, originY + 0.00, originZ + 0.00))
+        Vector((0.00, 0.00, 0.00)),
+        Vector((0.00, 0.15, 0.00)),
+        Vector((0.15, 0.15, 0.00)),
+        Vector((0.15, 0.00, 0.00))
     ]
     edgesParede1Coluna2 = []
     facesParede1Coluna2 = [[0, 1, 2, 3]]
     mesh_data_P1C2 = bpy.data.meshes.new(name="meshData_P1C2")
     mesh_data_P1C2.from_pydata(verticesParede1Coluna2, edgesParede1Coluna2, facesParede1Coluna2)
     mesh_object_P1C2 = bpy.data.objects.new(name="meshObject_P1C2", object_data=mesh_data_P1C2)
+    # # set the origin on the current object to the 3dcursor location
+    # bpy.ops.object.origin_set(type='ORIGIN_CURSOR')
     bpy.context.scene.collection.objects.link(mesh_object_P1C2)
+
+    # set 3dcursor location back to the stored location
+    bpy.context.scene.cursor.location = saved_location
+    bpy.context.scene.cursor.rotation_euler = saved_rotation
 
     # oX =  0.00
     # oY = oY + 13.00 
@@ -124,7 +143,7 @@ class ADD_mesh_from_data():
         print("Adding mesh ...")
         add_mesh_from_data()
         print("Mesh added")
-
+        
         return {'FINISHED'}
 
 # To register
