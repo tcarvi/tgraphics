@@ -25,10 +25,22 @@
 
 import bpy
 import sys
-from add_mesh import ADD_mesh_from_data
-from add_light import ADD_light_with_location
-from add_camera import ADD_camera_with_location
-from add_text import ADD_text_from_data
+from add_mesh import ADD_mesh
+# from add_curve import ADD_curve
+# from add_surface import ADD_surface
+# from add_metaball import ADD_metaball
+from add_text import ADD_text
+# from add_greasepencil import ADD_greasepencil
+from add_armature import ADD_armature
+# from add_lattice import ADD_lattice
+# from add_empty import ADD_empty
+# from add_image import ADD_image
+from add_light import ADD_light
+# from add_lightprobe import ADD_lightprobe
+from add_camera import ADD_camera
+# from add_speaker import ADD_speaker
+# from add_forcefield import ADD_forcefield
+
 
 def example_function(save_path, render_path):
     
@@ -36,22 +48,40 @@ def example_function(save_path, render_path):
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
     # Mesh
-    ADD_mesh_from_data.execute()
+    ADD_mesh.execute()
 
     # Curve
-    # ADD_curve_from_data.execute()
+    # ADD_curve.execute()
 
     # Surface
-    # ADD_surface_from_data.execute()
+    # ADD_surface.execute()
+
+    # Metaball
+    # ADD_metaball.execute()
 
     # Text Object
-    ADD_text_from_data.execute()
+    ADD_text.execute()
+
+    # Grease Pencil
+    # ADD_greasepencil.execute()
+
+    # Armature
+    ADD_armature.execute()
 
     # Light
-    ADD_light_with_location.execute()
+    ADD_light.execute()
+
+    # LightProbe
+    # ADD_lightprobe.execute()
 
     # Camera
-    ADD_camera_with_location.execute()  
+    ADD_camera.execute()  
+
+    # Speaker
+    # ADD_speaker.execute() 
+
+    # ForceField
+    # ADD_forcefield.execute()
 
     bpy.context.view_layer.update()
 

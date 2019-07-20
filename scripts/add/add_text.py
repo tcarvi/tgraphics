@@ -1,36 +1,33 @@
 import bpy
 
 # Internal method execution
-def add_text_from_data():
+def add_object():
 
     # TODO - To define input
     text = 'Text input'
 
-    txt_data = bpy.data.curves.new(name="MyTextData", type='FONT')
-    txt_object = bpy.data.objects.new(name="MyTextObject", object_data=txt_data)
-    bpy.context.scene.collection.objects.link(txt_object)   # add the data to the scene as an object
-    txt_data.body = text         # the body text to the command line arg given
-    txt_data.align_x = 'CENTER'  # center text
+    data = bpy.data.curves.new(name="textData", type='FONT')
+    object = bpy.data.objects.new(name="textObject", object_data=data)
+    data.body = text                                    # the body text to the command line arg given
+    data.align_x = 'CENTER'                             # center text
+    bpy.context.scene.collection.objects.link(object)   # add the data to the scene as an object
 
 # Class
-class ADD_text_from_data():
+class ADD_text():
     """Add text"""
 
     # Class execution
     def execute():
-        print("Adding text ...")
-        add_text_from_data()
-        print("Text added")
-
+        add_object()
         return {'FINISHED'}
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_text_from_data)
+    bpy.utils.register_class(ADD_text)
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_text_from_data)
+    bpy.utils.unregister_class(ADD_text)
 
 # Register
 if __name__ == "__main__":

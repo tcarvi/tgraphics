@@ -1,36 +1,33 @@
 import bpy
 
 # Internal method execution
-def add_camera_with_location():
+def add_object():
 
     # TODO - To define input
     locationInput = 0.0, 0.0, 10.0
 
-    cam_data = bpy.data.cameras.new("MyCamData")
-    cam_object = bpy.data.objects.new(name="MyCamObject", object_data=cam_data)
-    bpy.context.scene.collection.objects.link(cam_object)  # instance the camera object in the scene
-    bpy.context.scene.camera = cam_object       # set the active camera
-    cam_object.location = locationInput
-
+    data = bpy.data.cameras.new("camData")
+    object = bpy.data.objects.new(name="camObject", object_data=data)
+    object.location = locationInput
+    bpy.context.scene.collection.objects.link(object)  # instance the camera object in the scene
+    bpy.context.scene.camera = object                  # set the active camera
+    
 # Class
-class ADD_camera_with_location():
+class ADD_camera():
     """ADD camera with input location"""
 
     # Class execution
     def execute():
-        print("Adding camera ...")
-        add_camera_with_location()
-        print("Camera added")
-
+        add_object()
         return {'FINISHED'}
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_camera_with_location)
+    bpy.utils.register_class(ADD_camera)
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_camera_with_location)
+    bpy.utils.unregister_class(ADD_camera)
 
 # Register
 if __name__ == "__main__":

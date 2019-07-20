@@ -1,62 +1,29 @@
 import bpy
-from bpy.props import FloatVectorProperty
-from mathutils import Vector
 
 # Internal method execution
-def add_mesh_from_data():
+def add_object():
 
     # TODO - To define input
-    scale_x = 1
-    scale_y = 1
+    locationInput = 2.0, 2.0, 5.0
 
-    # TODO - To define input
-    verts = [
-        Vector((-1 * scale_x, 1 * scale_y, 0)),
-        Vector((1 * scale_x, 1 * scale_y, 0)),
-        Vector((1 * scale_x, -1 * scale_y, 0)),
-        Vector((-1 * scale_x, -1 * scale_y, 0)),
-    ]
-
-    # TODO - To define input
-    edges = []
-
-    # TODO - To define input
-    faces = [[0, 1, 2, 3]]
-
-    mesh_data = bpy.data.meshes.new(name="MyMesh")
-    mesh_data.from_pydata(verts, edges, faces)
-    mesh_object = bpy.data.objects.new(name="MyMesh", object_data=mesh_data)
-    bpy.context.scene.collection.objects.link(mesh_object)
-    # useful for development when the mesh may be invalid.
-    # mesh.validate(verbose=True)
+    # TODO - To add
 
 # Class
-class ADD_object_from_data():
-    """Create a new Mesh Object from data: vertices, edges and faces"""
-
-    # TODO - To understand
-    scale: FloatVectorProperty(
-        name="scale",
-        default=(1.0, 1.0, 1.0),
-        subtype='TRANSLATION',
-        description="scaling",
-    )
+class ADD_lightprobe():
+    """ADD lightprobe with input location"""
 
     # Class execution
     def execute():
-        print("Adding mesh ...")
-        add_mesh_from_data()
-        print("Mesh added")
-
+        add_object()
         return {'FINISHED'}
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_object_from_data)
+    bpy.utils.register_class(ADD_lightprobe)
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_object_from_data)
+    bpy.utils.unregister_class(ADD_lightprobe)
 
 # Register
 if __name__ == "__main__":

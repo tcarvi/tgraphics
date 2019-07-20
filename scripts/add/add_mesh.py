@@ -27,7 +27,7 @@ def incrementCursorRotationEuler(xRotEulerPlus, yRotEulerPlus, zRotEulerPlus):
     bpy.context.view_layer.update()
 
 # Internal method execution
-def add_mesh_from_data():
+def add_object():
 
     # store the location of current 3d cursor
     saved_location = bpy.context.scene.cursor.location.copy()
@@ -135,24 +135,21 @@ def add_mesh_from_data():
     # mesh.validate(verbose=True)
 
 # Class
-class ADD_mesh_from_data():
+class ADD_mesh():
     """Create a new Mesh Object from data: vertices, edges and faces"""
 
     # Class execution
     def execute():
-        print("Adding mesh ...")
-        add_mesh_from_data()
-        print("Mesh added")
-        
+        add_object()        
         return {'FINISHED'}
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_mesh_from_data)
+    bpy.utils.register_class(ADD_mesh)
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_mesh_from_data)
+    bpy.utils.unregister_class(ADD_mesh)
 
 # Register
 if __name__ == "__main__":

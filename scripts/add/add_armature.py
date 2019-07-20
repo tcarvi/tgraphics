@@ -1,62 +1,71 @@
 import bpy
-from bpy.props import FloatVectorProperty
-from mathutils import Vector
 
 # Internal method execution
-def add_mesh_from_data():
+def add_object():
 
     # TODO - To define input
-    scale_x = 1
-    scale_y = 1
+    # Armatures can get confusing, there are bones 
+    # as well as edit bones that contain the basic armature structure 
+    # and properties 
+    # and then there are pose bones that stores constraints and animation data for all the action.
 
     # TODO - To define input
-    verts = [
-        Vector((-1 * scale_x, 1 * scale_y, 0)),
-        Vector((1 * scale_x, 1 * scale_y, 0)),
-        Vector((1 * scale_x, -1 * scale_y, 0)),
-        Vector((-1 * scale_x, -1 * scale_y, 0)),
-    ]
+    # obj.data.edit_bones # adding, deleting, positioning bones
+    # obj.data.bones # adjusting bone properties
+    # obj.pose.bones # adding constraints, custom shapes...
 
     # TODO - To define input
-    edges = []
+    # bone1 = armature_data.edit_bones.new('bone1')
+    # a new bone will have zero length and not be kept
+    # move the head/tail to keep the bone
+    # bone1.head = (1.0, 1.0, 0.0)
+    # bone1.tail = (1.0, 1.0, 1.0)
+
+    # bone2 = armature_data.edit_bones.new('bone2')
+    # a new bone will have zero length and not be kept
+    # move the head/tail to keep the bone
+    # bone2.head = (1.0, 1.0, 0.0)
+    # bone2.tail = (1.0, 1.0, 1.0)
 
     # TODO - To define input
-    faces = [[0, 1, 2, 3]]
+    # make the custom bone shape
+    # bm = bmesh.new()
+    # bmesh.ops.create_circle(bm, cap_ends=False, diameter=0.2, segments=8)
+    # me = bpy.data.meshes.new("Mesh")
+    # bm.to_mesh(me)
+    # bm.free()
+    # b2_shape = bpy.data.objects.new("bone2_shape", me)
+    # bpy.context.scene.objects.link(b2_shape)
+    # b2_shape.layers = [False]*19+[True]
 
-    mesh_data = bpy.data.meshes.new(name="MyMesh")
-    mesh_data.from_pydata(verts, edges, faces)
-    mesh_object = bpy.data.objects.new(name="MyMesh", object_data=mesh_data)
-    bpy.context.scene.collection.objects.link(mesh_object)
+    # TODO - To define input
+    # use pose.bones for custom shape
+    # arm_obj.pose.bones['bone2'].custom_shape = b2_shape
+    # use data.bones for show_wire
+    # arm_obj.data.bones['bone2'].show_wire = True
+
+    data = bpy.data.armatures.new(name="armatureData")
+    object = bpy.data.objects.new(name="armatureObject", object_data=data)
+    bpy.context.scene.collection.objects.link(object)
     # useful for development when the mesh may be invalid.
     # mesh.validate(verbose=True)
 
 # Class
-class ADD_object_from_data():
-    """Create a new Mesh Object from data: vertices, edges and faces"""
-
-    # TODO - To understand
-    scale: FloatVectorProperty(
-        name="scale",
-        default=(1.0, 1.0, 1.0),
-        subtype='TRANSLATION',
-        description="scaling",
-    )
+class ADD_armature():
+    """Create a new Armature Object from data: obj.data.bones and obj.pose.bones"""
 
     # Class execution
     def execute():
-        print("Adding mesh ...")
-        add_mesh_from_data()
-        print("Mesh added")
-
+        add_object()
         return {'FINISHED'}
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_object_from_data)
+    bpy.utils.register_class(ADD_armature)
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_object_from_data)
+    bpy.utils.unregister_class(ADD_armature)
 
 # Register
 if __name__ == "__main__":
