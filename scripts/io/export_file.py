@@ -1,22 +1,22 @@
 import bpy
-
-def write_some_data(context, filepath, use_some_setting):
-    print("running write_some_data...")
-    f = open(filepath, 'w', encoding='utf-8')
-    f.write("Hello World %s" % use_some_setting)
-    f.close()
-
-    return {'FINISHED'}
-
 # ExportHelper is a helper class, defines filename and
 # invoke() function which calls the file selector.
 from bpy_extras.io_utils import ExportHelper
 from bpy.props import StringProperty, BoolProperty, EnumProperty
 from bpy.types import Operator
 
+
+def write_some_data(context, filepath, use_some_setting):
+    print("running write_some_data...")
+    f = open(filepath, 'w', encoding='utf-8')
+    f.write("Hello World %s" % use_some_setting)
+    f.close()
+    return {'FINISHED'}
+
+
 class ExportSomeData(Operator, ExportHelper):
     """This appears in the tooltip of the operator and in the generated docs"""
-    bl_idname = "export_test.some_data"  # important since its how bpy.ops.import_test.some_data is constructed
+    bl_idname = "export_test.some_data"
     bl_label = "Export Some Data"
 
     # ExportHelper mixin class uses this
@@ -49,20 +49,23 @@ class ExportSomeData(Operator, ExportHelper):
     def execute(self, context):
         return write_some_data(context, self.filepath, self.use_setting)
 
+
 # Only needed if you want to add into a dynamic menu
 def menu_func_export(self, context):
     self.layout.operator(ExportSomeData.bl_idname, text="Text Export Operator")
+
 
 def register():
     bpy.utils.register_class(ExportSomeData)
     bpy.types.TOPBAR_MT_file_export.append(menu_func_export)
 
+
 def unregister():
     bpy.utils.unregister_class(ExportSomeData)
     bpy.types.TOPBAR_MT_file_export.remove(menu_func_export)
 
+
 if __name__ == "__main__":
     register()
-
     # test call
     bpy.ops.export_test.some_data('INVOKE_DEFAULT')
