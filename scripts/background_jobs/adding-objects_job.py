@@ -1,43 +1,6 @@
-# Features implemented:
-# To run blender from the command line (in background mode with no interface),
-# It creates and adds:
-# - a mesh object
-# - a curve object
-# - a surface object
-# - a text object
-# - a light
-# - a camera
-# Then it renders a graphics product
-# And finally it saves the generated blend file.
-#
-# Coomand line executions:
-#
-# Linux
-# blender --background --factory-startup --python
-#   /libs/python/src/github.com/tgraphics/scripts/background_jobs/add_path.py
-#   --python /libs/python/src/github.com/tgraphics/scripts/background_jobs/
-#                                                    adding-objects_job.py --
-#   --render="/libs/python/src/github.com/tgraphics/render_output/r1"
-#   --save="/libs/python/src/github.com/tgraphics/blender_projects/f1.blend"
-#
-# Windows
-# blender --background --factory-startup
-#  --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\
-#                                                                add_path.py
-#  --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\
-#                                                   adding-objects_job.py --
-#  --render="C:\libs\python\src\github.com\tgraphics\render_output\r1"
-#  --save="C:\libs\python\src\github.com\tgraphics\blender_projects\f1.blend"
-#
-# Notice:
-# '--factory-startup' is used to avoid the user default settings from
-#                       interfering with automated scene generation.
-# '--' causes blender to ignore all following arguments so
-#                       python can use them.
-# See blender --help for details.
-
 import bpy
 import sys
+import os
 from add_mesh import ADD_mesh
 # from add_curve import ADD_curve
 # from add_surface import ADD_surface
@@ -57,104 +20,176 @@ from save_blenderfile import SAVE_blenderfile
 from save_rendering import SAVE_rendering
 
 
+def save_blenderfile(blenderfilename):
+    save_path = os.path.join(
+        os.path.abspath("."),
+        "blender_projects\\" + blenderfilename
+    )
+    SAVE_blenderfile.execute(userfilepath=save_path)
 
-def example_function(save_path, render_path):
 
+def save_rendering(filename):
+    render_path = os.path.join(
+        os.path.abspath("."),
+        "render_output\\" + filename
+    )
+    SAVE_rendering.execute(userfilepath=render_path)
+
+
+def executions():
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
-    # Mesh
-    ADD_mesh.execute()
-
-    # Curve
-    # ADD_curve.execute()
-
-    # Surface
-    # ADD_surface.execute()
-
-    # Metaball
-    # ADD_metaball.execute()
-
-    # Text Object
-    ADD_text.execute()
-
-    # Grease Pencil
-    # ADD_greasepencil.execute()
-
-    # Armature
-    ADD_armature.execute()
-
-    # Light
-    ADD_light.execute()
-
-    # LightProbe
-    # ADD_lightprobe.execute()
-
-    # Camera
-    ADD_camera.execute()
-
-    # Speaker
-    # ADD_speaker.execute()
-
-    # ForceField
-    # ADD_forcefield.execute()
-
+    ADD_mesh.execute()  # Mesh
+    # ADD_curve.execute()  # Curve
+    # ADD_surface.execute() # Surface
+    # ADD_metaball.execute() # Metaball
+    ADD_text.execute()  # Text Object
+    # ADD_greasepencil.execute()  # Grease Pencil
+    ADD_armature.execute()  # Armature
+    ADD_light.execute()  # Light
+    # ADD_lightprobe.execute()  # LightProbe
+    ADD_camera.execute()  # Camera
+    # ADD_speaker.execute()  # Speaker
+    # ADD_forcefield.execute()  # ForceField
     bpy.context.view_layer.update()
 
-    print("bpy.data.objects.items() = ")
-    print(bpy.data.objects.items())
 
-    if not save_path:
-        save_path = "blender_projects\\f2.blend"
-    SAVE_blenderfile.execute(userfilepath=save_path)
+def run_no_args():
 
-    if not render_path:
-        render_path = "//..\\render_output\\r2"
-    SAVE_rendering.execute(userfilepath=render_path)
+    executions()
+
+    default_save_path = "f1.blend"
+    save_blenderfile(default_save_path)
+    default_render_path = "r1"
+    save_rendering(default_render_path)
+
+
+def run_with_args(save_path, render_path):
+
+    executions()
+
+    if save_path is None:
+        default_save_path = "f1.blend"
+        save_blenderfile(default_save_path)
+    else:
+        save_blenderfile(save_path)
+
+    if render_path is None:
+        default_render_path = "r1"
+        save_rendering(default_render_path)
+    else:
+        save_rendering(render_path)
 
 
 def main():
     import sys
     import argparse
 
-    # To get command line args passed to blender after "--", 
-    # all of which are ignored by blender so scripts may receive 
-    # their own arguments.
     argv = sys.argv
 
-    if "--" not in argv:
-        argv = []  # as if no args are passed
+    if "--" in argv:
+        index = argv.index("--")
+        counter = 0
+        for i in range(index, -1, -1):
+            del argv[i]
     else:
-        argv = argv[argv.index("--") + 1:]  # get all args after "--"
+        argv = []
 
-    # When --help or no args are given, print this help
     usage_text = (
-        "Run blender in background mode with this script:"
-        "  blender --background --python " + __file__ + " -- [options]"
+        "Customized usage: $ blender --background --factory-startup"
+        "--python ADD_PATHS_SCRIPT --python GRAPHICS_SCRIPT  [-- options]"
     )
+    parameter_s = "-s"
+    parameter_r = "-r"
+    dest_s = "save_path"
+    dest_r = "render_path"
+    metavar_s = '="BLENDER_FILE"',
+    metavar_r = '="RENDER_FILE"',
+    help_s = 'Default: ="blender_projects/f10.blender"'
+    help_r = 'Default: ="render_output/r10.png"'
+    help_your_input = 'Using your command line argument ...'
 
-    # to parse options and print a nice help message
     parser = argparse.ArgumentParser(description=usage_text)
 
-    parser.add_argument(
-        "-s", "--save", dest="save_path", metavar='FILE',
-        help="Save the generated file to the specified path",
-    )
-    parser.add_argument(
-        "-r", "--render", dest="render_path", metavar='FILE',
-        help="Render an image to the specified path",
-    )
-
-    args = parser.parse_args(argv)  # In this example we won't use the args
-
-    if not argv:
+    if len(argv) == 1 and argv[0][1] == "s":
+        print("option s")
+        parser.add_argument(
+            parameter_s,
+            dest=dest_s,
+            metavar=metavar_s,
+            help=help_your_input
+        )
+        parser.add_argument(
+            parameter_r,
+            dest=dest_r,
+            metavar=metavar_r,
+            help=help_r
+        )
         parser.print_help()
-        return
+        args = parser.parse_args(argv)
+        run_with_args(
+            save_path=args.save_path,
+            render_path=None
+        )
+    elif len(argv) == 1 and argv[0][1] == "r":
+        print("option r")
+        parser.add_argument(
+            parameter_s,
+            dest=dest_s,
+            metavar=metavar_s,
+            help=help_s
+        )
+        parser.add_argument(
+            parameter_r,
+            dest=dest_r,
+            metavar=metavar_r,
+            help=help_your_input
+        )
+        parser.print_help()
+        args = parser.parse_args(argv)
+        run_with_args(
+            save_path=None,
+            render_path=args.render_path
+        )
+    elif len(argv) == 2 and argv[0][1] == "s" and argv[1][1] == "r":
+        print("option s and r")
+        parser.add_argument(
+            parameter_s,
+            dest=dest_s,
+            metavar=metavar_s,
+            help=help_your_input
+        )
+        parser.add_argument(
+            parameter_r,
+            dest=dest_r,
+            metavar=metavar_r,
+            help=help_your_input
+        )
+        parser.print_help()
+        args = parser.parse_args(argv)
+        run_with_args(
+            save_path=args.save_path,
+            render_path=args.render_path
+        )
+    elif len(argv) == 0:
+        print("no option")
+        parser.add_argument(
+            parameter_s,
+            dest=dest_s,
+            metavar=metavar_s,
+            help=help_s
+        )
+        parser.add_argument(
+            parameter_r,
+            dest=dest_r,
+            metavar=metavar_r,
+            help=help_r
+        )
+        parser.print_help()
+        run_no_args()
 
-    # Run the example function
-    example_function(args.save_path, args.render_path)
-
-    print("batch job finished, exiting")
+    print('\nBatch job finished, exiting ...')
 
 
 if __name__ == "__main__":
