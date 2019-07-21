@@ -1,13 +1,15 @@
 import bpy
 
+
 # Internal method execution
 def add_object():
 
     # TODO - To define input
-    # Armatures can get confusing, there are bones 
-    # as well as edit bones that contain the basic armature structure 
-    # and properties 
-    # and then there are pose bones that stores constraints and animation data for all the action.
+    # Armatures can get confusing, there are bones
+    # as well as edit bones that contain the basic armature structure
+    # and properties
+    # and then there are pose bones that stores constraints
+    # and animation data for all the action.
 
     # TODO - To define input
     # obj.data.edit_bones # adding, deleting, positioning bones
@@ -50,22 +52,26 @@ def add_object():
     # useful for development when the mesh may be invalid.
     # mesh.validate(verbose=True)
 
+
 # Class
 class ADD_armature():
-    """Create a new Armature Object from data: obj.data.bones and obj.pose.bones"""
+    """Create a new Armature Object from data: bones"""
 
     # Class execution
     def execute():
         add_object()
         return {'FINISHED'}
 
+
 # To register
 def register():
     bpy.utils.register_class(ADD_armature)
 
+
 # To unregister
 def unregister():
     bpy.utils.unregister_class(ADD_armature)
+
 
 # Register
 if __name__ == "__main__":

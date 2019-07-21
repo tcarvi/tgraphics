@@ -1,5 +1,6 @@
 import bpy
 
+
 # Internal method execution
 def add_object():
 
@@ -8,6 +9,7 @@ def add_object():
     bpy.context.scene.collection.objects.link(object)
     # useful for development when the mesh may be invalid.
     # mesh.validate(verbose=True)
+
 
 # Class
 class ADD_curve_from_data():
@@ -18,13 +20,16 @@ class ADD_curve_from_data():
         add_object()
         return {'FINISHED'}
 
+
 # To register
 def register():
     bpy.utils.register_class(ADD_curve)
 
+
 # To unregister
 def unregister():
     bpy.utils.unregister_class(ADD_curve)
+
 
 # Register
 if __name__ == "__main__":

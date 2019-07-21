@@ -1,7 +1,7 @@
 # Features implemented:
-# To run blender from the command line (in background mode with no interface), 
+# To run blender from the command line (in background mode with no interface),
 # It creates and adds:
-# - a mesh object 
+# - a mesh object
 # - a curve object
 # - a surface object
 # - a text object
@@ -9,18 +9,31 @@
 # - a camera
 # Then it renders a graphics product
 # And finally it saves the generated blend file.
-# 
+#
 # Coomand line executions:
-# 
+#
 # Linux
-# blender --background --factory-startup --python /libs/python/src/github.com/tgraphics/scripts/background_jobs/add_path.py --python /libs/python/src/github.com/tgraphics/scripts/background_jobs/adding-objects_job.py -- --render="/libs/python/src/github.com/tgraphics/render_output/r1" --save="/libs/python/src/github.com/tgraphics/blender_projects/f1.blend"
-# 
+# blender --background --factory-startup --python
+#   /libs/python/src/github.com/tgraphics/scripts/background_jobs/add_path.py
+#   --python /libs/python/src/github.com/tgraphics/scripts/background_jobs/
+#                                                    adding-objects_job.py --
+#   --render="/libs/python/src/github.com/tgraphics/render_output/r1"
+#   --save="/libs/python/src/github.com/tgraphics/blender_projects/f1.blend"
+#
 # Windows
-# blender --background --factory-startup --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\add_path.py --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\adding-objects_job.py -- --render="C:\libs\python\src\github.com\tgraphics\render_output\r1" --save="C:\libs\python\src\github.com\tgraphics\blender_projects\f1.blend"
+# blender --background --factory-startup
+#  --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\
+#                                                                add_path.py
+#  --python C:\libs\python\src\github.com\tgraphics\scripts\background_jobs\
+#                                                   adding-objects_job.py --
+#  --render="C:\libs\python\src\github.com\tgraphics\render_output\r1"
+#  --save="C:\libs\python\src\github.com\tgraphics\blender_projects\f1.blend"
 #
 # Notice:
-# '--factory-startup' is used to avoid the user default settings from interfering with automated scene generation.
-# '--' causes blender to ignore all following arguments so python can use them.
+# '--factory-startup' is used to avoid the user default settings from
+#                       interfering with automated scene generation.
+# '--' causes blender to ignore all following arguments so
+#                       python can use them.
 # See blender --help for details.
 
 import bpy
@@ -43,7 +56,7 @@ from add_camera import ADD_camera
 
 
 def example_function(save_path, render_path):
-    
+
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
@@ -75,10 +88,10 @@ def example_function(save_path, render_path):
     # ADD_lightprobe.execute()
 
     # Camera
-    ADD_camera.execute()  
+    ADD_camera.execute()
 
     # Speaker
-    # ADD_speaker.execute() 
+    # ADD_speaker.execute()
 
     # ForceField
     # ADD_forcefield.execute()
@@ -96,6 +109,7 @@ def example_function(save_path, render_path):
         render.use_file_extension = True
         render.filepath = render_path
         bpy.ops.render.render(write_still=True)
+
 
 def main():
     import sys       # to get command line args
@@ -137,6 +151,7 @@ def main():
     example_function(args.save_path, args.render_path)
 
     print("batch job finished, exiting")
+
 
 if __name__ == "__main__":
     main()

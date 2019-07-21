@@ -25,3 +25,47 @@ bpy.ops.mesh.subdivide(number_cuts=3, smoothness=0.5)
 if bpy.ops.object.mode_set.poll():  
     bpy.ops.object.mode_set(mode='EDIT')  
 ```  
+
+mesh_data Method
+from_pydata(vertices, edges, faces)
+Make a mesh from a list of vertices/edges/faces
+Parameters:
+
+:arg vertices:
+   float triplets each representing (X, Y, Z)
+   eg: [(0.0, 1.0, 0.5), ...].
+   :type vertices: iterable object
+
+:arg edges:
+   int pairs, each pair contains two indices to the vertices argument.
+   eg: [(1, 2), ...]
+   :type edges: iterable object
+
+:arg faces:
+   iterator of faces, each faces contains three or more indices to
+   the *vertices* argument. eg: [(5, 6, 8, 9), (1, 2, 3), ...]
+   :type faces: iterable object
+
+.. warning::
+   Invalid mesh data
+   *(out of range indices, edges with matching indices,
+   2 sided faces... etc)* are **not** prevented.
+   If the data used for mesh creation isn't known to be valid,
+   run :class:`Mesh.validate` after this function.
+
+Mesh Data documentation:
+The mesh data is accessed in object mode and intended for compact storage
+Blender stores 4 main arrays to define mesh geometry.
+- Mesh.vertices (3 points in space)
+- Mesh.edges (reference 2 vertices)
+- Mesh.loops (reference a single vertex and edge)
+- Mesh.polygons: (reference a range of loops)
+Each polygon reference a slice in the loop array, this way,
+  polygons do not store vertices or corner data such as UV’s directly,
+  only a reference to loops that the polygon uses.
+Mesh.loops, Mesh.uv_layers Mesh.vertex_colors are all aligned so
+  the same polygon loop indices can be used to find the UV’s and vertex colors
+  as with as the vertices.
+Mesh fields:
+- edges  (readonly)
+- vertices (readonly)
