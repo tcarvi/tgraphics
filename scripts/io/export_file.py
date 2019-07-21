@@ -48,6 +48,7 @@ class ExportSomeData(Operator, ExportHelper):
 
     def execute(self, context):
         return write_some_data(context, self.filepath, self.use_setting)
+        bpy.ops.wm.save_as_mainfile(filepath=save_path)
 
 
 # Only needed if you want to add into a dynamic menu

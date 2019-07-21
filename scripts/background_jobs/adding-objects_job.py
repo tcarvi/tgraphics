@@ -53,6 +53,9 @@ from add_light import ADD_light
 from add_camera import ADD_camera
 # from add_speaker import ADD_speaker
 # from add_forcefield import ADD_forcefield
+from save_blenderfile import SAVE_blenderfile
+from save_rendering import SAVE_rendering
+
 
 
 def example_function(save_path, render_path):
@@ -101,22 +104,22 @@ def example_function(save_path, render_path):
     print("bpy.data.objects.items() = ")
     print(bpy.data.objects.items())
 
-    if save_path:
-        bpy.ops.wm.save_as_mainfile(filepath=save_path)
+    if not save_path:
+        save_path = "blender_projects\\f2.blend"
+    SAVE_blenderfile.execute(userfilepath=save_path)
 
-    if render_path:
-        render = bpy.context.scene.render
-        render.use_file_extension = True
-        render.filepath = render_path
-        bpy.ops.render.render(write_still=True)
+    if not render_path:
+        render_path = "//..\\render_output\\r2"
+    SAVE_rendering.execute(userfilepath=render_path)
 
 
 def main():
-    import sys       # to get command line args
-    import argparse  # to parse options for us and print a nice help message
+    import sys
+    import argparse
 
-    # get the args passed to blender after "--", all of which are ignored by
-    # blender so scripts may receive their own arguments
+    # To get command line args passed to blender after "--", 
+    # all of which are ignored by blender so scripts may receive 
+    # their own arguments.
     argv = sys.argv
 
     if "--" not in argv:
@@ -130,6 +133,7 @@ def main():
         "  blender --background --python " + __file__ + " -- [options]"
     )
 
+    # to parse options and print a nice help message
     parser = argparse.ArgumentParser(description=usage_text)
 
     parser.add_argument(
