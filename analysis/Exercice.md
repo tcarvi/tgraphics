@@ -1,0 +1,13 @@
+Adding objects to 3D viewport
+- Select all objects  ( **A** )
+- Deselect all objects ( **Alt A** )
+- Select again all objects ( **A** )
+- Delete all objects ( **X D** )
+- Add Mesh - Cube ( **shift A - M - C** )
+- Drag Cube to ( 3, 3, 0) ( **G X3 ENTER** ) ( **G Y3 ENTER** )
+- Drag Object to corner between X and Y axis. Above the grid. ( **G Xvalue ENTER** ) ( **G Yvalue ENTER** ) ( **G Zvalue ENTER** )
+- Verify 3D views using pan and orbit. ( **using visual axis manipulator** )
+- Apply Location transform ( **ctrl A L** )
+- Scale the object at Y axis by factor 2 ( **S Y2 ENTER** )
+- Apply Scale transform ( **ctrl A S** )
+- Rotate the object, at Z axis, 45 degrees. ( **R Z 45** )
