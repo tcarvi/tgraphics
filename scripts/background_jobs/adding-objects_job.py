@@ -1,5 +1,4 @@
 import bpy
-import sys
 import os
 from add_mesh import ADD_mesh
 # from add_curve import ADD_curve
@@ -20,23 +19,8 @@ from save_blenderfile import SAVE_blenderfile
 from save_rendering import SAVE_rendering
 
 
-def save_blenderfile(blenderfilename):
-    save_path = os.path.join(
-        os.path.abspath("."),
-        "blender_projects\\" + blenderfilename
-    )
-    SAVE_blenderfile.execute(userfilepath=save_path)
-
-
-def save_rendering(filename):
-    render_path = os.path.join(
-        os.path.abspath("."),
-        "render_output\\" + filename
-    )
-    SAVE_rendering.execute(userfilepath=render_path)
-
-
-def executions():
+def gerarObjetosConformeEstruturaIndicadaEmArquivo():
+    
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
@@ -57,29 +41,29 @@ def executions():
 
 def run_no_args():
 
-    executions()
+    gerarObjetosConformeEstruturaIndicadaEmArquivo()
 
-    default_save_path = "f1.blend"
-    save_blenderfile(default_save_path)
-    default_render_path = "r1"
-    save_rendering(default_render_path)
+    default_save_file_name = "f1.blend"
+    SAVE_blenderfile.execute(blenderfilename=default_save_file_name)
+    default_render_output_name = "r1"
+    SAVE_rendering.execute(renderingfilename=default_render_output_name)
 
 
-def run_with_args(save_path, render_path):
+def run_with_args(save_file_name, render_output_name):
 
-    executions()
+    gerarObjetosConformeEstruturaIndicadaEmArquivo()
 
-    if save_path is None:
-        default_save_path = "f1.blend"
-        save_blenderfile(default_save_path)
+    if save_file_name is None:
+        default_save_file_name = "f1.blend"
+        SAVE_blenderfile.execute(blenderfilename=default_save_file_name)
     else:
-        save_blenderfile(save_path)
+        SAVE_blenderfile.execute(blenderfilename=save_file_name)
 
-    if render_path is None:
-        default_render_path = "r1"
-        save_rendering(default_render_path)
+    if render_output_name is None:
+        default_render_output_name = "r1"
+        SAVE_rendering.execute(renderingfilename=default_render_output_name)
     else:
-        save_rendering(render_path)
+        SAVE_rendering.execute(renderingfilename=render_output_name)
 
 
 def main():
@@ -98,22 +82,21 @@ def main():
 
     usage_text = (
         "Customized usage: $ blender --background --factory-startup"
-        "--python ADD_PATHS_SCRIPT --python GRAPHICS_SCRIPT  [-- options]"
+        " --python ADD_PATHS_SCRIPT --python ADD_GRAPHICS_SCRIPT  [-- options]"
     )
     parameter_s = "-s"
     parameter_r = "-r"
-    dest_s = "save_path"
-    dest_r = "render_path"
-    metavar_s = '="BLENDER_FILE"',
-    metavar_r = '="RENDER_FILE"',
-    help_s = 'Default: ="blender_projects/f10.blender"'
-    help_r = 'Default: ="render_output/r10.png"'
+    dest_s = "save_file_name"
+    dest_r = "render_output_name"
+    metavar_s = '-s="BLENDER_FILE"',
+    metavar_r = '-r="RENDER_FILE"',
+    help_s = 'Default: -s="f1.blender"'
+    help_r = 'Default: -r="r1.png"'
     help_your_input = 'Using your command line argument ...'
 
     parser = argparse.ArgumentParser(description=usage_text)
 
     if len(argv) == 1 and argv[0][1] == "s":
-        print("option s")
         parser.add_argument(
             parameter_s,
             dest=dest_s,
@@ -129,11 +112,10 @@ def main():
         parser.print_help()
         args = parser.parse_args(argv)
         run_with_args(
-            save_path=args.save_path,
-            render_path=None
+            save_file_name=args.save_file_name,
+            render_output_name=None
         )
     elif len(argv) == 1 and argv[0][1] == "r":
-        print("option r")
         parser.add_argument(
             parameter_s,
             dest=dest_s,
@@ -149,11 +131,10 @@ def main():
         parser.print_help()
         args = parser.parse_args(argv)
         run_with_args(
-            save_path=None,
-            render_path=args.render_path
+            save_file_name=None,
+            render_output_name=args.render_output_name
         )
     elif len(argv) == 2 and argv[0][1] == "s" and argv[1][1] == "r":
-        print("option s and r")
         parser.add_argument(
             parameter_s,
             dest=dest_s,
@@ -169,11 +150,10 @@ def main():
         parser.print_help()
         args = parser.parse_args(argv)
         run_with_args(
-            save_path=args.save_path,
-            render_path=args.render_path
+            save_file_name=args.save_file_name,
+            render_output_name=args.render_output_name
         )
     elif len(argv) == 0:
-        print("no option")
         parser.add_argument(
             parameter_s,
             dest=dest_s,

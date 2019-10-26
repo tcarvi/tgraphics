@@ -1,12 +1,19 @@
 import bpy
+import os
 
 
-# Internal method execution
-def save_blenderfile(userfilepath):
-
-    # TODO - To define input
-    # TODO - To add
-    bpy.ops.wm.save_as_mainfile(filepath=userfilepath)
+def save_blenderfile(blenderfilename):
+    save_dir = os.path.join(
+        os.path.abspath("."),
+        "blender_projects"
+    )
+    if not os.path.exists(save_dir):
+        os.mkdir(save_dir)
+    save_path = os.path.join(
+        os.path.abspath("."),
+        "blender_projects\\" + blenderfilename
+    )
+    bpy.ops.wm.save_as_mainfile(filepath=save_path)
 
 
 # Class
@@ -14,8 +21,8 @@ class SAVE_blenderfile():
     """SAVE_blenderfile"""
 
     # Class execution
-    def execute(userfilepath):
-        save_blenderfile(userfilepath)
+    def execute(blenderfilename):
+        save_blenderfile(blenderfilename)
         return {'FINISHED'}
 
 

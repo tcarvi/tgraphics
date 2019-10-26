@@ -3,7 +3,7 @@ import bpy
 
 # Internal method execution
 def add_object():
-
+    
     # TODO - To define input
     text = 'Text input'
 
@@ -12,6 +12,9 @@ def add_object():
     data.body = text
     data.align_x = 'CENTER'
     bpy.context.scene.collection.objects.link(object)
+    # OR
+    # scene = bpy.context.scene
+    # scene.collection.objects.link(txt_ob)
 
 
 # Class

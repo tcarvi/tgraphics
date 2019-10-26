@@ -8,6 +8,14 @@ def add_light():
     locationInput = 2.0, 2.0, 5.0
     # TODO - To add
 
+    data = bpy.data.lights.new("lightData", 'POINT')
+    object = bpy.data.objects.new(name="lightObject", object_data=data)
+    bpy.context.scene.collection.objects.link(object)
+    # OR
+    # scene = bpy.context.scene
+    # scene.collection.objects.link(object)
+    object.location = locationInput
+
 
 # Class
 class ADD_light():

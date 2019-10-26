@@ -1,9 +1,9 @@
 import sys
 
-AddDir = 'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\add'
-if AddDir not in sys.path:
-    sys.path.append(AddDir)
+DiretorioScriptsAdd = 'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\add'
+if DiretorioScriptsAdd not in sys.path:
+    sys.path.append(DiretorioScriptsAdd)
 
-IoDir = 'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\io'
-if IoDir not in sys.path:
-    sys.path.append(IoDir)
+DiretorioScriptsIO = 'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\io'
+if DiretorioScriptsIO not in sys.path:
+    sys.path.append(DiretorioScriptsIO)

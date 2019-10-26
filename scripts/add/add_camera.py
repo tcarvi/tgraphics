@@ -9,10 +9,13 @@ def add_object():
 
     data = bpy.data.cameras.new("camData")
     object = bpy.data.objects.new(name="camObject", object_data=data)
-    object.location = locationInput
     bpy.context.scene.collection.objects.link(object)
-    # set the active camera
-    bpy.context.scene.camera = object
+    bpy.context.scene.camera = object # set the active camera
+    # OR
+    # scene = bpy.context.scene
+    # scene.collection.objects.link(object)
+    # scene.camera = object
+    object.location = locationInput
 
 
 # Class
