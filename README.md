@@ -1,8 +1,8 @@
 # tgraphics  
 
-- Output folders: 
-    - rendering output: tgraphics/render_output/
-    - saving blender file: tgraphics/blender_projects/
+- Default output folders: 
+    - rendering output: render_output/
+    - saving blender file: blender_projects/
 
 #### Windows Command Line Options:
 ###### Se utilizados, os parâmetros -s e -r devem seguir a ordem definida.
