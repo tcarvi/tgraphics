@@ -17,21 +17,21 @@ from add_camera import ADD_camera
 # from add_forcefield import ADD_forcefield
 from save_blenderfile import SAVE_blenderfile
 from save_rendering import SAVE_rendering
-
+from inputPlantaBaixa import structure
 
 def gerarObjetosConformeEstruturaIndicadaEmArquivo():
     
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
-    ADD_mesh.execute()  # Mesh
+    ADD_mesh.execute(structure)  # Mesh
     # ADD_curve.execute()  # Curve
     # ADD_surface.execute() # Surface
     # ADD_metaball.execute() # Metaball
-    ADD_text.execute()  # Text Object
+    # ADD_text.execute()  # Text Object
     # ADD_greasepencil.execute()  # Grease Pencil
-    ADD_armature.execute()  # Armature
-    ADD_light.execute()  # Light
+    # ADD_armature.execute()  # Armature
+    # ADD_light.execute()  # Light
     # ADD_lightprobe.execute()  # LightProbe
     ADD_camera.execute()  # Camera
     # ADD_speaker.execute()  # Speaker

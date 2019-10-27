@@ -31,7 +31,32 @@ def incrementCursorRotationEuler(xRotEulerPlus, yRotEulerPlus, zRotEulerPlus):
 
 
 # Internal method execution
-def add_object():
+def add_object(s):
+
+    print("structure [0][0-2] = deslocamentoD0 =")
+    print(s[0][0][0])
+    print(s[0][0][1])
+    print(s[0][0][2])
+    print("structure [0][1][0-3][0-2] = verticesD0 =")
+    print(s[0][1][0][0])
+    print(s[0][1][0][1])
+    print(s[0][1][0][2])
+    print(s[0][1][1][0])
+    print(s[0][1][1][1])
+    print(s[0][1][1][2])
+    print(s[0][1][2][0])
+    print(s[0][1][2][1])
+    print(s[0][1][2][2])
+    print(s[0][1][3][0])
+    print(s[0][1][3][1])
+    print(s[0][1][3][2])
+    print("structure [0][2] = edgesD0 =")
+    print(s[0][2])
+    print("structure [0][3][0-3] = facesD0 =")
+    print(s[0][3][0])
+    print(s[0][3][1])
+    print(s[0][3][2])
+    print(s[0][3][3])
 
     # store the location of current 3d cursor
     saved_location = bpy.context.scene.cursor.location.copy()
@@ -61,14 +86,16 @@ def add_object():
         [0.00, 0.00, 0.00]
     )
 
+    # D0
+    incrementCursorLocation(s[0][0][0], s[0][0][1], s[0][0][2])
     verticesParede1Coluna1 = [
-        Vector((0.00, 0.00, 0.00)),
-        Vector((0.00, 0.15, 0.00)),
-        Vector((0.15, 0.15, 0.00)),
-        Vector((0.15, 0.00, 0.00))
+        Vector((s[0][1][0][0],s[0][1][0][1],s[0][1][0][2])),
+        Vector((s[0][1][1][0],s[0][1][1][1],s[0][1][1][2])),
+        Vector((s[0][1][2][0],s[0][1][2][1],s[0][1][2][2])),
+        Vector((s[0][1][3][0],s[0][1][3][1],s[0][1][3][2]))
     ]
-    edgesParede1Coluna1 = []
-    facesParede1Coluna1 = [[0, 1, 2, 3]]
+    edgesParede1Coluna1 = [s[0][2]]
+    facesParede1Coluna1 = [[s[0][3][0],s[0][3][1],s[0][3][2],s[0][3][3]]]
     mesh_data_P1C1 = bpy.data.meshes.new(name="meshData_P1C1")
     mesh_data_P1C1.from_pydata(
         verticesParede1Coluna1,
@@ -83,17 +110,17 @@ def add_object():
     bpy.ops.object.origin_set(type='ORIGIN_CURSOR')
     bpy.context.scene.collection.objects.link(mesh_object_P1C1)
 
-    incrementCursorLocation(0.0, 0.15, 0.0)
+
+    # D1
+    incrementCursorLocation(s[1][0][0], s[1][0][1], s[1][0][2])
     verticesParede1 = [
-        Vector((0.00, 0.00, 0.00)),
-        Vector((0.00, 8.20, 0.00)),
-        Vector((0.15, 8.20, 0.00)),
-        Vector((0.15, 0.00, 0.00))
+        Vector((s[1][1][0][0],s[1][1][0][1],s[1][1][0][2])),
+        Vector((s[1][1][1][0],s[1][1][1][1],s[1][1][1][2])),
+        Vector((s[1][1][2][0],s[1][1][2][1],s[1][1][2][2])),
+        Vector((s[1][1][3][0],s[1][1][3][1],s[1][1][3][2]))
     ]
-    edgesParede1 = []
-    facesParede1 = [
-        [0, 1, 2, 3]
-    ]
+    edgesParede1 = [s[1][2]]
+    facesParede1 = [[s[1][3][0],s[1][3][1],s[1][3][2],s[1][3][3]]]
     mesh_data_P1 = bpy.data.meshes.new(name="meshData_P1")
     mesh_data_P1.from_pydata(
         verticesParede1,
@@ -108,6 +135,7 @@ def add_object():
     bpy.ops.object.origin_set(type='ORIGIN_CURSOR')
     bpy.context.scene.collection.objects.link(mesh_object_P1)
 
+    # D3
     incrementCursorLocation(0.0, 8.20, 0.00)
     verticesParede1Coluna2 = [
         Vector((0.00, 0.00, 0.00)),
@@ -170,8 +198,8 @@ class ADD_mesh():
     """Create a new Mesh Object from data: vertices, edges and faces"""
 
     # Class execution
-    def execute():
-        add_object()
+    def execute(structure):
+        add_object(structure)
         return {'FINISHED'}
 
 
