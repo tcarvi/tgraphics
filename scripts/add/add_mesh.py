@@ -17,16 +17,10 @@ def setInitialCursorPosition(rotation_mode, location, rotation_euler):
 
 
 def incrementCursorLocation(xLocPlus, yLocPlus, zLocPlus):
-    print("bpy.context.scene.cursor.location[0]=")
-    print(bpy.context.scene.cursor.location[0])
     print("xLocPlus=")
     print(xLocPlus)
-    print("bpy.context.scene.cursor.location[1]=")
-    print(bpy.context.scene.cursor.location[1])
     print("yLocPlus=")
     print(yLocPlus)
-    print("bpy.context.scene.cursor.location[2]=")
-    print(bpy.context.scene.cursor.location[2])
     print("zLocPlus=")
     print(zLocPlus)
     bpy.context.scene.cursor.location[0] += xLocPlus
