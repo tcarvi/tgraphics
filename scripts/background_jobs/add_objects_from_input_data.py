@@ -21,7 +21,7 @@ from input_planta_structure import structure
 
 
 def generate_objects_from_structure():
-    
+
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
@@ -30,6 +30,7 @@ def generate_objects_from_structure():
 
     AddCamera.add()  # Camera
     bpy.context.view_layer.update()
+
 
 def run_no_args():
 

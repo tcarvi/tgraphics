@@ -21,6 +21,7 @@ def save_rendering(rendering_file_name):
     render.filepath = save_path
     bpy.ops.render.render(write_still=True)
 
+
 # Class
 class SaveRendering():
     """Save rendering file"""

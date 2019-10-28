@@ -3,7 +3,7 @@ import bpy
 
 # Internal method execution
 def add_object():
-    
+
     # TODO - To define input
     text = 'Text input'
 

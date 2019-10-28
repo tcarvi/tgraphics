@@ -1,6 +1,7 @@
 import yaml
 import io
 
+
 # Read YAML file
 def read_yaml_file(yaml_file_name):
 
@@ -9,6 +10,7 @@ def read_yaml_file(yaml_file_name):
             print(yaml.safe_load(stream))
         except yaml.YAMLError as exc:
             print(exc)
+
 
 # Class
 class ReadYamlFile():
