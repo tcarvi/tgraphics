@@ -12,23 +12,23 @@ def add_object():
 
 
 # Class
-class ADD_curve_from_data():
+class AddCurve():
     """Create a new Curve Object from data: """
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_curve)
+    bpy.utils.register_class(AddCurve)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_curve)
+    bpy.utils.unregister_class(AddCurve)
 
 
 # Register

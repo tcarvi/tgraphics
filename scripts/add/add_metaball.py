@@ -10,23 +10,23 @@ def add_object():
 
 
 # Class
-class ADD_metaball():
+class AddMetaball():
     """ADD metaball with input location"""
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_metaball)
+    bpy.utils.register_class(AddMetaball)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_metaball)
+    bpy.utils.unregister_class(AddMetaball)
 
 
 # Register

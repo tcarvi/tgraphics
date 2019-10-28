@@ -10,23 +10,23 @@ def add_object():
 
 
 # Class
-class ADD_surface():
+class AddSurface():
     """ADD surface with input location"""
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_surface)
+    bpy.utils.register_class(AddSurface)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_surface)
+    bpy.utils.unregister_class(AddSurface)
 
 
 # Register

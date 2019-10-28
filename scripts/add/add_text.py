@@ -18,23 +18,23 @@ def add_object():
 
 
 # Class
-class ADD_text():
+class AddText():
     """Add text"""
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_text)
+    bpy.utils.register_class(AddText)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_text)
+    bpy.utils.unregister_class(AddText)
 
 
 # Register

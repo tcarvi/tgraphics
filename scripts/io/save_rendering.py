@@ -2,7 +2,7 @@ import bpy
 import os
 
 
-def save_rendering(renderingfilename):
+def save_rendering(rendering_file_name):
 
     save_dir = os.path.join(
         os.path.abspath("."),
@@ -12,7 +12,7 @@ def save_rendering(renderingfilename):
         os.mkdir(save_dir)
     save_path = os.path.join(
         os.path.abspath("."),
-        "render_output\\" + renderingfilename
+        "render_output\\" + rendering_file_name
     )
     # TODO - To define input
     # TODO - To add
@@ -22,23 +22,23 @@ def save_rendering(renderingfilename):
     bpy.ops.render.render(write_still=True)
 
 # Class
-class SAVE_rendering():
-    """SAVE_blenderfile"""
+class SaveRendering():
+    """Save rendering file"""
 
     # Class execution
-    def execute(renderingfilename):
-        save_rendering(renderingfilename)
+    def execute(rendering_file_name):
+        save_rendering(rendering_file_name)
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(SAVE_rendering)
+    bpy.utils.register_class(SaveRendering)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(SAVE_rendering)
+    bpy.utils.unregister_class(SaveRendering)
 
 
 # Register

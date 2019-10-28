@@ -10,23 +10,23 @@ def add_object():
 
 
 # Class
-class ADD_forcefield():
-    """ADD forcefield with input location"""
+class AddCollectionsInstance():
+    """ADD collectioninstance"""
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_forcefield)
+    bpy.utils.register_class(AddCollectionsInstance)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_forcefield)
+    bpy.utils.unregister_class(AddCollectionsInstance)
 
 
 # Register

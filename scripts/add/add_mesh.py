@@ -1,68 +1,25 @@
 import bpy
 from mathutils import Vector
-
-
-# padrão de inicialização
-def setInitialCursorPosition(rotation_mode, location, rotation_euler):
-    # rotation_mode. Default value = 'XYZ'
-    # location. Default value = [0.00, 0.00, 0.00]
-    # rotation_euler. Default value = [0.00, 0.00, 0.00]
-    bpy.context.scene.cursor.rotation_mode = rotation_mode
-    bpy.context.scene.cursor.location[0] = location[0]
-    bpy.context.scene.cursor.location[1] = location[1]
-    bpy.context.scene.cursor.location[2] = location[2]
-    bpy.context.scene.cursor.rotation_euler[0] = rotation_euler[0]
-    bpy.context.scene.cursor.rotation_euler[1] = rotation_euler[1]
-    bpy.context.scene.cursor.rotation_euler[2] = rotation_euler[2]
-
-
-def incrementCursorLocation(xLocPlus, yLocPlus, zLocPlus):
-    print("xLocPlus=")
-    print(xLocPlus)
-    print("yLocPlus=")
-    print(yLocPlus)
-    print("zLocPlus=")
-    print(zLocPlus)
-    bpy.context.scene.cursor.location[0] += xLocPlus
-    bpy.context.scene.cursor.location[1] += yLocPlus
-    bpy.context.scene.cursor.location[2] += zLocPlus
-    bpy.context.view_layer.update()
-
-
-def incrementCursorRotationEuler(xRotEulerPlus, yRotEulerPlus, zRotEulerPlus):
-    bpy.context.scene.cursor.rotation_euler[0] += xRotEulerPlus
-    bpy.context.scene.cursor.rotation_euler[1] += yRotEulerPlus
-    bpy.context.scene.cursor.rotation_euler[2] += zRotEulerPlus
-    bpy.context.view_layer.update()
+from move_entry_point import MoveEntryPoint
 
 def processar_estrutura(structure):
     # store the location of current 3d cursor
-    saved_location = bpy.context.scene.cursor.location.copy()
-    saved_rotation = bpy.context.scene.cursor.rotation_euler.copy()
+    initial_location = bpy.context.scene.cursor.location.copy()
+    initial_rotation = bpy.context.scene.cursor.rotation_euler.copy()
 
-    originX = 0.00
-    originY = 0.00
-    originZ = 0.00
-    # originRotEulerX = 0.00
-    # originRotEulerY = 0.00
-    # originRotEulerZ = 0.00
-    setInitialCursorPosition(
-        'XYZ',
-        [originX, originY, originZ],
-        [0.00, 0.00, 0.00]
-    )
+    MoveEntryPoint.centralizar()
 
     for desenho in structure:
         add_object(desenho)
     
     # set 3dcursor location back to the stored location
-    bpy.context.scene.cursor.location = saved_location
-    bpy.context.scene.cursor.rotation_euler = saved_rotation
+    bpy.context.scene.cursor.location = initial_location
+    bpy.context.scene.cursor.rotation_euler = initial_rotation
 
 # Internal method execution
 def add_object(d):
     
-    incrementCursorLocation(d[0][0], d[0][1], d[0][2])
+    MoveEntryPoint.mover(d[0][0], d[0][1], d[0][2])
     data = bpy.data.meshes.new(name="meshData")
     data.from_pydata(
         [ Vector((d[1][0][0],d[1][0][1],d[1][0][2])),
@@ -85,23 +42,23 @@ def add_object(d):
 
 
 # Class
-class ADD_mesh():
+class AddMesh():
     """Create a new Mesh Object from data: vertices, edges and faces"""
 
     # Class execution
-    def execute(structure):
+    def add(structure):
         processar_estrutura(structure)
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_mesh)
+    bpy.utils.register_class(AddMesh)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_mesh)
+    bpy.utils.unregister_class(AddMesh)
 
 
 # Register

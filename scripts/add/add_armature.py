@@ -54,23 +54,23 @@ def add_object():
 
 
 # Class
-class ADD_armature():
+class AddArmature():
     """Create a new Armature Object from data: bones"""
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_armature)
+    bpy.utils.register_class(AddArmature)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_armature)
+    bpy.utils.unregister_class(AddArmature)
 
 
 # Register

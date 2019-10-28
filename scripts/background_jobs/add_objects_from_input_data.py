@@ -1,69 +1,61 @@
 import bpy
 import os
-from add_mesh import ADD_mesh
-# from add_curve import ADD_curve
-# from add_surface import ADD_surface
-# from add_metaball import ADD_metaball
-from add_text import ADD_text
-# from add_greasepencil import ADD_greasepencil
-from add_armature import ADD_armature
-# from add_lattice import ADD_lattice
-# from add_empty import ADD_empty
-# from add_image import ADD_image
-from add_light import ADD_light
-# from add_lightprobe import ADD_lightprobe
-from add_camera import ADD_camera
-# from add_speaker import ADD_speaker
-# from add_forcefield import ADD_forcefield
-from save_blenderfile import SAVE_blenderfile
-from save_rendering import SAVE_rendering
-from inputPlantaBaixa import structure
+from add_mesh import AddMesh
+# from add_curve import AddCurve
+# from add_surface import AddSurface
+# from add_metaball import AddMetaball
+# from add_text import AddText
+# from add_grease_pencil import AddGreasePencil
+# from add_armature import AddArmature
+# from add_lattice import AddLattice
+# from add_empty import AddEmpty
+# from add_image import AddImage
+# from add_light import AddLight
+# from add_light_probe import AddLightProbe
+from add_camera import AddCamera
+# from add_speaker import AddSpeaker
+# from add_force_field import AddForceField
+from save_blender_file import SaveBlenderFile
+from save_rendering import SaveRendering
+from input_planta_structure import structure
 
-def gerarObjetosConformeEstruturaIndicadaEmArquivo():
+
+def generate_objects_from_structure():
     
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
-    ADD_mesh.execute(structure)  # Mesh
-    # ADD_curve.execute()  # Curve
-    # ADD_surface.execute() # Surface
-    # ADD_metaball.execute() # Metaball
-    # ADD_text.execute()  # Text Object
-    # ADD_greasepencil.execute()  # Grease Pencil
-    # ADD_armature.execute()  # Armature
-    # ADD_light.execute()  # Light
-    # ADD_lightprobe.execute()  # LightProbe
-    ADD_camera.execute()  # Camera
-    # ADD_speaker.execute()  # Speaker
-    # ADD_forcefield.execute()  # ForceField
-    bpy.context.view_layer.update()
+    # Adding new objects
+    AddMesh.add(structure)  # Mesh
 
+    AddCamera.add()  # Camera
+    bpy.context.view_layer.update()
 
 def run_no_args():
 
-    gerarObjetosConformeEstruturaIndicadaEmArquivo()
+    generate_objects_from_structure()
 
     default_save_file_name = "f1.blend"
-    SAVE_blenderfile.execute(blenderfilename=default_save_file_name)
+    SaveBlenderFile.execute(blender_file_name=default_save_file_name)
     default_render_output_name = "r1"
-    SAVE_rendering.execute(renderingfilename=default_render_output_name)
+    SaveRendering.execute(rendering_file_name=default_render_output_name)
 
 
 def run_with_args(save_file_name, render_output_name):
 
-    gerarObjetosConformeEstruturaIndicadaEmArquivo()
+    generate_objects_from_structure()
 
     if save_file_name is None:
         default_save_file_name = "f1.blend"
-        SAVE_blenderfile.execute(blenderfilename=default_save_file_name)
+        SaveBlenderFile.execute(blender_file_name=default_save_file_name)
     else:
-        SAVE_blenderfile.execute(blenderfilename=save_file_name)
+        SaveBlenderFile.execute(blender_file_name=save_file_name)
 
     if render_output_name is None:
         default_render_output_name = "r1"
-        SAVE_rendering.execute(renderingfilename=default_render_output_name)
+        SaveRendering.execute(rendering_file_name=default_render_output_name)
     else:
-        SAVE_rendering.execute(renderingfilename=render_output_name)
+        SaveRendering.execute(rendering_file_name=render_output_name)
 
 
 def main():

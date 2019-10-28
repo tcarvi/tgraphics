@@ -19,23 +19,23 @@ def add_object():
 
 
 # Class
-class ADD_camera():
+class AddCamera():
     """ADD camera with input location"""
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_camera)
+    bpy.utils.register_class(AddCamera)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_camera)
+    bpy.utils.unregister_class(AddCamera)
 
 
 # Register

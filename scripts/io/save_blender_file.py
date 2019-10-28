@@ -2,7 +2,7 @@ import bpy
 import os
 
 
-def save_blenderfile(blenderfilename):
+def save_blender_file(blender_file_name):
     save_dir = os.path.join(
         os.path.abspath("."),
         "blender_projects"
@@ -11,29 +11,29 @@ def save_blenderfile(blenderfilename):
         os.mkdir(save_dir)
     save_path = os.path.join(
         os.path.abspath("."),
-        "blender_projects\\" + blenderfilename
+        "blender_projects\\" + blender_file_name
     )
     bpy.ops.wm.save_as_mainfile(filepath=save_path)
 
 
 # Class
-class SAVE_blenderfile():
-    """SAVE_blenderfile"""
+class SaveBlenderFile():
+    """Save blender file"""
 
     # Class execution
-    def execute(blenderfilename):
-        save_blenderfile(blenderfilename)
+    def execute(blender_file_name):
+        save_blender_file(blender_file_name)
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(SAVE_blenderfile)
+    bpy.utils.register_class(SaveBlenderFile)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(SAVE_blenderfile)
+    bpy.utils.unregister_class(SaveBlenderFile)
 
 
 # Register

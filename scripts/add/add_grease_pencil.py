@@ -5,28 +5,28 @@ import bpy
 def add_object():
 
     # TODO - To define input
-    locationInput = 2.0, 2.0, 5.0
     # TODO - To add
+    print("TODO")
 
 
 # Class
-class ADD_lightprobe():
-    """ADD lightprobe with input location"""
+class AddGreasePencil():
+    """ADD greasepencil with input location"""
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_lightprobe)
+    bpy.utils.register_class(AddGreasePencil)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_lightprobe)
+    bpy.utils.unregister_class(AddGreasePencil)
 
 
 # Register

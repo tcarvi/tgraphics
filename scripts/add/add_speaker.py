@@ -10,23 +10,23 @@ def add_object():
 
 
 # Class
-class ADD_speaker():
+class AddSpeaker():
     """ADD speaker with input location"""
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_speaker)
+    bpy.utils.register_class(AddSpeaker)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_speaker)
+    bpy.utils.unregister_class(AddSpeaker)
 
 
 # Register

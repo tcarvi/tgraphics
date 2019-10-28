@@ -18,23 +18,23 @@ def add_light():
 
 
 # Class
-class ADD_light():
+class AddLight():
     """ADD light with input location"""
 
     # Class execution
-    def execute():
+    def add():
         add_light()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_light)
+    bpy.utils.register_class(AddLight)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_light)
+    bpy.utils.unregister_class(AddLight)
 
 
 # Register

@@ -10,23 +10,23 @@ def add_object():
 
 
 # Class
-class ADD_greasepencil():
-    """ADD greasepencil with input location"""
+class AddForceField():
+    """ADD forcefield"""
 
     # Class execution
-    def execute():
+    def add():
         add_object()
         return {'FINISHED'}
 
 
 # To register
 def register():
-    bpy.utils.register_class(ADD_greasepencil)
+    bpy.utils.register_class(AddForceField)
 
 
 # To unregister
 def unregister():
-    bpy.utils.unregister_class(ADD_greasepencil)
+    bpy.utils.unregister_class(AddForceField)
 
 
 # Register
