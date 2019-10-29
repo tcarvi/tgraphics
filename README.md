@@ -1,8 +1,18 @@
 # tgraphics  
 
+- Requirements: 
+    - `install blender` ( https://www.blender.org/ )
+    - `install python` ( https://www.python.org/downloads/ )
+    - `install git`
+- Installation:
+    - Criar diretório `C:\libs\python\src\github.com\`
+    - `cd C:\libs\python\src\github.com\`
+    - `git clone https://github.com/tcarvi/tgraphics.git`
+    - `cd tgraphics`
+    - `pip install -r requirements.txt`
 - Default output folders: 
-    - rendering output: render_output/
-    - saving blender file: blender_projects/
+    - rendering output: `render_output/`
+    - saving blender file:  `blender_projects/`
 
 #### Windows Command Line Options:
 ###### Se utilizados, os parâmetros -s e -r devem seguir a ordem definida.
