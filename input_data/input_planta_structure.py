@@ -18,7 +18,7 @@ d0 = [
 ]
 
 # Desenho [1] P1
-deslocamentoD1 = [0.00, 0.15, 0.00]
+deslocamentoD1 = [0.00, 0.00, 0.00]
 verticesD1 = [
     [0.00, 0.00, 0.00],
     [0.00, 8.20, 0.00],
@@ -35,7 +35,7 @@ d1 = [
 ]
 
 # Desenho [2] P1C2
-deslocamentoD2 = [0.00, 8.20, 0.00]
+deslocamentoD2 = [0.00, 0.00, 0.00]
 verticesD2 = [
     [0.00, 0.00, 0.00],
     [0.00, 0.15, 0.00],

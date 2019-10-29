@@ -1,30 +1,24 @@
 import bpy
-import mathutils 
-from mathutils import Vector 
+import mathutils
+from mathutils import Vector
 
 
 def center_entry_point():
-    # bpy.ops.transform.translate(value=(0, 0, 1), orient_type='GLOBAL')
     bpy.context.scene.cursor.rotation_mode = 'XYZ'
     bpy.context.scene.cursor.location = Vector((0.0, 0.0, 0.0))
     bpy.context.scene.cursor.rotation_euler = Vector((0.0, 0.0, 0.0))
-    # bpy.ops.object.origin_set(type='ORIGIN_CURSOR', center='MEDIAN')
-    # bpy.context.view_layer.update()
 
 
 def increment_position_entry_point(x_plus, y_plus, z_plus):
     bpy.context.scene.cursor.location[0] += x_plus
     bpy.context.scene.cursor.location[1] += y_plus
     bpy.context.scene.cursor.location[2] += z_plus
-    bpy.ops.object.origin_set(type='ORIGIN_CURSOR', center='MEDIAN')
-    # bpy.context.view_layer.update()
 
 
 def increment_rot_euler_entry_point(x_rot_plus, y_rot_plus, z_rot_plus):
     bpy.context.scene.cursor.rotation_euler[0] += x_rot_plus
     bpy.context.scene.cursor.rotation_euler[1] += y_rot_plus
     bpy.context.scene.cursor.rotation_euler[2] += z_rot_plus
-    # bpy.context.view_layer.update()
 
 
 # Class
