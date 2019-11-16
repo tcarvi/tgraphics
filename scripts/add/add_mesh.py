@@ -1,70 +1,115 @@
+#!/usr/bin/env python3
 import bpy
-from mathutils import Vector
+from mathutils import Vector, Matrix
 from move_entry_point import MoveEntryPoint
+import json
+from math import radians
 
 
 def processar_estrutura(structure):
 
-    MoveEntryPoint.centralizar()
+    # with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data\\input_planta_structure.json') as json_data_file:
+    #     data = json.load(json_data_file)
+    #     print(data)
+
+    # MoveEntryPoint.centralizar()
 
     for d in structure:
-        add_object(d)
-        bpy.context.scene.cursor.location[0] += d[1][1][0]
-        bpy.context.scene.cursor.location[1] += d[1][1][1]
-        bpy.context.scene.cursor.location[2] += d[1][1][2]
+        if d[0] < 10:
+            if d[0] == 0:
+                # Atualiza posição X
+                bpy.context.scene.cursor.location[0] += d[1]
+                bpy.context.view_layer.update()
+            if d[0] == 1:
+                # Atualiza posição Y
+                bpy.context.scene.cursor.location[1] += d[1]
+                bpy.context.view_layer.update()
+            if d[0] == 2:
+                # Atualiza posição Z
+                bpy.context.scene.cursor.location[2] += d[1]
+                bpy.context.view_layer.update()
+            if d[0] == 3:
+                # Atualiza posição XY
+                bpy.context.scene.cursor.location[0] += d[1]
+                bpy.context.scene.cursor.location[1] += d[2]
+                bpy.context.view_layer.update()
+            continue
+        if d[0] < 20:
+            if d[0] == 10:
+                # Atualiza rotação do eixo X
+                bpy.context.scene.cursor.rotation_euler[0] += radians(d[1])
+                bpy.context.view_layer.update()
+            if d[0] == 11:
+                # Atualiza rotação do eixo Y
+                bpy.context.scene.cursor.rotation_euler[1] += radians(d[1])
+                bpy.context.view_layer.update()
+            if d[0] == 12:
+                # Atualiza rotação do eixo Z
+                bpy.context.scene.cursor.rotation_euler[2] += radians(d[1])
+                bpy.context.view_layer.update()
+            if d[0] == 13:
+                # Atualiza rotação do plano XY no mesmo ângulo
+                bpy.context.scene.cursor.rotation_euler[0] += radians(d[1])
+                bpy.context.scene.cursor.rotation_euler[1] += radians(d[1])
+                bpy.context.view_layer.update()
+            continue
+        if d[0] < 30:
+            if d[0] == 20:
+                # Desenha parede de 0.15 metros de largura, no eixo X
+                add_parede_15_centimetros_horizontal(d[1])
+                bpy.context.scene.cursor.location[0] += d[1]
+                bpy.context.view_layer.update()
+            if d[0] == 21:
+                # Desenha parede de 0.15 metros de largura, no eixo X
+                add_parede_15_centimetros_transversal(d[1])
+                bpy.context.scene.cursor.location[1] += d[1]
+                bpy.context.view_layer.update()
+            continue
+
+    print(bpy.context.scene.cursor.rotation_euler)
 
 
 # Internal method execution
-def add_object(d):
+def add_parede_15_centimetros_horizontal(xValue):
 
-    MoveEntryPoint.mover(
-        d[0][0],
-        d[0][1],
-        d[0][2]
-    )
     bpy.context.view_layer.update()
     data = bpy.data.meshes.new(name="meshData")
     data.from_pydata(
         [
             Vector(
                 (
-                    d[1][0][0] + bpy.context.scene.cursor.location[0],
-                    d[1][0][1] + bpy.context.scene.cursor.location[1],
-                    d[1][0][2] + bpy.context.scene.cursor.location[2]
+                    bpy.context.scene.cursor.location[0],
+                    bpy.context.scene.cursor.location[1],
+                    bpy.context.scene.cursor.location[2]
                 )
             ),
             Vector(
                 (
-                    d[1][1][0] + bpy.context.scene.cursor.location[0],
-                    d[1][1][1] + bpy.context.scene.cursor.location[1],
-                    d[1][1][2] + bpy.context.scene.cursor.location[2]
+                    bpy.context.scene.cursor.location[0] + xValue,
+                    bpy.context.scene.cursor.location[1],
+                    bpy.context.scene.cursor.location[2]
                 )
             ),
             Vector(
                 (
-                    d[1][2][0] + bpy.context.scene.cursor.location[0],
-                    d[1][2][1] + bpy.context.scene.cursor.location[1],
-                    d[1][2][2] + bpy.context.scene.cursor.location[2]
+                    bpy.context.scene.cursor.location[0] + xValue,
+                    bpy.context.scene.cursor.location[1] + 0.15,
+                    bpy.context.scene.cursor.location[2]
                 )
             ),
             Vector(
                 (
-                    d[1][3][0] + bpy.context.scene.cursor.location[0],
-                    d[1][3][1] + bpy.context.scene.cursor.location[1],
-                    d[1][3][2] + bpy.context.scene.cursor.location[2]
+                    bpy.context.scene.cursor.location[0],
+                    bpy.context.scene.cursor.location[1] + 0.15,
+                    bpy.context.scene.cursor.location[2]
                 )
             )
         ],
         [
-            d[2]
+            []
         ],
         [
-            [
-                d[3][0],
-                d[3][1],
-                d[3][2],
-                d[3][3]
-            ]
+            [0, 1, 2, 3]
         ]
     )
     object = bpy.data.objects.new(
@@ -73,7 +118,172 @@ def add_object(d):
     )
     bpy.context.scene.collection.objects.link(object)
 
+# Internal method execution
+def add_parede_15_centimetros_transversal(yValue):
 
+    bpy.context.view_layer.update()
+    data = bpy.data.meshes.new(name="meshData")
+    data.from_pydata(
+        [
+            
+            Vector(
+                    (
+                        bpy.context.scene.cursor.location[0],
+                        bpy.context.scene.cursor.location[1],
+                        bpy.context.scene.cursor.location[2]
+                    )
+            ),
+            Vector(
+                    (
+                        bpy.context.scene.cursor.location[0],
+                        bpy.context.scene.cursor.location[1] + yValue,
+                        bpy.context.scene.cursor.location[2]
+                    )
+            ),
+            Vector(
+                    (
+                        bpy.context.scene.cursor.location[0] - 0.15,
+                        bpy.context.scene.cursor.location[1] + yValue,
+                        bpy.context.scene.cursor.location[2]
+                    )
+            ),
+            Vector(
+                    (
+                        bpy.context.scene.cursor.location[0] - 0.15,
+                        bpy.context.scene.cursor.location[1],
+                        bpy.context.scene.cursor.location[2]
+                    )
+            )
+        ],
+        [
+            []
+        ],
+        [
+            [0, 1, 2, 3]
+        ]
+    )
+    object = bpy.data.objects.new(
+        name="meshObject",
+        object_data=data
+    )
+    bpy.context.scene.collection.objects.link(object)
+
+    # Internal method execution
+# def add_parede_15_centimetros_transversal(yValue):
+
+#     bpy.context.view_layer.update()
+#     data = bpy.data.meshes.new(name="meshData")
+#     data.from_pydata(
+#         [
+#             Matrix.Rotation(
+#                 Vector(
+#                     (
+#                         bpy.context.scene.cursor.location[0],
+#                         bpy.context.scene.cursor.location[1],
+#                         bpy.context.scene.cursor.location[2]
+#                     )
+#                 )
+#             ),
+#             Matrix.Rotation(
+#                 Vector(
+#                     (
+#                         bpy.context.scene.cursor.location[0],
+#                         bpy.context.scene.cursor.location[1] + yValue,
+#                         bpy.context.scene.cursor.location[2]
+#                     )
+#                 )
+#             ),
+#             Matrix.Rotation(
+#                 Vector(
+#                     (
+#                         bpy.context.scene.cursor.location[0] - 0.15,
+#                         bpy.context.scene.cursor.location[1] + yValue,
+#                         bpy.context.scene.cursor.location[2]
+#                     )
+#             ),
+#             Matrix.Rotation(
+#                 Vector(
+#                     (
+#                         bpy.context.scene.cursor.location[0] - 0.15,
+#                         bpy.context.scene.cursor.location[1],
+#                         bpy.context.scene.cursor.location[2]
+#                     )
+#                 )
+#             )
+#         ],
+#         [
+#             []
+#         ],
+#         [
+#             [0, 1, 2, 3]
+#         ]
+#     )
+#     object = bpy.data.objects.new(
+#         name="meshObject",
+#         object_data=data
+#     )
+#     bpy.context.scene.collection.objects.link(object)
+
+#     # Internal method execution
+# def add_parede_15_centimetros_transversal(yValue):
+
+#     bpy.context.view_layer.update()
+#     data = bpy.data.meshes.new(name="meshData")
+#     data.from_pydata(
+#         [
+#             Matrix.Rotation(
+#                 Vector(
+#                     (
+#                         bpy.context.scene.cursor.location[0],
+#                         bpy.context.scene.cursor.location[1],
+#                         bpy.context.scene.cursor.location[2]
+#                     )
+#                 )
+#             ),
+#             Matrix.Rotation(
+#                 Vector(
+#                     (
+#                         bpy.context.scene.cursor.location[0],
+#                         bpy.context.scene.cursor.location[1] + yValue,
+#                         bpy.context.scene.cursor.location[2]
+#                     )
+#                 )
+#             ),
+#             Matrix.Rotation(
+#                 Vector(
+#                     (
+#                         bpy.context.scene.cursor.location[0] - 0.15,
+#                         bpy.context.scene.cursor.location[1] + yValue,
+#                         bpy.context.scene.cursor.location[2]
+#                     )
+#             ),
+#             Matrix.Rotation(
+#                 Vector(
+#                     (
+#                         bpy.context.scene.cursor.location[0] - 0.15,
+#                         bpy.context.scene.cursor.location[1],
+#                         bpy.context.scene.cursor.location[2]
+#                     )
+#                 )
+#             )
+#         ],
+#         [
+#             []
+#         ],
+#         [
+#             [0, 1, 2, 3]
+#         ]
+#     )
+#     object = bpy.data.objects.new(
+#         name="meshObject",
+#         object_data=data
+#     )
+#     bpy.context.scene.collection.objects.link(object)
+
+# horiRot = rotMat(theta, 3, 'X')
+#                             vertRot = rotMat(phi, 3, 'Z')
+
+#                             basisVecX.rotate(horiRot)
 # Class
 class AddMesh():
     """Create a new Mesh Object from data: vertices, edges and faces"""
