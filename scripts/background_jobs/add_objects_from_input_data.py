@@ -18,6 +18,7 @@ from add_camera import AddCamera
 from save_blender_file import SaveBlenderFile
 from save_rendering import SaveRendering
 from input_planta_structure import structure
+from list_objects import ListObjects
 
 
 def generate_objects_from_structure():
@@ -162,6 +163,8 @@ def main():
         parser.print_help()
         run_no_args()
 
+    print("List of data objects:")
+    ListObjects.list()
     print('\nBatch job finished, exiting ...')
 
 
