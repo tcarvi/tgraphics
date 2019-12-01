@@ -1,3 +1,4 @@
+# <pep8-80 compliant>
 import bpy
 import os
 from add_mesh import AddMesh
@@ -164,10 +165,10 @@ def main():
         parser.print_help()
         run_no_args()
 
-    print("List of data objects:")
+    print("\nList of data objects:")
     ListObjects.list()
 
-    print("List of data scenes:")
+    print("\nList of data scenes:")
     ListScenes.list()
 
     print('\nBatch job finished, exiting ...')

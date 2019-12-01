@@ -1,4 +1,6 @@
+# <pep8-80 compliant>
 import sys
+
 
 diretorio_scripts_add = \
     'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\add'

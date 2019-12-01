@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# <pep8-80 compliant>
 import bpy
 from mathutils import Vector, Matrix
 from move_entry_point import MoveEntryPoint

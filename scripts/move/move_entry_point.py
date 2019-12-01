@@ -1,3 +1,4 @@
+# <pep8-80 compliant>
 import bpy
 import mathutils
 from mathutils import Vector

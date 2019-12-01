@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
+# <pep8-80 compliant>
 import bpy
+
 
 def list_scenes():
 
