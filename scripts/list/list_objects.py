@@ -6,7 +6,10 @@ def list_objects():
 
     # print all objects
     for obj in bpy.data.objects:
+        print()
         print(obj.name)
+        print(obj.name_full)
+        print()
 
 
 # Class
