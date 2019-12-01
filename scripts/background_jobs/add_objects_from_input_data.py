@@ -19,6 +19,7 @@ from save_blender_file import SaveBlenderFile
 from save_rendering import SaveRendering
 from input_planta_structure import structure
 from list_objects import ListObjects
+from list_scenes import ListScenes
 
 
 def generate_objects_from_structure():
@@ -165,6 +166,10 @@ def main():
 
     print("List of data objects:")
     ListObjects.list()
+
+    print("List of data scenes:")
+    ListScenes.list()
+
     print('\nBatch job finished, exiting ...')
 
 
