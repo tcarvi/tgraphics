@@ -6,11 +6,7 @@ def list_scenes():
 
     # print all scenes
     for scene in bpy.data.scenes:
-        print()
-        print(scene.name)
-        print(scene.name_full)
-        print()
-
+        print("Name = ", scene.name)
 
 
 # Class
