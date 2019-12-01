@@ -22,6 +22,11 @@ diretorio_scripts_list = \
 if diretorio_scripts_list not in sys.path:
     sys.path.append(diretorio_scripts_list)
 
+diretorio_scripts_evaluate = \
+    'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\evaluate'
+if diretorio_scripts_evaluate not in sys.path:
+    sys.path.append(diretorio_scripts_evaluate)
+
 diretorio_input_data = \
     'C:\\libs\\python\\src\\github.com\\tgraphics\\input_data'
 if diretorio_input_data not in sys.path:

@@ -21,6 +21,7 @@ from save_rendering import SaveRendering
 from input_planta_structure import structure
 from list_objects import ListObjects
 from list_scenes import ListScenes
+from evaluate_time import EvaluateTime
 
 
 def generate_objects_from_structure():
@@ -107,10 +108,13 @@ def main():
         )
         parser.print_help()
         args = parser.parse_args(argv)
+        time_of_execution = 0.00
+        EvaluateTime.init(time_of_execution)
         run_with_args(
             save_file_name=args.save_file_name,
             render_output_name=None
         )
+        EvaluateTime.evaluate_time(time_of_execution)
     elif len(argv) == 1 and argv[0][1] == "r":
         parser.add_argument(
             parameter_s,
@@ -126,10 +130,13 @@ def main():
         )
         parser.print_help()
         args = parser.parse_args(argv)
+        time_of_execution = 0.00
+        EvaluateTime.init(time_of_execution)
         run_with_args(
             save_file_name=None,
             render_output_name=args.render_output_name
         )
+        EvaluateTime.evaluate_time(time_of_execution)
     elif len(argv) == 2 and argv[0][1] == "s" and argv[1][1] == "r":
         parser.add_argument(
             parameter_s,
@@ -144,11 +151,14 @@ def main():
             help=help_your_input
         )
         parser.print_help()
+        time_of_execution = 0.00
+        EvaluateTime.init(time_of_execution)
         args = parser.parse_args(argv)
         run_with_args(
             save_file_name=args.save_file_name,
             render_output_name=args.render_output_name
         )
+        EvaluateTime.evaluate_time(time_of_execution)
     elif len(argv) == 0:
         parser.add_argument(
             parameter_s,
@@ -163,7 +173,10 @@ def main():
             help=help_r
         )
         parser.print_help()
+        time_of_execution = 0.00
+        EvaluateTime.init(time_of_execution)
         run_no_args()
+        EvaluateTime.evaluate_time(time_of_execution)
 
     print("\nList of data objects:")
     ListObjects.list()
