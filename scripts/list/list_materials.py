@@ -3,7 +3,6 @@ import bpy
 
 
 def list_materials():
-
     # print all materials
     for material in bpy.data.materials:
         print("Name = ", material.name)
