@@ -8,7 +8,8 @@ from math import radians
 
 def processar_estrutura(structure):
 
-    # with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data\\input_planta_structure.json') as json_data_file:
+    # with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data
+    #               \\input_planta_structure.json') as json_data_file:
     #     data = json.load(json_data_file)
     #     print(data)
 
@@ -97,7 +98,6 @@ def processar_estrutura(structure):
     print(bpy.context.scene.cursor.rotation_euler)
 
 
-# Internal method execution
 def add_parede_15_centimetros_horizontal(xValue):
     espessura_parede = 0.15
     if xValue < 0:
@@ -147,7 +147,7 @@ def add_parede_15_centimetros_horizontal(xValue):
     )
     bpy.context.scene.collection.objects.link(object)
 
-# Internal method execution
+
 def add_parede_15_centimetros_transversal(yValue):
     medida_parede = 0.15
     if yValue > 0:
@@ -155,7 +155,6 @@ def add_parede_15_centimetros_transversal(yValue):
     data = bpy.data.meshes.new(name="meshData")
     data.from_pydata(
         [
-            
             Vector(
                     (
                         bpy.context.scene.cursor.location[0],
@@ -198,7 +197,7 @@ def add_parede_15_centimetros_transversal(yValue):
     )
     bpy.context.scene.collection.objects.link(object)
 
-    # Internal method execution
+
 def add_parede_15_centimetros_inclinado_em_x(xValue):
     # create a location matrix
     # mat_loc = Matrix.Translation((2.0, 3.0, 4.0))
@@ -206,7 +205,7 @@ def add_parede_15_centimetros_inclinado_em_x(xValue):
     # create an identitiy matrix
     # mat_sca = Matrix.Scale(0.5, 4, (0.0, 0.0, 1.0))
     # print(mat_sca)
-    vec = Vector( (1, 2, 3) )
+    vec = Vector((1, 2, 3))
     # create a rotation matrix
     mat_rot = Matrix.Rotation(radians(83.0), 3, 'X')
     print("mat_rot = ")
@@ -226,7 +225,7 @@ def add_parede_15_centimetros_inclinado_em_x(xValue):
     #         bpy.context.scene.cursor.location[1],
     #         bpy.context.scene.cursor.location[2]
     # )
-    # vetor_ponto_2 = 
+    # vetor_ponto_2 =
     # data = bpy.data.meshes.new(name="meshData")
     # data.from_pydata(
     #     [
@@ -251,18 +250,18 @@ def add_parede_15_centimetros_inclinado_em_x(xValue):
     #         Matrix.Rotation(
     #             Vector(
     #                 (
-    #                     bpy.context.scene.cursor.location[0] + xValue,
-    #                     bpy.context.scene.cursor.location[1] + espessura_parede,
-    #                     bpy.context.scene.cursor.location[2]
+    #                 bpy.context.scene.cursor.location[0] + xValue,
+    #                 bpy.context.scene.cursor.location[1] + espessura_parede,
+    #                 bpy.context.scene.cursor.location[2]
     #                 )
     #             )
     #         ),
     #         Matrix.Rotation(
     #             Vector(
     #                 (
-    #                     bpy.context.scene.cursor.location[0],
-    #                     bpy.context.scene.cursor.location[1] + espessura_parede,
-    #                     bpy.context.scene.cursor.location[2]
+    #                bpy.context.scene.cursor.location[0],
+    #                bpy.context.scene.cursor.location[1] + espessura_parede,
+    #                bpy.context.scene.cursor.location[2]
     #                 )
     #             )
     #         )
@@ -340,6 +339,8 @@ def add_parede_15_centimetros_inclinado_em_x(xValue):
 #                             vertRot = rotMat(phi, 3, 'Z')
 
 #                             basisVecX.rotate(horiRot)
+
+
 # Class
 class AddMesh():
     """Create a new Mesh Object from data: vertices, edges and faces"""

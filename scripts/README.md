@@ -1,7 +1,7 @@
 # PEP 8 -- Style Guide for Python Code
 - https://www.python.org/dev/peps/pep-0008/
 - Verify code style:
-    - ```pycodestyle .\file.py```  
+    - ```pycodestyle .```  
 
 for script import:
 - \_thread

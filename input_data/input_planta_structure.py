@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # structure = [
-#   [ 
-#       tipoDoDesenho,    
+#   [
+#       tipoDoDesenho,
 #       deslocamento-inicial
 #   ],
 #   ...
