@@ -146,6 +146,7 @@ def add_parede_15_centimetros_horizontal(xValue):
         name="meshObject",
         object_data=data
     )
+    AddMaterial.add(object, "MaterialParedeBranca")
     bpy.context.scene.collection.objects.link(object)
 
 

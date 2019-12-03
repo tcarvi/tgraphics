@@ -12,6 +12,7 @@ def add_material(object, material_name):
     if material is None:
         # create and define material
         material = bpy.data.materials.new(name=material_name)
+        material.diffuse_color = (0.8, 0.0503067, 0.0475967, 1)
         print("material1 =")
         print(material)
         if material_name == "MaterialParedeBranca":
