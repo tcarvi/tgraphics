@@ -21,6 +21,7 @@ from save_rendering import SaveRendering
 from input_planta_structure import structure
 from list_objects import ListObjects
 from list_scenes import ListScenes
+from list_materials import ListMaterials
 from evaluate_time import EvaluateTime
 
 
@@ -183,6 +184,9 @@ def main():
 
     print("\nList of data scenes:")
     ListScenes.list()
+
+    print("\nList of data materials:")
+    ListMaterials.list()
 
     print('\nBatch job finished, exiting ...')
 
