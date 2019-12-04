@@ -11,7 +11,7 @@ from add_mesh import AddMesh
 # from add_lattice import AddLattice
 # from add_empty import AddEmpty
 # from add_image import AddImage
-# from add_light import AddLight
+from add_light import AddLight
 # from add_light_probe import AddLightProbe
 from add_camera import AddCamera
 # from add_speaker import AddSpeaker
@@ -19,6 +19,7 @@ from add_camera import AddCamera
 from save_blender_file import SaveBlenderFile
 from save_rendering import SaveRendering
 from input_planta_structure import structure
+from input_lighting_positions import lighting
 from list_objects import ListObjects
 from list_scenes import ListScenes
 from list_materials import ListMaterials
@@ -32,7 +33,9 @@ def generate_objects_from_structure():
 
     # Adding new objects
     AddMesh.add(structure)  # Mesh
-
+    print("Começo")
+    AddLight.add(lighting[0])  # Camera
+    print("Fim")
     AddCamera.add()  # Camera
     bpy.context.view_layer.update()
 
@@ -40,7 +43,7 @@ def generate_objects_from_structure():
 def run_no_args():
 
     generate_objects_from_structure()
-
+    
     default_save_file_name = "f1.blend"
     SaveBlenderFile.execute(blender_file_name=default_save_file_name)
     default_render_output_name = "r1"

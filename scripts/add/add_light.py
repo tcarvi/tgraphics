@@ -3,19 +3,12 @@ import bpy
 
 
 # Internal method execution
-def add_light():
-
-    # TODO - To define input
-    locationInput = 2.0, 2.0, 5.0
-    # TODO - To add
+def add_light(initialPosition):
 
     data = bpy.data.lights.new("lightData", 'POINT')
     object = bpy.data.objects.new(name="lightObject", object_data=data)
+    object.location = initialPosition
     bpy.context.scene.collection.objects.link(object)
-    # OR
-    # scene = bpy.context.scene
-    # scene.collection.objects.link(object)
-    object.location = locationInput
 
 
 # Class
@@ -23,8 +16,8 @@ class AddLight():
     """ADD light with input location"""
 
     # Class execution
-    def add():
-        add_light()
+    def add(initialPosition):
+        add_light(initialPosition)
         return {'FINISHED'}
 
 
