@@ -22,3 +22,42 @@ for script import:
 - array
 - time
 - string
+
+#### Codificação com Python
+- Language built-in methods:
+    - `int()`                  # Returns an integer number
+    - `float()`                # Returns a floating point number
+    - `str()`                  # Returns a string object
+    - `dict()`                 # Returns a dictionary (Array)
+    - `dir()`                  # Returns a list of the specified object's properties and methods
+    - `eval()`                 # Evaluates and executes an expression
+    - `exec()`                 # Executes the specified code (or object)
+    - `hasattr()`	           # Returns True if the specified object has the specified attribute (property/method)
+    - `hash()`          	   # Returns the hash value of a specified object
+    - `isinstance()`           # Returns True if a specified object is an instance of a specified object
+    - `issubclass()`	       # Returns True if a specified class is a subclass of a specified object
+    - `iter()`	               # Returns an iterator object
+    - `len()`	               # Returns the length of an object
+    - `list()`	               # Returns a list
+    - `map()`	               # Returns the specified iterator with the specified function applied to each item
+    - `max()`	               # Returns the largest item in an iterable
+    - `min()`	               # Returns the smallest item in an iterable
+    - `next()`	               # Returns the next item in an iterable
+    - `object()`	           # Returns a new object
+    - `type()`                 # Returns the type of an object
+    - `open()`	               # Opens a file and returns a file object
+    - `pow()`	               # Returns the value of x to the power of y
+    - `print()`	               # Prints to the standard output device
+    - `range()`	               # Returns a sequence of numbers, starting from 0 and increments by 1 (by default)
+    - `reversed()`	           # Returns a reversed iterator
+    - `round()`	               # Rounds a numbers
+    - `set()`	               # Returns a new set object
+    - `setattr()`	           # Sets an attribute (property/method) of an object
+    - `slice()`	               # Returns a slice object
+    - `sorted()`	           # Returns a sorted list
+    - `sum()`	               # Sums the items of an iterator
+    - `super()`	               # Returns an object that represents the parent class
+    - `tuple()`	               # Returns a tuple
+    - `string contatenation`
+        - "string1" + "string2"
+        - "string1" + str(value_expression)
