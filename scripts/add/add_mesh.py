@@ -95,9 +95,9 @@ def processar_estrutura(structure):
     print(bpy.context.scene.cursor.rotation_euler)
 
 
-def add_parede_15_centimetros_horizontal(xValue):
+def add_parede_15_centimetros_horizontal(x_value):
     espessura_parede = 0.15
-    if xValue < 0:
+    if x_value < 0:
         espessura_parede *= -1
     data = bpy.data.meshes.new(name="meshData")
     data.from_pydata(
@@ -111,14 +111,14 @@ def add_parede_15_centimetros_horizontal(xValue):
             ),
             Vector(
                 (
-                    bpy.context.scene.cursor.location[0] + xValue,
+                    bpy.context.scene.cursor.location[0] + x_value,
                     bpy.context.scene.cursor.location[1],
                     bpy.context.scene.cursor.location[2]
                 )
             ),
             Vector(
                 (
-                    bpy.context.scene.cursor.location[0] + xValue,
+                    bpy.context.scene.cursor.location[0] + x_value,
                     bpy.context.scene.cursor.location[1] + espessura_parede,
                     bpy.context.scene.cursor.location[2]
                 )
@@ -146,9 +146,9 @@ def add_parede_15_centimetros_horizontal(xValue):
     bpy.context.scene.collection.objects.link(object)
 
 
-def add_parede_15_centimetros_transversal(yValue):
+def add_parede_15_centimetros_transversal(y_value):
     medida_parede = 0.15
-    if yValue > 0:
+    if y_value > 0:
         medida_parede *= -1
     data = bpy.data.meshes.new(name="meshData")
     data.from_pydata(
@@ -163,14 +163,14 @@ def add_parede_15_centimetros_transversal(yValue):
             Vector(
                     (
                         bpy.context.scene.cursor.location[0],
-                        bpy.context.scene.cursor.location[1] + yValue,
+                        bpy.context.scene.cursor.location[1] + y_value,
                         bpy.context.scene.cursor.location[2]
                     )
             ),
             Vector(
                     (
                         bpy.context.scene.cursor.location[0] + medida_parede,
-                        bpy.context.scene.cursor.location[1] + yValue,
+                        bpy.context.scene.cursor.location[1] + y_value,
                         bpy.context.scene.cursor.location[2]
                     )
             ),
@@ -197,7 +197,7 @@ def add_parede_15_centimetros_transversal(yValue):
     bpy.context.scene.collection.objects.link(object)
 
 
-def add_parede_15_centimetros_inclinado_em_x(xValue):
+def add_parede_15_centimetros_inclinado_em_x(x_value):
     # create a location matrix
     # mat_loc = Matrix.Translation((2.0, 3.0, 4.0))
     # print(mat_loc)
