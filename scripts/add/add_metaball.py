@@ -5,7 +5,7 @@ import bpy
 # Internal method execution
 def add_object():
     # TODO - To define input
-    location_input = 2.0, 2.0, 5.0
+    t_location_input = 2.0, 2.0, 5.0
     # TODO - To add
 
 

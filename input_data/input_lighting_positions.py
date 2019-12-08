@@ -1,4 +1,4 @@
-lighting = [
+t_lighting = [
     [
         0, 0, 0
     ],

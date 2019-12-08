@@ -22,7 +22,7 @@
 #     30 Retângulo inclinado de 0.15 em X
 #     31 Retângulo inclinado de 0.15 em Y
 # A <class 'list'> named structure
-structure = [
+t_structure = [
     [
         30,
         8.80

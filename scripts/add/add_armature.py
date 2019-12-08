@@ -40,9 +40,9 @@ def add_object():
     # arm_obj.pose.bones['bone2'].custom_shape = b2_shape
     # use data.bones for show_wire
     # arm_obj.data.bones['bone2'].show_wire = True
-    data = bpy.data.armatures.new(name="armatureData")
-    object = bpy.data.objects.new(name="armatureObject", object_data=data)
-    bpy.context.scene.collection.objects.link(object)
+    t_data = bpy.data.armatures.new(name="armatureData")
+    t_object = bpy.data.objects.new(name="armatureObject", object_data=t_data)
+    bpy.context.scene.collection.objects.link(t_object)
     # useful for development when the mesh may be invalid.
     # mesh.validate(verbose=True)
 

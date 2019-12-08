@@ -3,27 +3,27 @@ import bpy
 
 
 # Internal method execution
-def add_material(object, material_name):
+def add_material(t_object, t_material_name):
     # Get material
-    material = bpy.data.materials.get(material_name)
+    t_material = bpy.data.materials.get(t_material_name)
     print("material0 =")
-    print(material)
-    if material is None:
+    print(t_material)
+    if t_material is None:
         # create and define material
-        material = bpy.data.materials.new(name=material_name)
-        material.diffuse_color = (0.8, 0.0503067, 0.0475967, 1)
+        t_material = bpy.data.materials.new(name=t_material_name)
+        t_material.diffuse_color = (0.8, 0.0503067, 0.0475967, 1)
         print("material1 =")
-        print(material)
-        if material_name == "MaterialParedeBranca":
+        print(t_material)
+        if t_material_name == "MaterialParedeBranca":
             print("material2 =")
-            print(material)
+            print(t_material)
     # Assign it to object
-    if object.data.materials:
+    if t_object.data.materials:
         # assign to 1st material slot
-        object.data.materials[0] = material
+        t_object.data.materials[0] = t_material
     else:
         # no slots
-        object.data.materials.append(material)
+        t_object.data.materials.append(t_material)
 
 
 # Class
@@ -31,8 +31,8 @@ class AddMaterial():
     """Add material to an object"""
 
     # Class execution
-    def add(object, material_name):
-        add_material(object, material_name)
+    def add(t_object, t_material_name):
+        add_material(t_object, t_material_name)
         return {'FINISHED'}
 
 

@@ -4,8 +4,8 @@ import bpy
 
 def list_scenes():
     # print all scenes
-    for scene in bpy.data.scenes:
-        print("Name = ", scene.name)
+    for t_scene in bpy.data.scenes:
+        print("Name = ", t_scene.name)
 
 
 # Class

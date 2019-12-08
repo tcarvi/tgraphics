@@ -7,13 +7,13 @@ from math import radians
 from add_material import AddMaterial
 
 
-def processar_estrutura(structure):
+def processar_estrutura(t_structure):
     # with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data
     #               \\input_planta_structure.json') as json_data_file:
     #     data = json.load(json_data_file)
     #     print(data)
     # MoveEntryPoint.centralizar()
-    for d in structure:
+    for d in t_structure:
         # Each item "d" is a <class 'list'>
         if d[0] < 10:
             if d[0] == 0:
@@ -96,13 +96,13 @@ def processar_estrutura(structure):
     print(bpy.context.scene.cursor.rotation_euler)
 
 
-def add_parede_15_centimetros_horizontal(x_value):
-    espessura_parede = 0.15
-    if x_value < 0:
-        espessura_parede *= -1
-    data = bpy.data.meshes.new(name="meshData")
+def add_parede_15_centimetros_horizontal(t_value_x):
+    t_espessura_parede = 0.15
+    if t_value_x < 0:
+        t_espessura_parede *= -1
+    t_data = bpy.data.meshes.new(name="meshData")
     # data is a <class 'bpy_types.Mesh'>
-    data.from_pydata(
+    t_data.from_pydata(
         [
             Vector(
                 (
@@ -113,22 +113,22 @@ def add_parede_15_centimetros_horizontal(x_value):
             ),
             Vector(
                 (
-                    bpy.context.scene.cursor.location[0] + x_value,
+                    bpy.context.scene.cursor.location[0] + t_value_x,
                     bpy.context.scene.cursor.location[1],
                     bpy.context.scene.cursor.location[2]
                 )
             ),
             Vector(
                 (
-                    bpy.context.scene.cursor.location[0] + x_value,
-                    bpy.context.scene.cursor.location[1] + espessura_parede,
+                    bpy.context.scene.cursor.location[0] + t_value_x,
+                    bpy.context.scene.cursor.location[1] + t_espessura_parede,
                     bpy.context.scene.cursor.location[2]
                 )
             ),
             Vector(
                 (
                     bpy.context.scene.cursor.location[0],
-                    bpy.context.scene.cursor.location[1] + espessura_parede,
+                    bpy.context.scene.cursor.location[1] + t_espessura_parede,
                     bpy.context.scene.cursor.location[2]
                 )
             )
@@ -140,21 +140,21 @@ def add_parede_15_centimetros_horizontal(x_value):
             [0, 1, 2, 3]
         ]
     )
-    object = bpy.data.objects.new(
+    t_object = bpy.data.objects.new(
         name="meshObject",
-        object_data=data
+        object_data=t_data
     )
     # object is a <class 'bpy_types.Object'>
-    AddMaterial.add(object, "MaterialParedeBranca")
-    bpy.context.scene.collection.objects.link(object)
+    AddMaterial.add(t_object, "MaterialParedeBranca")
+    bpy.context.scene.collection.objects.link(t_object)
 
 
-def add_parede_15_centimetros_transversal(y_value):
-    medida_parede = 0.15
-    if y_value > 0:
-        medida_parede *= -1
-    data = bpy.data.meshes.new(name="meshData")
-    data.from_pydata(
+def add_parede_15_centimetros_transversal(t_value_y):
+    t_medida_parede = 0.15
+    if t_value_y > 0:
+        t_medida_parede *= -1
+    t_data = bpy.data.meshes.new(name="meshData")
+    t_data.from_pydata(
         [
             Vector(
                     (
@@ -166,20 +166,20 @@ def add_parede_15_centimetros_transversal(y_value):
             Vector(
                     (
                         bpy.context.scene.cursor.location[0],
-                        bpy.context.scene.cursor.location[1] + y_value,
+                        bpy.context.scene.cursor.location[1] + t_value_y,
                         bpy.context.scene.cursor.location[2]
                     )
             ),
             Vector(
                     (
-                        bpy.context.scene.cursor.location[0] + medida_parede,
-                        bpy.context.scene.cursor.location[1] + y_value,
+                        bpy.context.scene.cursor.location[0] + t_medida_parede,
+                        bpy.context.scene.cursor.location[1] + t_value_y,
                         bpy.context.scene.cursor.location[2]
                     )
             ),
             Vector(
                     (
-                        bpy.context.scene.cursor.location[0] + medida_parede,
+                        bpy.context.scene.cursor.location[0] + t_medida_parede,
                         bpy.context.scene.cursor.location[1],
                         bpy.context.scene.cursor.location[2]
                     )
@@ -192,28 +192,28 @@ def add_parede_15_centimetros_transversal(y_value):
             [0, 1, 2, 3]
         ]
     )
-    object = bpy.data.objects.new(
+    t_object = bpy.data.objects.new(
         name="meshObject",
-        object_data=data
+        object_data=t_data
     )
-    AddMaterial.add(object, "MaterialParedeBranca")
-    bpy.context.scene.collection.objects.link(object)
+    AddMaterial.add(t_object, "MaterialParedeBranca")
+    bpy.context.scene.collection.objects.link(t_object)
 
 
-def add_parede_15_centimetros_inclinado_em_x(x_value):
+def add_parede_15_centimetros_inclinado_em_x(t_value_x):
     # create a location matrix
     # mat_loc = Matrix.Translation((2.0, 3.0, 4.0))
     # print(mat_loc)
     # create an identitiy matrix
     # mat_sca = Matrix.Scale(0.5, 4, (0.0, 0.0, 1.0))
     # print(mat_sca)
-    vec = Vector((1, 2, 3))
+    t_vec = Vector((1, 2, 3))
     # vec is a <class 'Vector'>
     # create a rotation matrix
-    mat_rot = Matrix.Rotation(radians(83.0), 3, 'X')
+    t_mat_rot = Matrix.Rotation(radians(83.0), 3, 'X')
     # mat_rot is a <class 'Matrix'>
     # combine transformations
-    mat_out = mat_rot @ vec
+    t_mat_out = t_mat_rot @ t_vec
     # mat_out is a <class 'Vector'>
     # espessura_parede = 0.15
     # if xValue < 0:
@@ -348,8 +348,8 @@ class AddMesh():
     """Create a new Mesh Object from data: vertices, edges and faces"""
 
     # Class execution
-    def add(structure):
-        processar_estrutura(structure)
+    def add(t_structure):
+        processar_estrutura(t_structure)
         return {'FINISHED'}
 
 

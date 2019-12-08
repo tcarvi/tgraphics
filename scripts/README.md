@@ -58,6 +58,42 @@ for script import:
     - `sum()`	               # Sums the items of an iterator
     - `super()`	               # Returns an object that represents the parent class
     - `tuple()`	               # Returns a tuple
+    - `input()`	               # Allows user input and return this input value
     - `string contatenation`
         - "string1" + "string2"
         - "string1" + str(value_expression)
+- Python *keywords*:
+    - and
+    - as
+    - assert
+    - break
+    - class
+    - continue
+    - def
+    - del
+    - elif
+    - else
+    - except
+    - exec
+    - finally
+    - for
+    - from
+    - global
+    - if
+    - import
+    - in
+    - is
+    - lambda
+    - nonlocal
+    - not
+    - or
+    - pass
+    - raise
+    - return
+    - try
+    - while
+    - with
+    - yield
+    - True
+    - False
+    - None

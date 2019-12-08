@@ -5,12 +5,12 @@ import bpy
 # Internal method execution
 def add_object():
     # TODO - To define input
-    text = 'Text input'
-    data = bpy.data.curves.new(name="textData", type='FONT')
-    object = bpy.data.objects.new(name="textObject", object_data=data)
-    data.body = text
-    data.align_x = 'CENTER'
-    bpy.context.scene.collection.objects.link(object)
+    t_text = 'Text input'
+    t_data = bpy.data.curves.new(name="textData", type='FONT')
+    t_object = bpy.data.objects.new(name="textObject", object_data=t_data)
+    t_data.body = t_text
+    t_data.align_x = 'CENTER'
+    bpy.context.scene.collection.objects.link(t_object)
     # OR
     # scene = bpy.context.scene
     # scene.collection.objects.link(txt_ob)
