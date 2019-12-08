@@ -31,11 +31,19 @@ class MoveEntryPoint():
         return {'FINISHED'}
 
     def mover(t_plus_x, t_plus_y, t_plus_z):
-        increment_position_entry_point(t_plus_x, t_plus_y, t_plus_z)
+        increment_position_entry_point(
+            t_plus_x,
+            t_plus_y,
+            t_plus_z
+        )
         return {'FINISHED'}
 
     def rotacionar(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z):
-        increment_rot_euler_entry_point(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z)
+        increment_rot_euler_entry_point(
+            t_rot_plus_x,
+            t_rot_plus_y,
+            t_rot_plus_z
+        )
         return {'FINISHED'}
 
 

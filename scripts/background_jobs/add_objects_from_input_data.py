@@ -41,23 +41,23 @@ def generate_objects_from_structure():
 def run_no_args():
     generate_objects_from_structure()
     t_default_save_file_name = "f1.blend"
-    SaveBlenderFile.execute(t_blender_file_name=t_default_save_file_name)
+    SaveBlenderFile.save(t_blender_file_name=t_default_save_file_name)
     t_default_render_output_name = "r1"
-    SaveRendering.execute(t_rendering_file_name=t_default_render_output_name)
+    SaveRendering.save(t_rendering_file_name=t_default_render_output_name)
 
 
 def run_with_args(t_save_file_name, t_render_output_name):
     generate_objects_from_structure()
     if t_save_file_name is None:
         t_default_save_file_name = "f1.blend"
-        SaveBlenderFile.execute(t_blender_file_name=t_default_save_file_name)
+        SaveBlenderFile.save(t_blender_file_name=t_default_save_file_name)
     else:
-        SaveBlenderFile.execute(t_blender_file_name=t_save_file_name)
+        SaveBlenderFile.save(t_blender_file_name=t_save_file_name)
     if t_render_output_name is None:
         t_default_render_output_name = "r1"
-        SaveRendering.execute(t_rendering_file_name=t_default_render_output_name)
+        SaveRendering.save(t_rendering_file_name=t_default_render_output_name)
     else:
-        SaveRendering.execute(t_rendering_file_name=t_render_output_name)
+        SaveRendering.save(t_rendering_file_name=t_render_output_name)
 
 
 def main():
