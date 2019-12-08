@@ -27,10 +27,8 @@ from evaluate_time import EvaluateTime
 
 
 def generate_objects_from_structure():
-
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
-
     # Adding new objects
     AddMesh.add(structure)  # Mesh
     print("Começo")
@@ -41,9 +39,7 @@ def generate_objects_from_structure():
 
 
 def run_no_args():
-
     generate_objects_from_structure()
-    
     default_save_file_name = "f1.blend"
     SaveBlenderFile.execute(blender_file_name=default_save_file_name)
     default_render_output_name = "r1"
@@ -51,15 +47,12 @@ def run_no_args():
 
 
 def run_with_args(save_file_name, render_output_name):
-
     generate_objects_from_structure()
-
     if save_file_name is None:
         default_save_file_name = "f1.blend"
         SaveBlenderFile.execute(blender_file_name=default_save_file_name)
     else:
         SaveBlenderFile.execute(blender_file_name=save_file_name)
-
     if render_output_name is None:
         default_render_output_name = "r1"
         SaveRendering.execute(rendering_file_name=default_render_output_name)
@@ -72,7 +65,6 @@ def main():
     import argparse
 
     argv = sys.argv
-
     if "--" in argv:
         index = argv.index("--")
         counter = 0
@@ -80,7 +72,6 @@ def main():
             del argv[i]
     else:
         argv = []
-
     usage_text = (
         "Customized usage: $ blender --background --factory-startup"
         " --python ADD_PATHS_SCRIPT --python ADD_GRAPHICS_SCRIPT  [-- options]"
@@ -93,10 +84,8 @@ def main():
     metavar_r = '-r="RENDER_FILE"',
     help_s = 'Default: -s="f1.blender"'
     help_r = 'Default: -r="r1.png"'
-    help_your_input = 'Using your command line argument ...'
-
+    help_your_input = "Using your command line argument ..."
     parser = argparse.ArgumentParser(description=usage_text)
-
     if len(argv) == 1 and argv[0][1] == "s":
         parser.add_argument(
             parameter_s,
@@ -181,17 +170,13 @@ def main():
         EvaluateTime.init(time_of_execution)
         run_no_args()
         EvaluateTime.evaluate_time(time_of_execution)
-
     print("\nList of data objects:")
     ListObjects.list()
-
     print("\nList of data scenes:")
     ListScenes.list()
-
     print("\nList of data materials:")
     ListMaterials.list()
-
-    print('\nBatch job finished, exiting ...')
+    print("\nBatch job finished, exiting ...")
 
 
 if __name__ == "__main__":

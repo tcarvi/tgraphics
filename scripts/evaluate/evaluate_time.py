@@ -14,12 +14,10 @@ def evaluate_time(time_started):
 class EvaluateTime():
     """Evaluate time of script execution"""
 
-
     # Class execution
     def init(time):
         init_time_counter(time)
         return {'FINISHED'}
-
 
     # Class execution
     def evaluate_time(time_started):

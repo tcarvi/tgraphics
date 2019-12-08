@@ -3,7 +3,6 @@ import bpy
 
 
 def list_scenes():
-
     # print all scenes
     for scene in bpy.data.scenes:
         print("Name = ", scene.name)

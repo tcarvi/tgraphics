@@ -4,7 +4,6 @@ import bpy
 
 # Internal method execution
 def add_object():
-
     data = bpy.data.curves.new(name="curveData", type="CURVE")
     object = bpy.data.objects.new(name="curveObject", object_data=data)
     bpy.context.scene.collection.objects.link(object)

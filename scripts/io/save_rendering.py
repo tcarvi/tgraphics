@@ -4,7 +4,6 @@ import os
 
 
 def save_rendering(rendering_file_name):
-
     save_dir = os.path.join(
         os.path.abspath("."),
         "render_output"

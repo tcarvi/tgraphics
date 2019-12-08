@@ -4,7 +4,6 @@ import bpy
 
 # Internal method execution
 def add_material(object, material_name):
-
     # Get material
     material = bpy.data.materials.get(material_name)
     print("material0 =")
@@ -18,7 +17,6 @@ def add_material(object, material_name):
         if material_name == "MaterialParedeBranca":
             print("material2 =")
             print(material)
-
     # Assign it to object
     if object.data.materials:
         # assign to 1st material slot

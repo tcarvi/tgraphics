@@ -4,7 +4,6 @@ import bpy
 
 # Internal method execution
 def add_object():
-
     # TODO - To define input
     # TODO - To add
     print("TODO")

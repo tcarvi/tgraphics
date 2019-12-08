@@ -4,7 +4,6 @@ import bpy
 
 # Internal method execution
 def add_light(initialPosition):
-
     data = bpy.data.lights.new("lightData", 'POINT')
     object = bpy.data.objects.new(name="lightObject", object_data=data)
     object.location = initialPosition

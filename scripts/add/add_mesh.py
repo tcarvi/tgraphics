@@ -8,14 +8,11 @@ from add_material import AddMaterial
 
 
 def processar_estrutura(structure):
-
     # with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data
     #               \\input_planta_structure.json') as json_data_file:
     #     data = json.load(json_data_file)
     #     print(data)
-
     # MoveEntryPoint.centralizar()
-
     for d in structure:
         if d[0] < 10:
             if d[0] == 0:
@@ -95,7 +92,6 @@ def processar_estrutura(structure):
                 bpy.context.view_layer.update()
                 continue
             continue
-
     print(bpy.context.scene.cursor.rotation_euler)
 
 

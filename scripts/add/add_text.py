@@ -4,10 +4,8 @@ import bpy
 
 # Internal method execution
 def add_object():
-
     # TODO - To define input
     text = 'Text input'
-
     data = bpy.data.curves.new(name="textData", type='FONT')
     object = bpy.data.objects.new(name="textObject", object_data=data)
     data.body = text

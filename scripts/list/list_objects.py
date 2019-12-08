@@ -3,7 +3,6 @@ import bpy
 
 
 def list_objects():
-
     # print all objects
     for obj in bpy.data.objects:
         print("Name = ", obj.name)
