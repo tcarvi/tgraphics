@@ -25,15 +25,15 @@ for script import:
 
 #### Codificação com Python
 - Language built-in methods:
-    - `int()`                  # Returns an integer number
-    - `float()`                # Returns a floating point number
-    - `str()`                  # Returns a string object
     - `dict()`                 # Returns a dictionary (Array)
     - `dir()`                  # Returns a list of the specified object's properties and methods
     - `eval()`                 # Evaluates and executes an expression
     - `exec()`                 # Executes the specified code (or object)
+    - `float()`                # Returns a floating point number
     - `hasattr()`	           # Returns True if the specified object has the specified attribute (property/method)
     - `hash()`          	   # Returns the hash value of a specified object
+    - `input()`	               # Allows user input and return this input value
+    - `int()`                  # Returns an integer number
     - `isinstance()`           # Returns True if a specified object is an instance of a specified object
     - `issubclass()`	       # Returns True if a specified class is a subclass of a specified object
     - `iter()`	               # Returns an iterator object
@@ -44,7 +44,6 @@ for script import:
     - `min()`	               # Returns the smallest item in an iterable
     - `next()`	               # Returns the next item in an iterable
     - `object()`	           # Returns a new object
-    - `type()`                 # Returns the type of an object
     - `open()`	               # Opens a file and returns a file object
     - `pow()`	               # Returns the value of x to the power of y
     - `print()`	               # Prints to the standard output device
@@ -55,13 +54,17 @@ for script import:
     - `setattr()`	           # Sets an attribute (property/method) of an object
     - `slice()`	               # Returns a slice object
     - `sorted()`	           # Returns a sorted list
+    - `str()`                  # Returns a string object
     - `sum()`	               # Sums the items of an iterator
     - `super()`	               # Returns an object that represents the parent class
     - `tuple()`	               # Returns a tuple
-    - `input()`	               # Allows user input and return this input value
+    - `type()`                 # Returns the type of an object
+    
+- Python coding:
     - `string contatenation`
         - "string1" + "string2"
         - "string1" + str(value_expression)
+
 - Python *keywords*:
     - and
     - as
