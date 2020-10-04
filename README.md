@@ -9,6 +9,7 @@
     - `cd C:\libs\python\src\github.com\`
     - `git clone https://github.com/tcarvi/tgraphics.git`
     - `cd tgraphics`
+    - `pip install --upgrade pip`
     - `pip install -r requirements.txt`
 - Default output folders: 
     - rendering output: `render_output/`
