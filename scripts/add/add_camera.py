@@ -4,19 +4,17 @@ import bpy
 
 # Internal method execution
 def add_object():
-
     # TODO - To define input
-    locationInput = 0.0, 0.0, 10.0
-
-    data = bpy.data.cameras.new("camData")
-    object = bpy.data.objects.new(name="camObject", object_data=data)
-    bpy.context.scene.collection.objects.link(object)
-    bpy.context.scene.camera = object  # set the active camera
+    t_location_input = 0.0, 0.0, 10.0
+    t_data = bpy.data.cameras.new("camData")
+    t_object = bpy.data.objects.new(name="camObject", object_data=t_data)
+    bpy.context.scene.collection.objects.link(t_object)
+    bpy.context.scene.camera = t_object  # set the active camera
     # OR
     # scene = bpy.context.scene
     # scene.collection.objects.link(object)
     # scene.camera = object
-    object.location = locationInput
+    t_object.location = t_location_input
 
 
 # Class

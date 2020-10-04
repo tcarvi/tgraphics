@@ -2,28 +2,26 @@
 import time
 
 
-def init_time_counter(time_start):
-    time_start = time.time()
+def init_time_counter(t_time_start):
+    t_time_start = time.time()
 
 
-def evaluate_time(time_started):
-    print("Script terminado em: %.4f sec" % (time.time() - time_started))
+def evaluate_time(t_time_started):
+    print("Script terminado em: %.4f sec" % (time.time() - t_time_started))
 
 
 # Class
 class EvaluateTime():
     """Evaluate time of script execution"""
 
-
     # Class execution
-    def init(time):
-        init_time_counter(time)
+    def init(t_time):
+        init_time_counter(t_time)
         return {'FINISHED'}
 
-
     # Class execution
-    def evaluate_time(time_started):
-        evaluate_time(time_started)
+    def evaluate_time(t_time_started):
+        evaluate_time(t_time_started)
         return {'FINISHED'}
 
 

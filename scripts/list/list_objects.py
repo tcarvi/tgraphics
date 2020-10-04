@@ -3,10 +3,9 @@ import bpy
 
 
 def list_objects():
-
     # print all objects
-    for obj in bpy.data.objects:
-        print("Name = ", obj.name)
+    for t_object in bpy.data.objects:
+        print("Name = ", t_object.name)
 
 
 # Class

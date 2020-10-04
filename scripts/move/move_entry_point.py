@@ -10,16 +10,16 @@ def center_entry_point():
     bpy.context.scene.cursor.rotation_euler = Vector((0.0, 0.0, 0.0))
 
 
-def increment_position_entry_point(x_plus, y_plus, z_plus):
-    bpy.context.scene.cursor.location[0] += x_plus
-    bpy.context.scene.cursor.location[1] += y_plus
-    bpy.context.scene.cursor.location[2] += z_plus
+def increment_position_entry_point(t_plus_x, t_plus_y, t_plus_z):
+    bpy.context.scene.cursor.location[0] += t_plus_x
+    bpy.context.scene.cursor.location[1] += t_plus_y
+    bpy.context.scene.cursor.location[2] += t_plus_z
 
 
-def increment_rot_euler_entry_point(x_rot_plus, y_rot_plus, z_rot_plus):
-    bpy.context.scene.cursor.rotation_euler[0] += x_rot_plus
-    bpy.context.scene.cursor.rotation_euler[1] += y_rot_plus
-    bpy.context.scene.cursor.rotation_euler[2] += z_rot_plus
+def increment_rot_euler_entry_point(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z):
+    bpy.context.scene.cursor.rotation_euler[0] += t_rot_plus_x
+    bpy.context.scene.cursor.rotation_euler[1] += t_rot_plus_y
+    bpy.context.scene.cursor.rotation_euler[2] += t_rot_plus_z
 
 
 # Class
@@ -30,12 +30,20 @@ class MoveEntryPoint():
         center_entry_point()
         return {'FINISHED'}
 
-    def mover(x_plus, y_plus, z_plus):
-        increment_position_entry_point(x_plus, y_plus, z_plus)
+    def mover(t_plus_x, t_plus_y, t_plus_z):
+        increment_position_entry_point(
+            t_plus_x,
+            t_plus_y,
+            t_plus_z
+        )
         return {'FINISHED'}
 
-    def rotacionar(x_rot_plus, y_rot_plus, z_rot_plus):
-        increment_rot_euler_entry_point(x_rot_plus, y_rot_plus, z_rot_plus)
+    def rotacionar(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z):
+        increment_rot_euler_entry_point(
+            t_rot_plus_x,
+            t_rot_plus_y,
+            t_rot_plus_z
+        )
         return {'FINISHED'}
 
 

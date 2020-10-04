@@ -4,8 +4,8 @@ import bpy
 
 def list_materials():
     # print all materials
-    for material in bpy.data.materials:
-        print("Name = ", material.name)
+    for t_material in bpy.data.materials:
+        print("Name = ", t_material.name)
 
 
 # Class

@@ -1,24 +1,231 @@
-# PEP 8 -- Style Guide for Python Code
+# Coding with Python
+
+#### PEP 8 -- Style Guide for Python Code
 - https://www.python.org/dev/peps/pep-0008/
 - Verify code style:
     - ```pycodestyle .```  
 
-for script import:
-- \_thread
-- \_io
-- \_\_main\_\_
-- io
-- os
-- os.path
-- \_bpy
-- bl\_operators
-- mathutils
-- math
-- collections
-- operator
-- cycles
-- enum
-- types
-- array
-- time
-- string
+#### Standard library modules: (Base inicial da codificação)  
+`Referência`: https://docs.python.org/3.9/py-modindex.html  
+- `\_\_main\_\_`	  The environment where the top-level script is run.
+- `\_thread`	      Low-level threading API.
+- aifc	Read and write audio files in AIFF or AIFC format.
+- argparse	Command-line option and argument parsing library.
+- `array`	Space efficient arrays of uniformly typed numeric values.
+- asynchat	Support for asynchronous command/response protocols.
+- asyncore	A base class for developing asynchronous socket handling services.
+- audioop	Manipulate raw audio data.
+- `base64`	RFC 3548: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85
+- bdb	Debugger framework.
+- `binascii`	Tools for converting between binary and various ASCII-encoded binary representations.
+- bisect	Array bisection algorithms for binary searching.
+- builtins	The module that provides the built-in namespace.
+- bz2	Interfaces for bzip2 compression and decompression.
+- `calendar`	Functions for working with calendars, including some emulation of the Unix cal program.
+- `cmath`	Mathematical functions for complex numbers.
+- `codecs`	Encode and decode data and streams.
+- collections	
+    - collections.abc	Abstract base classes for containers
+- colorsys	Conversion functions between RGB and other color systems.
+- `concurrent`
+    - concurrent.futures	Execute computations concurrently using threads or processes.
+- configparser	Configuration file parser.
+- `copy`	Shallow and deep copy operations.
+- `crypt` (Unix)	The crypt() function used to check Unix passwords.
+- `datetime`	Basic date and time types.
+- `decimal`	Implementation of the General Decimal Arithmetic Specification.
+- `email`	Package supporting the parsing, manipulating, and generating email messages.
+- `enum`	Implementation of an enumeration class.
+- `errno`	Standard errno system symbols.
+- `filecmp`	Compare files efficiently.
+- `fileinput`	Loop over standard input or a list of files.
+- `fnmatch`	Unix shell style filename pattern matching.
+- `fractions`	Rational numbers.
+- `ftplib`	FTP protocol client (requires sockets).
+- `functools`	Higher-order functions and operations on callable objects.
+- `glob`	Unix shell style pathname pattern expansion.
+- `gzip`	Interfaces for gzip compression and decompression using file objects.
+- `hashlib`	Secure hash and message digest algorithms.
+- heapq	Heap queue algorithm (a.k.a. priority queue).
+- hmac	Keyed-Hashing for Message Authentication (HMAC) implementation
+- html	Helpers for manipulating HTML
+- `http`	HTTP status codes and messages
+- `imaplib`	IMAP4 protocol client (requires sockets).
+- imghdr	Determine the type of image contained in a file or byte stream.
+- `inspect`	Extract information and source code from live objects.
+- `io`	Core tools for working with streams.
+- `ipaddress`	IPv4/IPv6 manipulation library.
+- `itertools`	Functions creating iterators for efficient looping.
+- `json`	Encode and decode the JSON format.
+- `locale`	Internationalization services.
+- logging	Flexible event logging system for applications.
+- lzma	A Python wrapper for the liblzma compression library.
+- `mailbox`	Manipulate mailboxes in various formats
+- mailcap	Mailcap file handling.
+- `marshal`	Convert Python objects to streams of bytes and back (with different constraints).
+- `math`	Mathematical functions (sin() etc.).
+- `mimetypes`	Mapping of filename extensions to MIME types.
+- mmap	Interface to memory-mapped files for Unix and Windows.
+- modulefinder	Find modules used by a script.
+- `multiprocessing`	Process-based parallelism.
+- `nntplib`	NNTP protocol client (requires sockets).
+- `numbers`	Numeric abstract base classes (Complex, Real, Integral, etc.).
+- `operator`	Functions corresponding to the standard operators.
+- `os`	Miscellaneous operating system interfaces.
+- ossaudiodev (Linux, FreeBSD)	Access to OSS-compatible audio devices.
+- `parser`	Access parse trees for Python source code.
+- `pathlib`	Object-oriented filesystem paths
+- pdb	The Python debugger for interactive interpreters.
+- `pickle`	Convert Python objects to streams of bytes and back.
+- `pickletools`	Contains extensive comments about the pickle protocols and pickle-machine opcodes, as well as some useful functions.
+- `pipes` (Unix)	A Python interface to Unix shell pipelines.
+- pkgutil	Utilities for the import system.
+- platform	Retrieves as much platform identifying data as possible.
+- `poplib`	POP3 protocol client (requires sockets).
+- posix (Unix)	The most common POSIX system calls (normally used via module os).
+- pprint	Data pretty printer.
+- `profile`	Python source profiler.
+- `py_compile`	Generate byte-code files from Python source files.
+- `pydoc`	Documentation generator and online help system.
+- `queue`	A synchronized queue class.
+- `random`	Generate pseudo-random numbers with various common distributions.
+- `re`	Regular expression operations.
+- `readline` (Unix)	GNU readline support for Python.
+- `resource` (Unix)	An interface to provide resource usage information on the current process.
+- rlcompleter	Python identifier completion, suitable for the GNU readline library.
+- runpy	Locate and run Python modules without importing them first.
+- `sched`	General purpose event scheduler.
+- secrets	Generate secure random numbers for managing secrets.
+- `select`	Wait for I/O completion on multiple streams.
+- `selectors`	High-level I/O multiplexing.
+- `shutil`	High-level file operations, including copying.
+- `signal`	Set handlers for asynchronous events.
+- `smtpd`	A SMTP server implementation in Python.
+- `smtplib`	SMTP protocol client (requires sockets).
+- sndhdr	Determine type of a sound file.
+- `socket`	Low-level networking interface.
+- `socketserver`	A framework for network servers.
+- `ssl`	TLS/SSL wrapper for socket objects
+- `statistics`	Mathematical statistics functions
+- `string`	Common string operations.
+- `stringprep`	String preparation, as per RFC 3453
+- `struct`	Interpret bytes as packed binary data.
+- `subprocess`	Subprocess management.
+- sunau	Provide an interface to the Sun AU sound format.
+- `sys`	Access system-specific parameters and functions.
+- `sysconfig`	Python's configuration information
+- `syslog` (Unix)	An interface to the Unix syslog library routines.
+- `tarfile`	Read and write tar-format archive files.
+- `tempfile`	Generate temporary files and directories.
+- termios (Unix)	POSIX style tty control.
+- `test`	Regression tests package containing the testing suite for Python
+- `threading`	Thread-based parallelism.
+- `time`	Time access and conversions.
+- `timeit`	Measure the execution time of small code snippets.
+- `tkinter`	Interface to Tcl/Tk for graphical user interfaces
+- `token`	Constants representing terminal nodes of the parse tree.
+- tokenize	Lexical scanner for Python source code.
+- `trace`	Trace or track Python statement execution.
+- `traceback`	Print or retrieve a stack traceback.
+- `tracemalloc`	Trace memory allocations.
+- tty (Unix)	Utility functions that perform common terminal control operations.
+- `types`	Names for built-in types.
+- typing	Support for type hints (see :pep:`484`).
+- `unittest`	Unit testing framework for Python.
+- `urllib`	
+    - urllib.error	Exception classes raised by urllib.request.
+    - urllib.parse	Parse URLs into or assemble them from components.
+    - urllib.request	Extensible library for opening URLs.
+    - urllib.response	Response classes used by urllib.
+    - urllib.robotparser	Load a robots.txt file and answer questions about fetchability of other URLs.
+- uu	Encode and decode files in uuencode format.
+- uuid	UUID objects (universally unique identifiers) according to RFC 4122
+- wave	Provide an interface to the WAV sound format.
+- `weakref`	Support for weak references and weak dictionaries.
+- wsgiref	WSGI Utilities and Reference Implementation.
+- xdrlib	Encoders and decoders for the External Data Representation (XDR).
+- `xml`	Package containing XML processing modules
+- zipfile	Read and write ZIP-format archive files.
+- zlib	Low-level interface to compression and decompression routines compatible with gzip.
+
+#### Blender library modules:
+- `\_bpy`
+- `bl\_operators`
+- `cycles`
+
+#### Language built-in methods:
+- `dict()`                 # Returns a dictionary (Array)
+- `dir()`                  # Returns a list of the specified object's properties and methods
+- `eval()`                 # Evaluates and executes an expression
+- `exec()`                 # Executes the specified code (or object)
+- `float()`                # Returns a floating point number
+- `hasattr()`	           # Returns True if the specified object has the specified attribute (property/method)
+- `hash()`          	   # Returns the hash value of a specified object
+- `input()`	               # Allows user input and return this input value
+- `int()`                  # Returns an integer number
+- `isinstance()`           # Returns True if a specified object is an instance of a specified object
+- `issubclass()`	       # Returns True if a specified class is a subclass of a specified object
+- `iter()`	               # Returns an iterator object
+- `len()`	               # Returns the length of an object
+- `list()`	               # Returns a list
+- `map()`	               # Returns the specified iterator with the specified function applied to each item
+- `max()`	               # Returns the largest item in an iterable
+- `min()`	               # Returns the smallest item in an iterable
+- `next()`	               # Returns the next item in an iterable
+- `object()`	           # Returns a new object
+- `open()`	               # Opens a file and returns a file object
+- `pow()`	               # Returns the value of x to the power of y
+- `print()`	               # Prints to the standard output device
+- `range()`	               # Returns a sequence of numbers, starting from 0 and increments by 1 (by default)
+- `reversed()`	           # Returns a reversed iterator
+- `round()`	               # Rounds a numbers
+- `set()`	               # Returns a new set object
+- `setattr()`	           # Sets an attribute (property/method) of an object
+- `slice()`	               # Returns a slice object
+- `sorted()`	           # Returns a sorted list
+- `str()`                  # Returns a string object
+- `sum()`	               # Sums the items of an iterator
+- `super()`	               # Returns an object that represents the parent class
+- `tuple()`	               # Returns a tuple
+- `type()`                 # Returns the type of an object
+    
+#### Python coding examples:
+- `string contatenation`
+    - "string1" + "string2"
+    - "string1" + str(value_expression)
+
+#### Python *keywords*:
+- and
+- as
+- assert
+- break
+- class
+- continue
+- def
+- del
+- elif
+- else
+- except
+- exec
+- finally
+- for
+- from
+- global
+- if
+- import
+- in
+- is
+- lambda
+- nonlocal
+- not
+- or
+- pass
+- raise
+- return
+- try
+- while
+- with
+- yield
+- True
+- False
+- None
