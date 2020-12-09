@@ -105,6 +105,8 @@ venv.bak/
 
 # Local development
 temp/
+render_output/r1.png
+blender_projects/f1.blend
 
 # VS Code
 .vscode/
