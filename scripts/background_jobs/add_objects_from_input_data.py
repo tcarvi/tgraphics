@@ -30,15 +30,17 @@ def generate_objects_from_structure():
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
     # Adding new objects
+    print("Adding Mesh: t_structure ...")
     AddMesh.add(t_structure)  # Mesh
-    print("Começo")
+    print("Adding light: t_lighting[0] ...")
     AddLight.add(t_lighting[0])  # Camera
-    print("Fim")
+    print("Adding Camera ...")
     AddCamera.add()  # Camera
     bpy.context.view_layer.update()
 
 
 def run_no_args():
+    print("\nrun_no_args()...")
     generate_objects_from_structure()
     t_default_save_file_name = "f1.blend"
     SaveBlenderFile.save(t_blender_file_name=t_default_save_file_name)
@@ -47,6 +49,7 @@ def run_no_args():
 
 
 def run_with_args(t_save_file_name, t_render_output_name):
+    print("\nrun_with_args()...")
     generate_objects_from_structure()
     if t_save_file_name is None:
         t_default_save_file_name = "f1.blend"

@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # structure = [
 #   [
-#       tipoDoDesenho,
+#       tipoDoComandoParaDesenho,
 #       deslocamento-inicial
 #   ],
 #   ...
 # ]
-# tipoDoDesenho:
+# tipoDoComandoParaDesenho:
 #
 #     0 Deslocamento ortogonal em X
 #     1 Deslocamento ortogonal em Y
@@ -22,18 +22,22 @@
 #     30 Retângulo inclinado de 0.15 em X
 #     31 Retângulo inclinado de 0.15 em Y
 # A <class 'list'> named structure
+# [[30, 8.8], [10, 3.0], [30, 8.3], [21, 22.9], [20, -20.0], [1, -3.0], [21, -21.85]]
 t_structure = [
     [
         30,
-        8.80
+        8.80,
+        3.0
     ],
     [
-        0,
-        3.00
+        10,
+        3.00,
+        3.0
     ],
     [
-        20,
-        8.30
+        30,
+        8.30,
+        3.0
     ],
     [
         21,
