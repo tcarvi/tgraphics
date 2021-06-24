@@ -1,0 +1,39 @@
+{
+    "comandos": [
+        {
+            "comando":"30",
+            "deslocamento":"8.80",
+            "orientacao":"6.0"
+        },
+        {
+            "comando":"10",
+            "deslocamento":"3.00",
+            "orientacao":"6.0"
+        },
+        {
+            "comando":"30",
+            "deslocamento":"8.30",
+            "orientacao":"6.0"
+        },
+        {
+            "comando":"21",
+            "deslocamento":"22.90",
+            "orientacao":"0.0"
+        },
+        {
+            "comando":"20",
+            "deslocamento":"-20.00",
+            "orientacao":"0.0"
+        },
+        {
+            "comando":"1",
+            "deslocamento":"-3.00",
+            "orientacao":"0.0"
+        },
+        {
+            "comando":"21",
+            "deslocamento":"-21.85",
+            "orientacao":"0.0"
+        }
+    ]
+}

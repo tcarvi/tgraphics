@@ -5,7 +5,7 @@
     - `install python` ( https://www.python.org/downloads/ )
     - `install git`
 - Installation:
-    - Criar diretório `C:\libs\python\src\github.com\`
+    - `mkdir C:\libs\python\src\github.com\`
     - `cd C:\libs\python\src\github.com\`
     - `git clone https://github.com/tcarvi/tgraphics.git`
     - `cd tgraphics`

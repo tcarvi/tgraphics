@@ -3,9 +3,7 @@ import bpy
 
 
 # Internal method execution
-def add_object():
-    # TODO - To define input
-    t_location_input = 0.0, 0.0, 10.0
+def add_object(t_location):  
     t_data = bpy.data.cameras.new("camData")
     t_object = bpy.data.objects.new(name="camObject", object_data=t_data)
     bpy.context.scene.collection.objects.link(t_object)
@@ -14,7 +12,7 @@ def add_object():
     # scene = bpy.context.scene
     # scene.collection.objects.link(object)
     # scene.camera = object
-    t_object.location = t_location_input
+    t_object.location = t_location
 
 
 # Class
@@ -22,8 +20,10 @@ class AddCamera():
     """ADD camera with input location"""
 
     # Class execution
-    def add():
-        add_object()
+    def add(t_location):
+        # print("LOG: Adding camera ...")
+        add_object(t_location)
+        # print("LOG: Camera added.")
         return {'FINISHED'}
 
 

@@ -30,17 +30,18 @@ def generate_objects_from_structure():
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
     # Adding new objects
-    print("Adding Mesh: t_structure ...")
-    AddMesh.add(t_structure)  # Mesh
-    print("Adding light: t_lighting[0] ...")
-    AddLight.add(t_lighting[0])  # Camera
-    print("Adding Camera ...")
-    AddCamera.add()  # Camera
+    # print("#LOG: FROM generate_objects_from_structure -> bpy.context.scene.cursor.location[0] =" , bpy.context.scene.cursor.location[0])
+    AddMesh.add(t_structure)
+    AddLight.add(t_lighting[0])
+    t_location1 = 0.0, 0.0, 10.0
+    AddCamera.add(t_location1)
+    t_location2 = 0.0, 0.0, 20.0
+    AddCamera.add(t_location2)
     bpy.context.view_layer.update()
 
 
 def run_no_args():
-    print("\nrun_no_args()...")
+    # print("\nrun_no_args()...")
     generate_objects_from_structure()
     t_default_save_file_name = "f1.blend"
     SaveBlenderFile.save(t_blender_file_name=t_default_save_file_name)
@@ -49,7 +50,7 @@ def run_no_args():
 
 
 def run_with_args(t_save_file_name, t_render_output_name):
-    print("\nrun_with_args()...")
+    # print("\nrun_with_args()...")
     generate_objects_from_structure()
     if t_save_file_name is None:
         t_default_save_file_name = "f1.blend"
@@ -75,20 +76,22 @@ def main():
     else:
         t_argv = []
     t_usage_text = (
-        "Customized usage: $ blender --background --factory-startup"
+        "Comando customizado: $ blender --background --factory-startup"
         " --python ADD_PATHS_SCRIPT --python ADD_GRAPHICS_SCRIPT  [-- options]"
     )
-    t_parameter_s = "-s"
-    t_parameter_r = "-r"
-    t_dest_s = "save_file_name"
-    t_dest_r = "render_output_name"
-    t_metavar_s = '-s="BLENDER_FILE"',
-    t_metavar_r = '-r="RENDER_FILE"',
-    t_help_s = 'Default: -s="f1.blender"'
-    t_help_r = 'Default: -r="r1.png"'
-    t_help_your_input = "Using your command line argument ..."
     t_parser = argparse.ArgumentParser(description=t_usage_text)
+    print(t_parser)
+    t_parameter_s = "-s"
+    t_metavar_s = '-s="BLENDER_FILE"'
+    t_help_s = 'Default: -s="f1.blender"'
+    t_dest_s = "save_file_name"
+    t_parameter_r = "-r"
+    t_metavar_r = '-r="RENDER_FILE"'
+    t_help_r = 'Default: -r="r1.png"'
+    t_dest_r = "render_output_name"
+    t_help_your_input = "Using your command line argument ..."
     if len(t_argv) == 1 and t_argv[0][1] == "s":
+        # print("\n t_argv == 1 s \n")  # logs
         t_parser.add_argument(
             t_parameter_s,
             dest=t_dest_s,
@@ -102,7 +105,7 @@ def main():
             help=t_help_r
         )
         t_parser.print_help()
-        t_args = parser.parse_args(t_argv)
+        t_args = t_parser.parse_args(t_argv)
         t_time_of_execution = 0.00
         EvaluateTime.init(t_time_of_execution)
         run_with_args(
@@ -111,6 +114,7 @@ def main():
         )
         EvaluateTime.evaluate_time(t_time_of_execution)
     elif len(t_argv) == 1 and t_argv[0][1] == "r":
+        # print("\n t_argv == 1 r \n")  # logs
         parser.add_argument(
             t_parameter_s,
             dest=t_dest_s,
@@ -133,6 +137,7 @@ def main():
         )
         EvaluateTime.evaluate_time(t_time_of_execution)
     elif len(t_argv) == 2 and t_argv[0][1] == "s" and t_argv[1][1] == "r":
+        # print("\n t_argv == 2 r/s \n")  # logs
         parser.add_argument(
             t_parameter_s,
             dest=t_dest_s,
@@ -155,6 +160,7 @@ def main():
         )
         EvaluateTime.evaluate_time(t_time_of_execution)
     elif len(t_argv) == 0:
+        # print("\n t_argv == 0 \n") # logs
         t_parser.add_argument(
             t_parameter_s,
             dest=t_dest_s,
@@ -167,18 +173,18 @@ def main():
             metavar=t_metavar_r,
             help=t_help_r
         )
-        t_parser.print_help()
+        # t_parser.print_help()
         t_time_of_execution = 0.00
         EvaluateTime.init(t_time_of_execution)
         run_no_args()
-        EvaluateTime.evaluate_time(t_time_of_execution)
-    print("\nList of data objects:")
-    ListObjects.list()
-    print("\nList of data scenes:")
-    ListScenes.list()
-    print("\nList of data materials:")
-    ListMaterials.list()
-    print("\nBatch job finished, exiting ...")
+        # EvaluateTime.evaluate_time(t_time_of_execution)
+    # print("\nList of data objects:")
+    # ListObjects.list()
+    # print("\nList of data scenes:")
+    # ListScenes.list()
+    # print("\nList of data materials:")
+    # ListMaterials.list()
+    # print("\nBatch job finished, exiting ...")
 
 
 if __name__ == "__main__":
