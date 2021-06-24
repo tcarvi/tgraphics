@@ -1,6 +1,20 @@
 # <pep8-80 compliant>
 import sys
 import json
+from enum import Enum
+class ComandoDesenho(Enum):
+    DeslocarEmX = 0
+    DeslocarEmY = 1
+    DeslocarEmZ = 2
+    DeslocarEmXInclinado = 10
+    DeslocarEmYInclinado = 11
+    DeslocarEmZInclinado = 12
+    DesenharRetanguloEmX = 20
+    DesenharRetanguloEmY = 21
+    DesenharRetanguloEmZ = 22
+    DesenharRetanguloEmXInclinado = 30
+    DesenharRetanguloEmYInclinado = 31
+    DesenharRetanguloEmZInclinado = 32
 
 def updatePathToUnixFormat(windowsPath):
     windowsPath = windowsPath.replace('C:','')
@@ -14,27 +28,17 @@ if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
 
 with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data\\input_planta_structure.json') as json_data_file:
     t_json_structure = json.load(json_data_file)
-    # print(t_structure)
-    # a = np.array([1, 2, 3])   # Create a rank 1 array
-    # print(type(a))            # Prints "<class 'numpy.ndarray'>"
-    # print(a.shape)            # Prints "(3,)"
-    # print(a[0], a[1], a[2])   # Prints "1 2 3"
-    # a[0] = 5                  # Change an element of the array
-    # print(a)                  # Prints "[5, 2, 3]"
-    # b = np.array([[1,2,3],[4,5,6]])    # Create a rank 2 array
-    # print(b.shape)                     # Prints "(2, 3)"
-    # print(b[0, 0], b[0, 1], b[1, 0])   # Prints "1 2 4"
     global t_structure
     t_structure = []
     for obj in t_json_structure["comandos"]:
-        t_structure.append([float(obj["comando"]),float(obj["deslocamento"]),float(obj["orientacao"])])
+        t_structure.append([ComandoDesenho[obj["comando"]].value,float(obj["deslocamento"]),float(obj["angulo"])])
 
 #!/usr/bin/env python
 # structure = [
 #   [
 #       tipoDoComandoParaDesenho,
 #       deslocamento-comprimento
-#       sentido
+#       angulo
 #   ],
 #   ...
 # ]
@@ -53,10 +57,8 @@ with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data\\input_plant
 #
 #     30 Retângulo inclinado de 0.15 em X
 #     31 Retângulo inclinado de 0.15 em Y
-# A <class 'list'> named structure
-# [[30, 8.8], [10, 3.0], [30, 8.3], [21, 22.9], [20, -20.0], [1, -3.0], [21, -21.85]]
-
-# // last
+#
+# // Exemplo depois do processamento:
 # t_structure = [
 #     [
 #         30,
