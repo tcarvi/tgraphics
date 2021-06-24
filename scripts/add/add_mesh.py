@@ -38,21 +38,7 @@ def add_object(t_structure):
     #           20 -> Retângulo ortogonal de 0.15 em X
     #           1  -> Deslocamento ortogonal em Y
     #           21 -> Retângulo ortogonal de 0.15 em Y
-    # a = np.array([1, 2, 3])   # Create a rank 1 array
-    # print(type(a))            # Prints "<class 'numpy.ndarray'>"
-    # print(a.shape)            # Prints "(3,)"
-    # print(a[0], a[1], a[2])   # Prints "1 2 3"
-    # a[0] = 5                  # Change an element of the array
-    # print(a)                  # Prints "[5, 2, 3]"
-    # b = np.array([[1,2,3],[4,5,6]])    # Create a rank 2 array
-    # print(b.shape)                     # Prints "(2, 3)"
-    # print(b[0, 0], b[0, 1], b[1, 0])   # Prints "1 2 4"
-    global array_commands
-    array_commands = []
-    for obj in t_structure["comandos"]:
-        array_commands.append([float(obj["comando"]),float(obj["deslocamento"]),float(obj["orientacao"])])
-    print(array_commands)
-    for d in array_commands:
+    for d in t_structure:
         # Each item "d" is a <class 'list'>
         # print("#LOG: FROM LOOP -> bpy.context.scene.cursor.location[0] =" , bpy.context.scene.cursor.location[0])
         print("\n\n")
