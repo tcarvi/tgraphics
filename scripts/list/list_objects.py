@@ -8,7 +8,7 @@ class ListObjects:
 
     # Class execution
     @classmethod
-    def list(cls):
+    def list(cls) -> str:
         _list_objects()
         return {'FINISHED'}
 

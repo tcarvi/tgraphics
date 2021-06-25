@@ -9,13 +9,13 @@ class EvaluateTime:
 
     # Class execution 1
     @classmethod
-    def init(cls, t_time):
+    def init(cls, t_time) -> str:
         _init_time_counter(t_time)
         return {'FINISHED'}
 
     # Class execution 2
     @classmethod
-    def evaluate_time(cls, t_time_started):
+    def evaluate_time(cls, t_time_started) -> str:
         _evaluate_time(t_time_started)
         return {'FINISHED'}
 

@@ -9,7 +9,7 @@ class SaveRendering:
 
     # Class execution
     @classmethod
-    def save(cls, t_rendering_file_name):
+    def save(cls, t_rendering_file_name) -> str:
         _save_rendering(t_rendering_file_name)
         return {'FINISHED'}
 

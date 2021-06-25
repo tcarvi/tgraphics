@@ -9,7 +9,7 @@ class SaveBlenderFile:
 
     # Class execution
     @classmethod
-    def save(cls, t_blender_file_name):
+    def save(cls, t_blender_file_name) -> str:
         _save_blender_file(t_blender_file_name)
         return {'FINISHED'}
 

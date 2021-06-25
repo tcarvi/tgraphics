@@ -8,7 +8,7 @@ class ListMaterials:
 
     # Class execution
     @classmethod
-    def list(cls):
+    def list(cls) -> str:
         _list_materials()
         return {'FINISHED'}
 

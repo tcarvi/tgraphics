@@ -10,7 +10,7 @@ class ReadYamlFile:
 
     # Class execution
     @classmethod
-    def execute(cls):
+    def execute(cls) -> str:
         _read_yaml_file("inputPlantaBaixa.yaml")
         return {'FINISHED'}
 

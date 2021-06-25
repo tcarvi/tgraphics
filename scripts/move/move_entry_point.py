@@ -9,13 +9,13 @@ class MoveEntryPoint:
 
     # Class execution 1
     @classmethod
-    def centralizar(cls):
+    def centralizar(cls) -> str:
         _center_entry_point()
         return {'FINISHED'}
 
     # Class execution 2
     @classmethod
-    def mover(cls, t_plus_x, t_plus_y, t_plus_z):
+    def mover(cls, t_plus_x, t_plus_y, t_plus_z) -> str:
         _increment_position_entry_point(
             t_plus_x,
             t_plus_y,
@@ -25,7 +25,7 @@ class MoveEntryPoint:
 
     # Class execution 3
     @classmethod
-    def rotacionar(cls, t_rot_plus_x, t_rot_plus_y, t_rot_plus_z):
+    def rotacionar(cls, t_rot_plus_x, t_rot_plus_y, t_rot_plus_z) -> str:
         _increment_rot_euler_entry_point(
             t_rot_plus_x,
             t_rot_plus_y,
