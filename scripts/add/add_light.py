@@ -8,7 +8,7 @@ class AddLight:
 
     # Class execution
     @classmethod
-    def add(cls, t_initial_position):
+    def add(cls, t_initial_position) -> str:
         _add_light(t_initial_position)
         return {'FINISHED'}
 

@@ -8,7 +8,7 @@ class AddCamera:
 
     # Class execution
     @classmethod
-    def add(cls, t_location):
+    def add(cls, t_location) -> str:
         # print("LOG: Adding camera ...")
         _add_object(t_location)
         # print("LOG: Camera added.")

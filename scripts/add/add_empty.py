@@ -8,7 +8,7 @@ class AddEmpty:
 
     # Class execution
     @classmethod
-    def add(cls):
+    def add(cls) -> str:
         _add_object()
         return {'FINISHED'}
 

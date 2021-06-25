@@ -5,6 +5,9 @@
 - Verify code style:
     - ```pycodestyle .```  
 
+#### PEP 484 -- Type Hints
+- https://www.python.org/dev/peps/pep-0484/
+
 #### Standard library modules: (Base inicial da codificação)  
 `Referência`: https://docs.python.org/3.9/py-modindex.html  
 - `\_\_main\_\_`	  The environment where the top-level script is run.

@@ -8,7 +8,7 @@ class AddMaterial:
 
     # Class execution
     @classmethod
-    def add(cls, t_object, t_material_name):
+    def add(cls, t_object, t_material_name) -> str:
         _add_material(t_object, t_material_name)
         return {'FINISHED'}
 
