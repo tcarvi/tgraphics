@@ -77,7 +77,7 @@ def main():
     t_usage_text = (
         "Comando customizado: $ blender --background --factory-startup"
         " --python ADD_PATHS_SCRIPT --python ADD_GRAPHICS_SCRIPT  [-- options]"
-    )
+        )
     t_parser = argparse.ArgumentParser(description=t_usage_text)
     print(t_parser)
     t_parameter_s = "-s"
@@ -96,13 +96,13 @@ def main():
             dest=t_dest_s,
             metavar=t_metavar_s,
             help=t_help_your_input
-        )
+            )
         t_parser.add_argument(
             t_parameter_r,
             dest=t_dest_r,
             metavar=t_metavar_r,
             help=t_help_r
-        )
+            )
         t_parser.print_help()
         t_args = t_parser.parse_args(t_argv)
         t_time_of_execution = 0.00
@@ -110,7 +110,7 @@ def main():
         run_with_args(
             t_save_file_name=t_args.save_file_name,
             t_render_output_name=None
-        )
+            )
         EvaluateTime.evaluate_time(t_time_of_execution)
     elif len(t_argv) == 1 and t_argv[0][1] == "r":
         # print("\n t_argv == 1 r \n")  # logs
@@ -119,13 +119,13 @@ def main():
             dest=t_dest_s,
             metavar=t_metavar_s,
             help=t_help_s
-        )
+            )
         parser.add_argument(
             t_parameter_r,
             dest=t_dest_r,
             metavar=t_metavar_r,
             help=t_help_your_input
-        )
+            )
         t_parser.print_help()
         t_args = parser.parse_args(t_argv)
         t_time_of_execution = 0.00
@@ -133,7 +133,7 @@ def main():
         run_with_args(
             t_save_file_name=None,
             t_render_output_name=t_args.render_output_name
-        )
+            )
         EvaluateTime.evaluate_time(t_time_of_execution)
     elif len(t_argv) == 2 and t_argv[0][1] == "s" and t_argv[1][1] == "r":
         # print("\n t_argv == 2 r/s \n")  # logs
@@ -142,13 +142,13 @@ def main():
             dest=t_dest_s,
             metavar=t_metavar_s,
             help=t_help_your_input
-        )
+            )
         parser.add_argument(
             t_parameter_r,
             dest=t_dest_r,
             metavar=t_metavar_r,
             help=t_help_your_input
-        )
+            )
         t_parser.print_help()
         t_time_of_execution = 0.00
         EvaluateTime.init(t_time_of_execution)
@@ -156,7 +156,7 @@ def main():
         run_with_args(
             t_save_file_name=args.t_save_file_name,
             t_render_output_name=t_args.render_output_name
-        )
+            )
         EvaluateTime.evaluate_time(t_time_of_execution)
     elif len(t_argv) == 0:
         # print("\n t_argv == 0 \n") # logs
@@ -165,13 +165,13 @@ def main():
             dest=t_dest_s,
             metavar=t_metavar_s,
             help=t_help_s
-        )
+            )
         t_parser.add_argument(
             t_parameter_r,
             dest=t_dest_r,
             metavar=t_metavar_r,
             help=t_help_r
-        )
+            )
         # t_parser.print_help()
         t_time_of_execution = 0.00
         EvaluateTime.init(t_time_of_execution)
