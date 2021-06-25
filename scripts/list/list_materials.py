@@ -2,12 +2,6 @@
 import bpy
 
 
-def list_materials():
-    # print all materials
-    for t_material in bpy.data.materials:
-        print("Name = ", t_material.name)
-
-
 # Class
 class ListMaterials():
     """List all data materials"""
@@ -16,6 +10,12 @@ class ListMaterials():
     def list():
         list_materials()
         return {'FINISHED'}
+
+
+def list_materials():
+    # print all materials
+    for t_material in bpy.data.materials:
+        print("Name = ", t_material.name)
 
 
 # To register

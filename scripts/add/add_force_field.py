@@ -2,13 +2,6 @@
 import bpy
 
 
-# Internal method execution
-def add_object():
-    # TODO - To define input
-    # TODO - To add
-    print("TODO")
-
-
 # Class
 class AddForceField():
     """ADD forcefield"""
@@ -17,6 +10,13 @@ class AddForceField():
     def add():
         add_object()
         return {'FINISHED'}
+
+
+# Internal method execution
+def add_object():
+    # TODO - To define input
+    # TODO - To add
+    print("TODO")
 
 
 # To register

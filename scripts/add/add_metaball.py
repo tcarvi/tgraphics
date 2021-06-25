@@ -2,13 +2,6 @@
 import bpy
 
 
-# Internal method execution
-def add_object():
-    # TODO - To define input
-    t_location_input = 2.0, 2.0, 5.0
-    # TODO - To add
-
-
 # Class
 class AddMetaball():
     """ADD metaball with input location"""
@@ -17,6 +10,13 @@ class AddMetaball():
     def add():
         add_object()
         return {'FINISHED'}
+
+
+# Internal method execution
+def add_object():
+    # TODO - To define input
+    t_location_input = 2.0, 2.0, 5.0
+    # TODO - To add
 
 
 # To register

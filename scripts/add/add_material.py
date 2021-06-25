@@ -2,6 +2,16 @@
 import bpy
 
 
+# Class
+class AddMaterial():
+    """Add material to an object"""
+
+    # Class execution
+    def add(t_object, t_material_name):
+        add_material(t_object, t_material_name)
+        return {'FINISHED'}
+
+
 # Internal method execution
 def add_material(t_object, t_material_name):
     # print("Adding material ...")
@@ -20,16 +30,6 @@ def add_material(t_object, t_material_name):
         # no slots. Append to 1st material slot
         t_object.data.materials.append(t_material)
     # print("Added material")
-
-
-# Class
-class AddMaterial():
-    """Add material to an object"""
-
-    # Class execution
-    def add(t_object, t_material_name):
-        add_material(t_object, t_material_name)
-        return {'FINISHED'}
 
 
 # To register

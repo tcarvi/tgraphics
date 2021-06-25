@@ -2,12 +2,6 @@
 import bpy
 
 
-def list_scenes():
-    # print all scenes
-    for t_scene in bpy.data.scenes:
-        print("Name = ", t_scene.name)
-
-
 # Class
 class ListScenes():
     """List all data scenes"""
@@ -16,6 +10,12 @@ class ListScenes():
     def list():
         list_scenes()
         return {'FINISHED'}
+
+
+def list_scenes():
+    # print all scenes
+    for t_scene in bpy.data.scenes:
+        print("Name = ", t_scene.name)
 
 
 # To register

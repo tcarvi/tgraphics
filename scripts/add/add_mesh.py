@@ -7,6 +7,18 @@ from add_material import AddMaterial
 from move_entry_point import MoveEntryPoint
 
 
+# Class
+class AddMesh():
+    """Create a new Mesh Object from data: vertices, edges and faces"""
+
+    # Class execution
+    def add(t_structure):
+        # print("#LOG: Adding Mesh: ...")
+        add_object(t_structure)
+        # print("#LOG: Mesh added")
+        return {'FINISHED'}
+
+
 def add_object(t_structure):
     # processar_estrutura
     # MoveEntryPoint.centralizar()
@@ -237,18 +249,6 @@ def add_parede(t_value_x, t_value_y, t_value_inclinacao):
     # horiRot = rotMat(theta, 3, 'X')
     #                             vertRot = rotMat(phi, 3, 'Z')
     #                             basisVecX.rotate(horiRot)
-
-
-# Class
-class AddMesh():
-    """Create a new Mesh Object from data: vertices, edges and faces"""
-
-    # Class execution
-    def add(t_structure):
-        # print("#LOG: Adding Mesh: ...")
-        add_object(t_structure)
-        # print("#LOG: Mesh added")
-        return {'FINISHED'}
 
 
 # To register

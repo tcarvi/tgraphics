@@ -3,6 +3,16 @@ import bpy
 import os
 
 
+# Class
+class SaveBlenderFile():
+    """Save blender file"""
+
+    # Class execution
+    def save(t_blender_file_name):
+        save_blender_file(t_blender_file_name)
+        return {'FINISHED'}
+
+
 def save_blender_file(blender_file_name):
     save_dir = os.path.join(
         os.path.abspath("."),
@@ -17,16 +27,6 @@ def save_blender_file(blender_file_name):
     if os.path.exists(save_path):
         os.remove(save_path)
     bpy.ops.wm.save_as_mainfile(filepath=save_path)
-
-
-# Class
-class SaveBlenderFile():
-    """Save blender file"""
-
-    # Class execution
-    def save(t_blender_file_name):
-        save_blender_file(t_blender_file_name)
-        return {'FINISHED'}
 
 
 # To register

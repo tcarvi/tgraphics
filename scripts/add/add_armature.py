@@ -2,6 +2,16 @@
 import bpy
 
 
+# Class
+class AddArmature():
+    """Create a new Armature Object from data: bones"""
+
+    # Class execution
+    def add():
+        add_object()
+        return {'FINISHED'}
+
+
 # Internal method execution
 def add_object():
     # TODO - To define input
@@ -45,16 +55,6 @@ def add_object():
     bpy.context.scene.collection.objects.link(t_object)
     # useful for development when the mesh may be invalid.
     # mesh.validate(verbose=True)
-
-
-# Class
-class AddArmature():
-    """Create a new Armature Object from data: bones"""
-
-    # Class execution
-    def add():
-        add_object()
-        return {'FINISHED'}
 
 
 # To register

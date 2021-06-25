@@ -3,6 +3,34 @@ import bpy
 import mathutils
 
 
+# Class
+class MoveEntryPoint():
+    """Move entry point"""
+
+    # Class execution 1
+    def centralizar():
+        center_entry_point()
+        return {'FINISHED'}
+
+    # Class execution 2
+    def mover(t_plus_x, t_plus_y, t_plus_z):
+        increment_position_entry_point(
+            t_plus_x,
+            t_plus_y,
+            t_plus_z
+            )
+        return {'FINISHED'}
+
+    # Class execution 3
+    def rotacionar(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z):
+        increment_rot_euler_entry_point(
+            t_rot_plus_x,
+            t_rot_plus_y,
+            t_rot_plus_z
+            )
+        return {'FINISHED'}
+
+
 def center_entry_point():
     bpy.context.scene.cursor.rotation_mode = 'XYZ'
     bpy.context.scene.cursor.location = Vector((0.0, 0.0, 0.0))
@@ -19,31 +47,6 @@ def increment_rot_euler_entry_point(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z):
     bpy.context.scene.cursor.rotation_euler[0] += t_rot_plus_x
     bpy.context.scene.cursor.rotation_euler[1] += t_rot_plus_y
     bpy.context.scene.cursor.rotation_euler[2] += t_rot_plus_z
-
-
-# Class
-class MoveEntryPoint():
-    """Move entry point"""
-
-    def centralizar():
-        center_entry_point()
-        return {'FINISHED'}
-
-    def mover(t_plus_x, t_plus_y, t_plus_z):
-        increment_position_entry_point(
-            t_plus_x,
-            t_plus_y,
-            t_plus_z
-            )
-        return {'FINISHED'}
-
-    def rotacionar(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z):
-        increment_rot_euler_entry_point(
-            t_rot_plus_x,
-            t_rot_plus_y,
-            t_rot_plus_z
-            )
-        return {'FINISHED'}
 
 
 def register():

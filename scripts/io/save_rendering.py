@@ -3,6 +3,16 @@ import bpy
 import os
 
 
+# Class
+class SaveRendering():
+    """Save rendering file"""
+
+    # Class execution
+    def save(t_rendering_file_name):
+        save_rendering(t_rendering_file_name)
+        return {'FINISHED'}
+
+
 def save_rendering(t_rendering_file_name):
     t_save_dir = os.path.join(
         os.path.abspath("."),
@@ -20,16 +30,6 @@ def save_rendering(t_rendering_file_name):
     t_render.use_file_extension = True
     t_render.filepath = t_save_path
     bpy.ops.render.render(write_still=True)
-
-
-# Class
-class SaveRendering():
-    """Save rendering file"""
-
-    # Class execution
-    def save(t_rendering_file_name):
-        save_rendering(t_rendering_file_name)
-        return {'FINISHED'}
 
 
 # To register

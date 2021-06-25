@@ -2,6 +2,16 @@
 import bpy
 
 
+# Class
+class AddText():
+    """Add text"""
+
+    # Class execution
+    def add():
+        add_object()
+        return {'FINISHED'}
+
+
 # Internal method execution
 def add_object():
     # TODO - To define input
@@ -14,16 +24,6 @@ def add_object():
     # OR
     # scene = bpy.context.scene
     # scene.collection.objects.link(txt_ob)
-
-
-# Class
-class AddText():
-    """Add text"""
-
-    # Class execution
-    def add():
-        add_object()
-        return {'FINISHED'}
 
 
 # To register

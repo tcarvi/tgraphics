@@ -2,13 +2,6 @@
 import bpy
 
 
-# Internal method execution
-def add_object():
-    # TODO - To define input
-    # TODO - To add
-    print("TODO")
-
-
 # Class
 class AddCollectionsInstance():
     """ADD collectioninstance"""
@@ -17,6 +10,13 @@ class AddCollectionsInstance():
     def add():
         add_object()
         return {'FINISHED'}
+
+
+# Internal method execution
+def add_object():
+    # TODO - To define input
+    # TODO - To add
+    print("TODO")
 
 
 # To register

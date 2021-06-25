@@ -2,6 +2,18 @@
 import bpy
 
 
+# Class
+class AddCamera():
+    """ADD camera with input location"""
+
+    # Class execution
+    def add(t_location):
+        # print("LOG: Adding camera ...")
+        add_object(t_location)
+        # print("LOG: Camera added.")
+        return {'FINISHED'}
+
+
 # Internal method execution
 def add_object(t_location):
     t_data = bpy.data.cameras.new("camData")
@@ -13,18 +25,6 @@ def add_object(t_location):
     # scene.collection.objects.link(object)
     # scene.camera = object
     t_object.location = t_location
-
-
-# Class
-class AddCamera():
-    """ADD camera with input location"""
-
-    # Class execution
-    def add(t_location):
-        # print("LOG: Adding camera ...")
-        add_object(t_location)
-        # print("LOG: Camera added.")
-        return {'FINISHED'}
 
 
 # To register

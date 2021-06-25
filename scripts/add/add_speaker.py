@@ -2,13 +2,6 @@
 import bpy
 
 
-# Internal method execution
-def add_object():
-    # TODO - To define input
-    # TODO - To add
-    print("TODO")
-
-
 # Class
 class AddSpeaker():
     """ADD speaker with input location"""
@@ -17,6 +10,13 @@ class AddSpeaker():
     def add():
         add_object()
         return {'FINISHED'}
+
+
+# Internal method execution
+def add_object():
+    # TODO - To define input
+    # TODO - To add
+    print("TODO")
 
 
 # To register

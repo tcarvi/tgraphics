@@ -2,12 +2,6 @@
 import bpy
 
 
-def list_objects():
-    # print all objects
-    for t_object in bpy.data.objects:
-        print("Name = ", t_object.name)
-
-
 # Class
 class ListObjects():
     """List all data objects"""
@@ -16,6 +10,12 @@ class ListObjects():
     def list():
         list_objects()
         return {'FINISHED'}
+
+
+def list_objects():
+    # print all objects
+    for t_object in bpy.data.objects:
+        print("Name = ", t_object.name)
 
 
 # To register

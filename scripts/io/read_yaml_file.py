@@ -4,15 +4,6 @@ import io
 import yaml
 
 
-# Read YAML file
-def read_yaml_file(yaml_file_name):
-    with open(yaml_file_name, 'r') as stream:
-        try:
-            print(yaml.safe_load(stream))
-        except yaml.YAMLError as exc:
-            print(exc)
-
-
 # Class
 class ReadYamlFile():
     """READ yaml file"""
@@ -21,6 +12,15 @@ class ReadYamlFile():
     def execute():
         read_yaml_file("inputPlantaBaixa.yaml")
         return {'FINISHED'}
+
+
+# Read YAML file
+def read_yaml_file(yaml_file_name):
+    with open(yaml_file_name, 'r') as stream:
+        try:
+            print(yaml.safe_load(stream))
+        except yaml.YAMLError as exc:
+            print(exc)
 
 
 # To register
