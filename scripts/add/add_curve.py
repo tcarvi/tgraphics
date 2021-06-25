@@ -9,12 +9,12 @@ class AddCurve:
     # Class execution
     @classmethod
     def add(cls):
-        add_object()
+        _add_object()
         return {'FINISHED'}
 
 
-# Internal method execution
-def add_object():
+# non-public method
+def _add_object():
     t_data = bpy.data.curves.new(name="curveData", type="CURVE")
     t_object = bpy.data.objects.new(name="curveObject", object_data=t_data)
     bpy.context.scene.collection.objects.link(t_object)

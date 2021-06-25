@@ -10,13 +10,13 @@ class AddCamera:
     @classmethod
     def add(cls, t_location):
         # print("LOG: Adding camera ...")
-        add_object(t_location)
+        _add_object(t_location)
         # print("LOG: Camera added.")
         return {'FINISHED'}
 
 
-# Internal method execution
-def add_object(t_location):
+# non-public method
+def _add_object(t_location):
     t_data = bpy.data.cameras.new("camData")
     t_object = bpy.data.objects.new(name="camObject", object_data=t_data)
     bpy.context.scene.collection.objects.link(t_object)

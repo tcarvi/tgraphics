@@ -9,12 +9,12 @@ class AddImage:
     # Class execution
     @classmethod
     def add(cls):
-        add_object()
+        _add_object()
         return {'FINISHED'}
 
 
-# Internal method execution
-def add_object():
+# non-public method
+def _add_object():
     # TODO - To define input
     # TODO - To add
     print("TODO")

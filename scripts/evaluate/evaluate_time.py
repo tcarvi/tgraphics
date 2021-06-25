@@ -1,4 +1,5 @@
 # <pep8-80 compliant>
+import bpy
 import time
 
 
@@ -9,21 +10,21 @@ class EvaluateTime:
     # Class execution 1
     @classmethod
     def init(cls, t_time):
-        init_time_counter(t_time)
+        _init_time_counter(t_time)
         return {'FINISHED'}
 
     # Class execution 2
     @classmethod
     def evaluate_time(cls, t_time_started):
-        evaluate_time(t_time_started)
+        _evaluate_time(t_time_started)
         return {'FINISHED'}
 
 
-def init_time_counter(t_time_start):
+def _init_time_counter(t_time_start):
     t_time_start = time.time()
 
 
-def evaluate_time(t_time_started):
+def _evaluate_time(t_time_started):
     print("Script terminado em: %.4f sec" % (time.time() - t_time_started))
 
 

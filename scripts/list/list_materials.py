@@ -9,11 +9,12 @@ class ListMaterials:
     # Class execution
     @classmethod
     def list(cls):
-        list_materials()
+        _list_materials()
         return {'FINISHED'}
 
 
-def list_materials():
+# non-public method
+def _list_materials():
     # print all materials
     for t_material in bpy.data.materials:
         print("Name = ", t_material.name)

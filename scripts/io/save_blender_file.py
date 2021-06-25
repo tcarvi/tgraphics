@@ -10,11 +10,12 @@ class SaveBlenderFile:
     # Class execution
     @classmethod
     def save(cls, t_blender_file_name):
-        save_blender_file(t_blender_file_name)
+        _save_blender_file(t_blender_file_name)
         return {'FINISHED'}
 
 
-def save_blender_file(blender_file_name):
+# non-public method
+def _save_blender_file(blender_file_name):
     save_dir = os.path.join(
         os.path.abspath("."),
         "blender_projects"

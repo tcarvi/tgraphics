@@ -15,12 +15,13 @@ class AddMesh:
     @classmethod
     def add(cls, t_structure):
         # print("#LOG: Adding Mesh: ...")
-        add_object(t_structure)
+        _add_object(t_structure)
         # print("#LOG: Mesh added")
         return {'FINISHED'}
 
 
-def add_object(t_structure):
+# non-public method
+def _add_object(t_structure):
     # processar_estrutura
     # MoveEntryPoint.centralizar()
     print("\n\n\n\n\n\n\n")
@@ -118,16 +119,14 @@ def add_object(t_structure):
         if d[0] < 30:
             if d[0] == 20:
                 # Desenha parede de 0.15 metros de largura, no eixo X  OK
-                # print("add_parede_15_centimetros_horizontal")
-                add_parede_15_centimetros_horizontal(d[1])
+                _add_parede_15_centimetros_horizontal(d[1])
                 bpy.context.scene.cursor.location[0] += d[1]
                 bpy.context.view_layer.update()
                 continue
             if d[0] == 21:
                 print("\n\n#LOG: Now, d[0] = ", d[0])
                 # Desenha parede de 0.15 metros de largura, no eixo Y
-                # print("add_parede_15_centimetros_transversal")
-                add_parede_15_centimetros_transversal(d[1])
+                _add_parede_15_centimetros_transversal(d[1])
                 bpy.context.scene.cursor.location[1] += d[1]
                 bpy.context.view_layer.update()
                 print("changed bpy.context.scene.cursor.location[0] = ", bpy.context.scene.cursor.location[0])
@@ -146,7 +145,7 @@ def add_object(t_structure):
                 # print("#LOG: Medida da inclinação da parede em graus = ", t_inclinação_parede_graus)
                 t_inclinação_parede_radianos = math.radians(t_inclinação_parede_graus)
                 # print("#LOG: Medida da inclinacao da parede em radianos = ", t_inclinação_parede_radianos)
-                add_parede_15_centimetros_inclinado_em_x(t_comprimento_parede, t_inclinação_parede_radianos)
+                _add_parede_15_centimetros_inclinado_em_x(t_comprimento_parede, t_inclinação_parede_radianos)
                 bpy.context.scene.cursor.location[0] += t_comprimento_parede * math.cos(t_inclinação_parede_radianos)
                 bpy.context.scene.cursor.location[1] += t_comprimento_parede * math.sin(t_inclinação_parede_radianos)
                 bpy.context.view_layer.update()
@@ -156,8 +155,7 @@ def add_object(t_structure):
                 continue
             if d[0] == 31:
                 # Desenha parede de 0.15 metros de largura, no eixo Y inclinado
-                # print("add_parede_15_centimetros_inclinado_em_y")
-                add_parede_15_centimetros_inclinado_em_x(d[1])
+                _add_parede_15_centimetros_inclinado_em_x(d[1])
                 bpy.context.scene.cursor.location[1] += d[1]
                 bpy.context.view_layer.update()
                 continue
@@ -165,24 +163,28 @@ def add_object(t_structure):
     # print(bpy.context.scene.cursor.rotation_euler)
 
 
-def add_parede_15_centimetros_horizontal(t_value_x):
+# non-public method
+def _add_parede_15_centimetros_horizontal(t_value_x):
     t_value_y = 0.15
     t_value_inclinacao = 0.00
-    add_parede(t_value_x, t_value_y, t_value_inclinacao)
+    _add_parede(t_value_x, t_value_y, t_value_inclinacao)
 
 
-def add_parede_15_centimetros_transversal(t_value_y):
+# non-public method
+def _add_parede_15_centimetros_transversal(t_value_y):
     t_value_x = 0.15
     t_value_inclinacao = 0.00
-    add_parede(t_value_x, t_value_y, t_value_inclinacao)
+    _add_parede(t_value_x, t_value_y, t_value_inclinacao)
 
 
-def add_parede_15_centimetros_inclinado_em_x(t_value_x, t_value_inclinacao):
+# non-public method
+def _add_parede_15_centimetros_inclinado_em_x(t_value_x, t_value_inclinacao):
     t_value_y = 0.15
-    add_parede(t_value_x, t_value_y, t_value_inclinacao)
+    _add_parede(t_value_x, t_value_y, t_value_inclinacao)
 
 
-def add_parede(t_value_x, t_value_y, t_value_inclinacao):
+# non-public method
+def _add_parede(t_value_x, t_value_y, t_value_inclinacao):
     if t_value_x < 0:
         t_value_y *= -1
     t_data = bpy.data.meshes.new(name="meshData")

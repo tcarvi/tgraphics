@@ -10,11 +10,12 @@ class SaveRendering:
     # Class execution
     @classmethod
     def save(cls, t_rendering_file_name):
-        save_rendering(t_rendering_file_name)
+        _save_rendering(t_rendering_file_name)
         return {'FINISHED'}
 
 
-def save_rendering(t_rendering_file_name):
+# non-public method
+def _save_rendering(t_rendering_file_name):
     t_save_dir = os.path.join(
         os.path.abspath("."),
         "render_output"

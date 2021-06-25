@@ -9,12 +9,12 @@ class AddMetaball:
     # Class execution
     @classmethod
     def add(cls):
-        add_object()
+        _add_object()
         return {'FINISHED'}
 
 
-# Internal method execution
-def add_object():
+# non-public method
+def _add_object():
     # TODO - To define input
     t_location_input = 2.0, 2.0, 5.0
     # TODO - To add
