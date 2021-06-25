@@ -1,11 +1,10 @@
 # <pep8-80 compliant>
 import bpy
-from mathutils import Vector, Matrix
-from move_entry_point import MoveEntryPoint
 import json
 import math
+from mathutils import Vector, Matrix
 from add_material import AddMaterial
-import numpy as np
+from move_entry_point import MoveEntryPoint
 
 
 def add_object(t_structure):
