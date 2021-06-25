@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddMaterial():
+class AddMaterial:
     """Add material to an object"""
 
     # Class execution

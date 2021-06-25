@@ -4,7 +4,7 @@ import os
 
 
 # Class
-class SaveBlenderFile():
+class SaveBlenderFile:
     """Save blender file"""
 
     # Class execution

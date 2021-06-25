@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddEmpty():
+class AddEmpty:
     """ADD empty with input location"""
 
     # Class execution

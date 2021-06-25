@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddText():
+class AddText:
     """Add text"""
 
     # Class execution

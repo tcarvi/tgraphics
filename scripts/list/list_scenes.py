@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class ListScenes():
+class ListScenes:
     """List all data scenes"""
 
     # Class execution

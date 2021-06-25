@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class ListMaterials():
+class ListMaterials:
     """List all data materials"""
 
     # Class execution

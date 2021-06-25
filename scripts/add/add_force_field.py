@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddForceField():
+class AddForceField:
     """ADD forcefield"""
 
     # Class execution

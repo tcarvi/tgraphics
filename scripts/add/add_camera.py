@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddCamera():
+class AddCamera:
     """ADD camera with input location"""
 
     # Class execution

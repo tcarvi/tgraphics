@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddCollectionsInstance():
+class AddCollectionsInstance:
     """ADD collectioninstance"""
 
     # Class execution

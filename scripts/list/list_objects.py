@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class ListObjects():
+class ListObjects:
     """List all data objects"""
 
     # Class execution

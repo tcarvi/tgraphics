@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddSurface():
+class AddSurface:
     """ADD surface with input location"""
 
     # Class execution

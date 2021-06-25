@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddImage():
+class AddImage:
     """ADD image with input location"""
 
     # Class execution

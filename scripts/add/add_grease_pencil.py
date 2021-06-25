@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddGreasePencil():
+class AddGreasePencil:
     """ADD greasepencil with input location"""
 
     # Class execution

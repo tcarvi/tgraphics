@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddLightProbe():
+class AddLightProbe:
     """ADD lightprobe with input location"""
 
     # Class execution

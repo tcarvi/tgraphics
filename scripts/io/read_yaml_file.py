@@ -5,7 +5,7 @@ import yaml
 
 
 # Class
-class ReadYamlFile():
+class ReadYamlFile:
     """READ yaml file"""
 
     # Class execution

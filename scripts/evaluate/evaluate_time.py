@@ -3,7 +3,7 @@ import time
 
 
 # Class
-class EvaluateTime():
+class EvaluateTime:
     """Evaluate time of script execution"""
 
     # Class execution 1

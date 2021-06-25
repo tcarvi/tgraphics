@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddSpeaker():
+class AddSpeaker:
     """ADD speaker with input location"""
 
     # Class execution

@@ -4,7 +4,7 @@ import os
 
 
 # Class
-class SaveRendering():
+class SaveRendering:
     """Save rendering file"""
 
     # Class execution

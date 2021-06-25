@@ -4,7 +4,7 @@ import mathutils
 
 
 # Class
-class MoveEntryPoint():
+class MoveEntryPoint:
     """Move entry point"""
 
     # Class execution 1

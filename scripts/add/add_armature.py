@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddArmature():
+class AddArmature:
     """Create a new Armature Object from data: bones"""
 
     # Class execution

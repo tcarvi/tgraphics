@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddMetaball():
+class AddMetaball:
     """ADD metaball with input location"""
 
     # Class execution

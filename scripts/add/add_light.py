@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddLight():
+class AddLight:
     """ADD light with input location"""
 
     # Class execution

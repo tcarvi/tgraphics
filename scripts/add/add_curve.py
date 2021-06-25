@@ -3,7 +3,7 @@ import bpy
 
 
 # Class
-class AddCurve():
+class AddCurve:
     """Create a new Curve Object from data:"""
 
     # Class execution
