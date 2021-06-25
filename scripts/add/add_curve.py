@@ -13,7 +13,7 @@ def add_object():
 
 # Class
 class AddCurve():
-    """Create a new Curve Object from data: """
+    """Create a new Curve Object from data:"""
 
     # Class execution
     def add():
