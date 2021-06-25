@@ -30,7 +30,6 @@ def generate_objects_from_structure():
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
     # Adding new objects
-    # print("#LOG: FROM generate_objects_from_structure -> bpy.context.scene.cursor.location[0] =" , bpy.context.scene.cursor.location[0])
     AddMesh.add(t_structure)
     AddLight.add(t_lighting[0])
     t_location1 = 0.0, 0.0, 10.0

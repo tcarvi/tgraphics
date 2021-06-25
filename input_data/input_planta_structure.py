@@ -2,6 +2,8 @@
 import sys
 import json
 from enum import Enum
+
+
 class ComandoDesenho(Enum):
     DeslocarEmX = 0
     DeslocarEmY = 1
@@ -16,10 +18,12 @@ class ComandoDesenho(Enum):
     DesenharRetanguloEmYInclinado = 31
     DesenharRetanguloEmZInclinado = 32
 
+
 def updatePathToUnixFormat(windowsPath):
-    windowsPath = windowsPath.replace('C:','')
-    windowsPath = windowsPath.replace('\\','/')
+    windowsPath = windowsPath.replace('C:', '')
+    windowsPath = windowsPath.replace('\\', '/')
     return windowsPath
+
 
 t_diretorio_input_planta = \
     'C:\\libs\\python\\src\\github.com\\tgraphics\\input_data'
@@ -31,9 +35,9 @@ with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data\\input_plant
     global t_structure
     t_structure = []
     for obj in t_json_structure["comandos"]:
-        t_structure.append([ComandoDesenho[obj["comando"]].value,float(obj["deslocamento"]),float(obj["angulo"])])
+        t_structure.append([ComandoDesenho[obj["comando"]].value, float(obj["deslocamento"]), float(obj["angulo"])])
 
-#!/usr/bin/env python
+# !/usr/bin/env python
 # structure = [
 #   [
 #       tipoDoComandoParaDesenho,

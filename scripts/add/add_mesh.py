@@ -7,6 +7,7 @@ import math
 from add_material import AddMaterial
 import numpy as np
 
+
 def add_object(t_structure):
     # processar_estrutura
     # MoveEntryPoint.centralizar()
@@ -77,7 +78,7 @@ def add_object(t_structure):
                 t_inclinação_deslocamento_graus = d[2]
                 t_inclinação_deslocamento_radianos = math.radians(t_inclinação_deslocamento_graus)
                 bpy.context.scene.cursor.location[0] = bpy.context.scene.cursor.location[0] + t_medida_deslocamentoX * math.cos(t_inclinação_deslocamento_radianos)
-                bpy.context.scene.cursor.location[1] = bpy.context.scene.cursor.location[1] + t_medida_deslocamentoX * math.sin(t_inclinação_deslocamento_radianos)                
+                bpy.context.scene.cursor.location[1] = bpy.context.scene.cursor.location[1] + t_medida_deslocamentoX * math.sin(t_inclinação_deslocamento_radianos)
                 bpy.context.view_layer.update()
                 print("changed bpy.context.scene.cursor.location[0] = ", bpy.context.scene.cursor.location[0])
                 print("changed bpy.context.scene.cursor.location[1] = ", bpy.context.scene.cursor.location[1])
@@ -151,20 +152,24 @@ def add_object(t_structure):
             continue
     # print(bpy.context.scene.cursor.rotation_euler)
 
+
 def add_parede_15_centimetros_horizontal(t_value_x):
     t_value_y = 0.15
     t_value_inclinacao = 0.00
     add_parede(t_value_x, t_value_y, t_value_inclinacao)
+
 
 def add_parede_15_centimetros_transversal(t_value_y):
     t_value_x = 0.15
     t_value_inclinacao = 0.00
     add_parede(t_value_x, t_value_y, t_value_inclinacao)
 
+
 def add_parede_15_centimetros_inclinado_em_x(t_value_x, t_value_inclinacao):
     t_value_y = 0.15
     add_parede(t_value_x, t_value_y, t_value_inclinacao)
-    
+
+
 def add_parede(t_value_x, t_value_y, t_value_inclinacao):
     if t_value_x < 0:
         t_value_y *= -1
@@ -230,7 +235,6 @@ def add_parede(t_value_x, t_value_y, t_value_inclinacao):
     # object is a <class 'bpy_types.Object'>
     AddMaterial.add(t_object, "MaterialParedeBranca")
     bpy.context.scene.collection.objects.link(t_object)
-  
     # horiRot = rotMat(theta, 3, 'X')
     #                             vertRot = rotMat(phi, 3, 'Z')
     #                             basisVecX.rotate(horiRot)
