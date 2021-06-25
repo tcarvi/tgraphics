@@ -1,6 +1,7 @@
 # <pep8-80 compliant>
-import yaml
+import bpy
 import io
+import yaml
 
 
 # Read YAML file
@@ -14,7 +15,7 @@ def read_yaml_file(yaml_file_name):
 
 # Class
 class ReadYamlFile():
-    """READ_yamlfile"""
+    """READ yaml file"""
 
     # Class execution
     def execute():

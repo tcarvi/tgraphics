@@ -7,13 +7,13 @@ def save_rendering(t_rendering_file_name):
     t_save_dir = os.path.join(
         os.path.abspath("."),
         "render_output"
-    )
+        )
     if not os.path.exists(t_save_dir):
         os.mkdir(t_save_dir)
     t_save_path = os.path.join(
         os.path.abspath("."),
         "render_output\\" + t_rendering_file_name
-    )
+        )
     # TODO - To define input
     # TODO - To add
     t_render = bpy.context.scene.render

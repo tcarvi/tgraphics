@@ -1,7 +1,6 @@
 # <pep8-80 compliant>
 import bpy
 import mathutils
-from mathutils import Vector
 
 
 def center_entry_point():
@@ -35,7 +34,7 @@ class MoveEntryPoint():
             t_plus_x,
             t_plus_y,
             t_plus_z
-        )
+            )
         return {'FINISHED'}
 
     def rotacionar(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z):
@@ -43,7 +42,7 @@ class MoveEntryPoint():
             t_rot_plus_x,
             t_rot_plus_y,
             t_rot_plus_z
-        )
+            )
         return {'FINISHED'}
 
 
