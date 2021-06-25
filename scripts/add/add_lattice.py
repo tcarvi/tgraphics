@@ -7,7 +7,8 @@ class AddLattice():
     """ADD lattice with input location"""
 
     # Class execution
-    def add():
+    @classmethod
+    def add(cls):
         add_object()
         return {'FINISHED'}
 

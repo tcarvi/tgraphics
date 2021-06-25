@@ -8,7 +8,8 @@ class SaveBlenderFile():
     """Save blender file"""
 
     # Class execution
-    def save(t_blender_file_name):
+    @classmethod
+    def save(cls, t_blender_file_name):
         save_blender_file(t_blender_file_name)
         return {'FINISHED'}
 

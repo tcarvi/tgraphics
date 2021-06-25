@@ -7,7 +7,8 @@ class ListScenes():
     """List all data scenes"""
 
     # Class execution
-    def list():
+    @classmethod
+    def list(cls):
         list_scenes()
         return {'FINISHED'}
 

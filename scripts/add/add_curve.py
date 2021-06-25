@@ -7,7 +7,8 @@ class AddCurve():
     """Create a new Curve Object from data:"""
 
     # Class execution
-    def add():
+    @classmethod
+    def add(cls):
         add_object()
         return {'FINISHED'}
 

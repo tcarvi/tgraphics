@@ -7,7 +7,8 @@ class ListObjects():
     """List all data objects"""
 
     # Class execution
-    def list():
+    @classmethod
+    def list(cls):
         list_objects()
         return {'FINISHED'}
 

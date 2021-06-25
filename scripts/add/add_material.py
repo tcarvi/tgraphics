@@ -7,7 +7,8 @@ class AddMaterial():
     """Add material to an object"""
 
     # Class execution
-    def add(t_object, t_material_name):
+    @classmethod
+    def add(cls, t_object, t_material_name):
         add_material(t_object, t_material_name)
         return {'FINISHED'}
 

@@ -7,7 +7,8 @@ class AddLight():
     """ADD light with input location"""
 
     # Class execution
-    def add(t_initial_position):
+    @classmethod
+    def add(cls, t_initial_position):
         add_light(t_initial_position)
         return {'FINISHED'}
 

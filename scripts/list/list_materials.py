@@ -7,7 +7,8 @@ class ListMaterials():
     """List all data materials"""
 
     # Class execution
-    def list():
+    @classmethod
+    def list(cls):
         list_materials()
         return {'FINISHED'}
 

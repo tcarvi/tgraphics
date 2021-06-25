@@ -7,7 +7,8 @@ class AddText():
     """Add text"""
 
     # Class execution
-    def add():
+    @classmethod
+    def add(cls):
         add_object()
         return {'FINISHED'}
 

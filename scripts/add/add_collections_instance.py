@@ -7,7 +7,8 @@ class AddCollectionsInstance():
     """ADD collectioninstance"""
 
     # Class execution
-    def add():
+    @classmethod
+    def add(cls):
         add_object()
         return {'FINISHED'}
 

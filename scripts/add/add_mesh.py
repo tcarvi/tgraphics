@@ -8,11 +8,12 @@ from move_entry_point import MoveEntryPoint
 
 
 # Class
-class AddMesh():
+class AddMesh:
     """Create a new Mesh Object from data: vertices, edges and faces"""
 
     # Class execution
-    def add(t_structure):
+    @classmethod
+    def add(cls, t_structure):
         # print("#LOG: Adding Mesh: ...")
         add_object(t_structure)
         # print("#LOG: Mesh added")

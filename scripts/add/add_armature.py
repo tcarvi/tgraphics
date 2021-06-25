@@ -7,7 +7,8 @@ class AddArmature():
     """Create a new Armature Object from data: bones"""
 
     # Class execution
-    def add():
+    @classmethod
+    def add(cls):
         add_object()
         return {'FINISHED'}
 

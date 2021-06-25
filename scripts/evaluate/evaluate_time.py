@@ -7,12 +7,14 @@ class EvaluateTime():
     """Evaluate time of script execution"""
 
     # Class execution 1
-    def init(t_time):
+    @classmethod
+    def init(cls, t_time):
         init_time_counter(t_time)
         return {'FINISHED'}
 
     # Class execution 2
-    def evaluate_time(t_time_started):
+    @classmethod
+    def evaluate_time(cls, t_time_started):
         evaluate_time(t_time_started)
         return {'FINISHED'}
 
