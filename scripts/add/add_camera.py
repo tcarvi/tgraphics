@@ -16,7 +16,7 @@ class AddCamera:
 
 
 # non-public method
-def _add_object(t_location):
+def _add_object(t_location) -> None:
     t_data = bpy.data.cameras.new("camData")
     t_object = bpy.data.objects.new(name="camObject", object_data=t_data)
     bpy.context.scene.collection.objects.link(t_object)

@@ -14,7 +14,7 @@ class AddArmature:
 
 
 # non-public method
-def _add_object():
+def _add_object() -> None:
     # TODO - To define input
     # Armatures can get confusing, there are bones
     # as well as edit bones that contain the basic armature structure

@@ -14,7 +14,7 @@ class AddCurve:
 
 
 # non-public method
-def _add_object():
+def _add_object() -> None:
     t_data = bpy.data.curves.new(name="curveData", type="CURVE")
     t_object = bpy.data.objects.new(name="curveObject", object_data=t_data)
     bpy.context.scene.collection.objects.link(t_object)
