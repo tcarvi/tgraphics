@@ -14,7 +14,7 @@ class AddMaterial:
 
 
 # non-public method
-def _add_material(t_object, t_material_name):
+def _add_material(t_object, t_material_name) -> None:
     # print("Adding material ...")
     # Get material
     t_material = bpy.data.materials.get(t_material_name)

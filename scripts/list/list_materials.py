@@ -14,7 +14,7 @@ class ListMaterials:
 
 
 # non-public method
-def _list_materials():
+def _list_materials() -> None:
     # print all materials
     for t_material in bpy.data.materials:
         print("Name = ", t_material.name)

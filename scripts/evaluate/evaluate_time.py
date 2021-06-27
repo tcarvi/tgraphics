@@ -20,11 +20,11 @@ class EvaluateTime:
         return {'FINISHED'}
 
 
-def _init_time_counter(t_time_start):
+def _init_time_counter(t_time_start) -> None:
     t_time_start = time.time()
 
 
-def _evaluate_time(t_time_started):
+def _evaluate_time(t_time_started) -> None:
     print("Script terminado em: %.4f sec" % (time.time() - t_time_started))
 
 

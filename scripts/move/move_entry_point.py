@@ -35,21 +35,21 @@ class MoveEntryPoint:
 
 
 # non-public method
-def _center_entry_point():
+def _center_entry_point() -> None:
     bpy.context.scene.cursor.rotation_mode = 'XYZ'
     bpy.context.scene.cursor.location = Vector((0.0, 0.0, 0.0))
     bpy.context.scene.cursor.rotation_euler = Vector((0.0, 0.0, 0.0))
 
 
 # non-public method
-def _increment_position_entry_point(t_plus_x, t_plus_y, t_plus_z):
+def _increment_position_entry_point(t_plus_x, t_plus_y, t_plus_z) -> None:
     bpy.context.scene.cursor.location[0] += t_plus_x
     bpy.context.scene.cursor.location[1] += t_plus_y
     bpy.context.scene.cursor.location[2] += t_plus_z
 
 
 # non-public method
-def _increment_rot_euler_entry_point(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z):
+def _increment_rot_euler_entry_point(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z) -> None:
     bpy.context.scene.cursor.rotation_euler[0] += t_rot_plus_x
     bpy.context.scene.cursor.rotation_euler[1] += t_rot_plus_y
     bpy.context.scene.cursor.rotation_euler[2] += t_rot_plus_z

@@ -15,7 +15,7 @@ class SaveRendering:
 
 
 # non-public method
-def _save_rendering(t_rendering_file_name):
+def _save_rendering(t_rendering_file_name) -> None:
     t_save_dir = os.path.join(
         os.path.abspath("."),
         "render_output"

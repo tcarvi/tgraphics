@@ -14,7 +14,7 @@ class AddSpeaker:
 
 
 # Internal method execution
-def _add_object():
+def _add_object() -> None:
     # TODO - To define input
     # TODO - To add
     print("TODO")

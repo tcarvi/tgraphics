@@ -14,7 +14,7 @@ class AddLightProbe:
 
 
 # non-public method
-def _add_object():
+def _add_object() -> None:
     # TODO - To define input
     t_location_input = 2.0, 2.0, 5.0
     # TODO - To add

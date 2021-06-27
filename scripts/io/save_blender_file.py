@@ -15,7 +15,7 @@ class SaveBlenderFile:
 
 
 # non-public method
-def _save_blender_file(blender_file_name):
+def _save_blender_file(blender_file_name) -> None:
     save_dir = os.path.join(
         os.path.abspath("."),
         "blender_projects"

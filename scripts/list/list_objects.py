@@ -13,7 +13,7 @@ class ListObjects:
         return {'FINISHED'}
 
 
-def _list_objects():
+def _list_objects() -> None:
     # print all objects
     for t_object in bpy.data.objects:
         print("Name = ", t_object.name)

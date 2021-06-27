@@ -14,7 +14,7 @@ class AddText:
 
 
 # non-public method
-def _add_object():
+def _add_object() -> None:
     # TODO - To define input
     t_text = 'Text input'
     t_data = bpy.data.curves.new(name="textData", type='FONT')
