@@ -12,7 +12,7 @@ def update_path_to_unix(windows_path):
 
 t_diretorio_input_planta = \
     'C:\\libs\\python\\src\\github.com\\tgraphics\\input_data'
-if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
+if(sys.platform.startswith('linux') or sys.platform.startswith('darwin')):
     t_diretorio_input_planta = update_path_to_unix(t_diretorio_input_planta)
 with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data\\input_planta_structure.json') as json_data_file:
     t_json_structure = json.load(json_data_file)

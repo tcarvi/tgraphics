@@ -60,31 +60,31 @@ def _add_object(t_structure: list) -> None:
         print("Antes: bpy.context.scene.cursor.location[1] = ", bpy.context.scene.cursor.location[1])
         print("Antes: bpy.context.scene.cursor.location[2] = ", bpy.context.scene.cursor.location[2])
         print("\n")
-        if d[0] < 10:
-            if d[0] == 0:
+        if(d[0] < 10):
+            if(d[0] == 0):
                 # Atualiza posição X
                 bpy.context.scene.cursor.location[0] += d[1]
                 bpy.context.view_layer.update()
                 continue
-            if d[0] == 1:
+            if(d[0] == 1):
                 # Atualiza posição Y
                 bpy.context.scene.cursor.location[1] += d[1]
                 bpy.context.view_layer.update()
                 continue
-            if d[0] == 2:
+            if(d[0] == 2):
                 # Atualiza posição Z
                 bpy.context.scene.cursor.location[2] += d[1]
                 bpy.context.view_layer.update()
                 continue
-            if d[0] == 3:
+            if(d[0] == 3):
                 # Atualiza posição XY
                 bpy.context.scene.cursor.location[0] += d[1]
                 bpy.context.scene.cursor.location[1] += d[2]
                 bpy.context.view_layer.update()
                 continue
             continue
-        if d[0] < 20:
-            if d[0] == 10:
+        if(d[0] < 20):
+            if(d[0] == 10):
                 # Desloca posição de inserção
                 print("\n\n#LOG: Now, d[0] = ", d[0])
                 t_medida_deslocamentoX = d[1]
@@ -96,19 +96,19 @@ def _add_object(t_structure: list) -> None:
                 print("changed bpy.context.scene.cursor.location[0] = ", bpy.context.scene.cursor.location[0])
                 print("changed bpy.context.scene.cursor.location[1] = ", bpy.context.scene.cursor.location[1])
                 continue
-            if d[0] == 11:
+            if(d[0] == 11):
                 # TODO
                 # Atualiza rotação do eixo Y
                 bpy.context.scene.cursor.rotation_euler[1] += math.radians(d[1])
                 bpy.context.view_layer.update()
                 continue
-            if d[0] == 12:
+            if(d[0] == 12):
                 # TODO
                 # Atualiza rotação do eixo Z
                 bpy.context.scene.cursor.rotation_euler[2] += math.radians(d[1])
                 bpy.context.view_layer.update()
                 continue
-            if d[0] == 13:
+            if(d[0] == 13):
                 # TODO
                 # Atualiza rotação do plano XY no mesmo ângulo
                 bpy.context.scene.cursor.rotation_euler[0] += math.radians(d[1])
@@ -116,14 +116,14 @@ def _add_object(t_structure: list) -> None:
                 bpy.context.view_layer.update()
                 continue
             continue
-        if d[0] < 30:
-            if d[0] == 20:
+        if(d[0] < 30):
+            if(d[0] == 20):
                 # Desenha parede de 0.15 metros de largura, no eixo X  OK
                 _add_parede_15_centimetros_horizontal(d[1])
                 bpy.context.scene.cursor.location[0] += d[1]
                 bpy.context.view_layer.update()
                 continue
-            if d[0] == 21:
+            if(d[0] == 21):
                 print("\n\n#LOG: Now, d[0] = ", d[0])
                 # Desenha parede de 0.15 metros de largura, no eixo Y
                 _add_parede_15_centimetros_transversal(d[1])
@@ -133,8 +133,8 @@ def _add_object(t_structure: list) -> None:
                 print("changed bpy.context.scene.cursor.location[1] = ", bpy.context.scene.cursor.location[1])
                 continue
             continue
-        if d[0] < 40:
-            if d[0] == 30:
+        if(d[0] < 40):
+            if(d[0] == 30):
                 print("\n\n#LOG: Now, d[0] = ", d[0])
                 # Desenha parede de 0.15 metros de largura, no eixo X inclinado
                 # print("#LOG: AddingParede15CentimetrosInclinadaEmX")
@@ -153,7 +153,7 @@ def _add_object(t_structure: list) -> None:
                 print("changed bpy.context.scene.cursor.location[1] = ", bpy.context.scene.cursor.location[1])
                 # print("#LOG: added parede_15_centimetros_inclinado_em_x")
                 continue
-            if d[0] == 31:
+            if(d[0] == 31):
                 # Desenha parede de 0.15 metros de largura, no eixo Y inclinado
                 _add_parede_15_centimetros_inclinado_em_x(d[1])
                 bpy.context.scene.cursor.location[1] += d[1]
