@@ -55,13 +55,18 @@ def _increment_rot_euler_entry_point(t_rot_plus_x, t_rot_plus_y, t_rot_plus_z) -
     bpy.context.scene.cursor.rotation_euler[2] += t_rot_plus_z
 
 
-def register():
-    bpy.utils.register_class(MoveEntryPoint)
-
-
+# Unregister
 def unregister():
     bpy.utils.unregister_class(MoveEntryPoint)
 
 
+# Register
+def register():
+    bpy.utils.register_class(MoveEntryPoint)
+
+
+# Se este script for chamado pelo próprio arquivo, 
+#   como fluxo de execução "$ python file_name",
+#   executa-se apenas a função register().
 if __name__ == "__main__":
     register()

@@ -86,6 +86,6 @@ def _dir_src_input_data() -> None:
 
 # Se este script for chamado pelo próprio arquivo, 
 #   como fluxo de execução "$ python file_name", 
-#   executa-se apenas a função main().
+#   executa-se apenas a função AddPath.add().
 if __name__ == "__main__":
     AddPath.add()
