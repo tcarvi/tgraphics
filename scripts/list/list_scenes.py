@@ -8,13 +8,13 @@ class ListScenes:
 
     # Class execution
     @classmethod
-    def list(cls) -> str:
+    def list(cls):
         _list_scenes()
         return {'FINISHED'}
 
 
 # non-public method
-def _list_scenes() -> None:
+def _list_scenes():
     # print all scenes
     for t_scene in bpy.data.scenes:
         print("Name = ", t_scene.name)

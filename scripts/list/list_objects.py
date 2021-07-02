@@ -8,12 +8,12 @@ class ListObjects:
 
     # Class execution
     @classmethod
-    def list(cls) -> str:
+    def list(cls):
         _list_objects()
         return {'FINISHED'}
 
 
-def _list_objects() -> None:
+def _list_objects():
     # print all objects
     for t_object in bpy.data.objects:
         print("Name = ", t_object.name)

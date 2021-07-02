@@ -9,24 +9,24 @@ class EvaluateTime:
 
     # Class execution 1
     @classmethod
-    def init(cls, t_time) -> str:
+    def init(cls, t_time):
         _init_time_counter(t_time)
         return {'FINISHED'}
 
     # Class execution 2
     @classmethod
-    def evaluate_time(cls, t_time_started) -> str:
+    def evaluate_time(cls, t_time_started):
         _evaluate_time(t_time_started)
         return {'FINISHED'}
 
 
 # non-public method
-def _init_time_counter(t_time_start) -> None:
+def _init_time_counter(t_time_start):
     t_time_start = time.time()
 
 
 # non-public method
-def _evaluate_time(t_time_started) -> None:
+def _evaluate_time(t_time_started):
     print("Script terminado em: %.4f sec" % (time.time() - t_time_started))
 
 

@@ -13,7 +13,7 @@ class AddMesh:
 
     # Class execution
     @classmethod
-    def add(cls, t_structure: list) -> str:
+    def add(cls, t_structure):
         # print("#LOG: Adding Mesh: ...")
         _add_object(t_structure)
         # print("#LOG: Mesh added")
@@ -21,7 +21,7 @@ class AddMesh:
 
 
 # non-public method
-def _add_object(t_structure: list) -> None:
+def _add_object(t_structure):
     # processar_estrutura
     # MoveEntryPoint.centralizar()
     print("\n\n\n\n\n\n\n")
@@ -163,27 +163,27 @@ def _add_object(t_structure: list) -> None:
 
 
 # non-public method
-def _add_parede_15_centimetros_horizontal(t_value_x: float) -> None:
+def _add_parede_15_centimetros_horizontal(t_value_x: float):
     t_value_y = 0.15
     t_value_inclinacao = 0.00
     _add_parede(t_value_x, t_value_y, t_value_inclinacao)
 
 
 # non-public method
-def _add_parede_15_centimetros_transversal(t_value_y: float) -> None:
+def _add_parede_15_centimetros_transversal(t_value_y: float):
     t_value_x = 0.15
     t_value_inclinacao = 0.00
     _add_parede(t_value_x, t_value_y, t_value_inclinacao)
 
 
 # non-public method
-def _add_parede_15_centimetros_inclinado_em_x(t_value_x: float, t_value_inclinacao: float) -> None:
+def _add_parede_15_centimetros_inclinado_em_x(t_value_x: float, t_value_inclinacao: float):
     t_value_y = 0.15
     _add_parede(t_value_x, t_value_y, t_value_inclinacao)
 
 
 # non-public method
-def _add_parede(t_value_x: float, t_value_y: float, t_value_inclinacao: float) -> None:
+def _add_parede(t_value_x: float, t_value_y: float, t_value_inclinacao: float):
     if t_value_x < 0:
         t_value_y *= -1
     t_data = bpy.data.meshes.new(name="meshData")

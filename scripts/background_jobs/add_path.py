@@ -7,7 +7,7 @@ class AddPath:
 
     # Class execution
     @classmethod
-    def add(cls) -> str:
+    def add(cls):
         _dir_src_add()
         _dir_src_evaluate()
         _dir_src_io()
@@ -18,14 +18,14 @@ class AddPath:
 
 
 # non-public method
-def _update_path_to_unix(windows_path) -> str:
+def _update_path_to_unix(windows_path):
     windows_path = windows_path.replace('C:', '')
     windows_path = windows_path.replace('\\', '/')
     return windows_path
 
 
 # non-public method
-def _dir_src_add() -> None:
+def _dir_src_add():
     t_dir_src_add = \
         'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\add'
     if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
@@ -35,7 +35,7 @@ def _dir_src_add() -> None:
 
 
 # non-public method
-def _dir_src_evaluate() -> None:
+def _dir_src_evaluate():
     t_dir_src_evaluate = \
         "C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\evaluate"
     if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
@@ -45,7 +45,7 @@ def _dir_src_evaluate() -> None:
 
 
 # non-public method
-def _dir_src_io() -> None:
+def _dir_src_io():
     t_dir_src_io = \
         'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\io'
     if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
@@ -55,7 +55,7 @@ def _dir_src_io() -> None:
 
 
 # non-public method
-def _dir_src_list() -> None:
+def _dir_src_list():
     t_dir_src_list = \
         "C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\list"
     if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
@@ -65,7 +65,7 @@ def _dir_src_list() -> None:
 
 
 # non-public method
-def _dir_src_move() -> None:
+def _dir_src_move():
     t_dir_src_move = \
         "C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\move"
     if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
@@ -75,7 +75,7 @@ def _dir_src_move() -> None:
 
 
 # non-public method
-def _dir_src_input_data() -> None:
+def _dir_src_input_data():
     t_dir_src_input_data = \
         "C:\\libs\\python\\src\\github.com\\tgraphics\\input_data"
     if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):

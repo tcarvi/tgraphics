@@ -8,13 +8,13 @@ class AddLight:
 
     # Class execution
     @classmethod
-    def add(cls, t_initial_position) -> str:
+    def add(cls, t_initial_position):
         _add_light(t_initial_position)
         return {'FINISHED'}
 
 
 # non-public method
-def _add_light(t_initial_position) -> None:
+def _add_light(t_initial_position):
     t_data = bpy.data.lights.new("lightData", 'POINT')
     t_object = bpy.data.objects.new(name="lightObject", object_data=t_data)
     t_object.location = t_initial_position

@@ -8,13 +8,13 @@ class AddSpeaker:
 
     # Class execution
     @classmethod
-    def add(cls) -> str:
+    def add(cls):
         _add_object()
         return {'FINISHED'}
 
 
 # Internal method execution
-def _add_object() -> None:
+def _add_object():
     # TODO - To define input
     # TODO - To add
     print("TODO")

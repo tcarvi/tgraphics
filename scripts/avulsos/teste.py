@@ -2,13 +2,13 @@ import sys
 import json
 
 # non-public method
-def _update_path_to_unix(windows_path) -> str:
+def _update_path_to_unix(windows_path):
     windows_path = windows_path.replace('C:', '')
     windows_path = windows_path.replace('\\', '/')
     return windows_path
 
 # non-public method
-def _dir_src_input_data() -> None:
+def _dir_src_input_data():
     t_dir_src_input_data = \
         "C:\\libs\\python\\src\\github.com\\tgraphics\\input_data"
     if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):

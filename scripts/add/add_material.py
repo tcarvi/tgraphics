@@ -8,13 +8,13 @@ class AddMaterial:
 
     # Class execution
     @classmethod
-    def add(cls, t_object, t_material_name) -> str:
+    def add(cls, t_object, t_material_name):
         _add_material(t_object, t_material_name)
         return {'FINISHED'}
 
 
 # non-public method
-def _add_material(t_object, t_material_name) -> None:
+def _add_material(t_object, t_material_name):
     # print("Adding material ...")
     # Get material
     t_material = bpy.data.materials.get(t_material_name)

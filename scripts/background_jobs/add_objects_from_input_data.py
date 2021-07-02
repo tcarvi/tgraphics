@@ -34,7 +34,7 @@ class AddObjetcsFromInputData:
 
     # Class execution
     @classmethod
-    def add(cls) -> str:
+    def add(cls):
         _add_objects()
         return {'FINISHED'}
 

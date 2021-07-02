@@ -10,13 +10,13 @@ class ReadYamlFile:
 
     # Class execution
     @classmethod
-    def execute(cls) -> str:
+    def execute(cls):
         _read_yaml_file("inputPlantaBaixa.yaml")
         return {'FINISHED'}
 
 
 # non-public method
-def _read_yaml_file(yaml_file_name) -> None:
+def _read_yaml_file(yaml_file_name):
     with open(yaml_file_name, 'r') as stream:
         try:
             print(yaml.safe_load(stream))
