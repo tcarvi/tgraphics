@@ -1,6 +1,6 @@
 from enum import Enum
 
-class ComandoDesenho(Enum):
+class EnumComandoDesenho(Enum):
     DeslocarEmX = 0
     DeslocarEmY = 1
     DeslocarEmZ = 2

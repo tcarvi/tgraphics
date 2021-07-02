@@ -20,7 +20,7 @@ from add_camera import AddCamera
 # from add_force_field import AddForceField
 from save_blender_file import SaveBlenderFile
 from save_rendering import SaveRendering
-from input_planta_structure import t_structure
+from input_planta_structure import InputPlantaStruture
 from input_lighting_positions import t_lighting
 from list_objects import ListObjects
 from list_scenes import ListScenes
@@ -44,7 +44,8 @@ def generate_objects_from_structure():
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
     # Adding new objects
-    AddMesh.add(t_structure)
+    received_structure = InputPlantaStruture.receive()
+    AddMesh.add(received_structure)
     AddLight.add(t_lighting[0])
     t_location1 = 0.0, 0.0, 10.0
     AddCamera.add(t_location1)
