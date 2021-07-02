@@ -1,6 +1,8 @@
 # <pep8-80 compliant>
+import argparse
 import bpy
 import os
+import sys
 from add_mesh import AddMesh
 # from add_curve import AddCurve
 # from add_surface import AddSurface
@@ -26,6 +28,18 @@ from list_materials import ListMaterials
 from evaluate_time import EvaluateTime
 
 
+# Class
+class AddObjetcsFromInputData:
+    """Add Objetcs From InputData"""
+
+    # Class execution
+    @classmethod
+    def add(cls) -> str:
+        _add_objects()
+        return {'FINISHED'}
+
+
+# non-public method
 def generate_objects_from_structure():
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -39,6 +53,7 @@ def generate_objects_from_structure():
     bpy.context.view_layer.update()
 
 
+# non-public method
 def run_no_args():
     # print("\nrun_no_args()...")
     generate_objects_from_structure()
@@ -48,6 +63,7 @@ def run_no_args():
     SaveRendering.save(t_rendering_file_name=t_default_render_output_name)
 
 
+# non-public method
 def run_with_args(t_save_file_name, t_render_output_name):
     # print("\nrun_with_args()...")
     generate_objects_from_structure()
@@ -63,10 +79,8 @@ def run_with_args(t_save_file_name, t_render_output_name):
         SaveRendering.save(t_rendering_file_name=t_render_output_name)
 
 
-def main():
-    import sys
-    import argparse
-
+# non-public method
+def _add_objects():
     t_argv = sys.argv
     if "--" in t_argv:
         t_index = t_argv.index("--")
@@ -186,5 +200,8 @@ def main():
     # print("\nBatch job finished, exiting ...")
 
 
+# Se este script for chamado pelo próprio arquivo, 
+#   como fluxo de execução "$ python file_name", 
+#   executa-se apenas a função main().
 if __name__ == "__main__":
-    main()
+    AddObjetcsFromInputData.add()

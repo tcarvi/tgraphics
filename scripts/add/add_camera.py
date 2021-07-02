@@ -39,5 +39,8 @@ def unregister():
 
 
 # Register
+# Se este script for chamado pelo próprio arquivo, 
+#   como fluxo de execução "main", 
+#   executa-se apenas a função register().
 if __name__ == "__main__":
     register()
