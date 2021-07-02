@@ -28,6 +28,7 @@ class InputPlantaStruture:
         return t_structure
 
 
+# non-public method
 def _update_path_to_unix(windows_path):
     windows_path = windows_path.replace('C:', '')
     windows_path = windows_path.replace('\\', '/')

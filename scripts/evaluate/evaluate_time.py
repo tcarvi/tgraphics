@@ -20,10 +20,12 @@ class EvaluateTime:
         return {'FINISHED'}
 
 
+# non-public method
 def _init_time_counter(t_time_start) -> None:
     t_time_start = time.time()
 
 
+# non-public method
 def _evaluate_time(t_time_started) -> None:
     print("Script terminado em: %.4f sec" % (time.time() - t_time_started))
 

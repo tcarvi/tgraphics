@@ -1,5 +1,7 @@
+# <pep8-80 compliant>
 from enum import Enum
 
+# Class
 class EnumComandoDesenho(Enum):
     DeslocarEmX = 0
     DeslocarEmY = 1

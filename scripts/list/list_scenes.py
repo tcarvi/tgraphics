@@ -13,6 +13,7 @@ class ListScenes:
         return {'FINISHED'}
 
 
+# non-public method
 def _list_scenes() -> None:
     # print all scenes
     for t_scene in bpy.data.scenes:
