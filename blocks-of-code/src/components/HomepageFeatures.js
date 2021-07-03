@@ -4,32 +4,34 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
+    title: 'Especificações',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        <a href="https://www.blender.org/support/tutorials/">Blender Tutorials</a><br />
+        <a href="https://docs.blender.org/api/current/">Blender APIs</a><br />
+        <a href="https://wiki.blender.org/wiki/Main_Page">Blender for Developers</a><br />
+        <a href="https://docs.python.org/3/">Python Especification</a><br />
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Instrução',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Alura ...
+      </>
+    ),
+  },
+  {
+    title: 'Comunidade',
+    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        <a href="https://br.pinterest.com/">Pinterest</a><br />
+        <a href="https://www.artstation.com/">ArtStation</a><br />
+        <a href="https://www.instagram.com/">Instagram</a>
       </>
     ),
   },
