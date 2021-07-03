@@ -16,9 +16,8 @@ title: "Etapa 1 - Cadastramento"
             - anguloRadiano: `4/3`
         - No primeiro caso, o ângulo serve para calcular o **REAL DeslocamentoEmY**, considerando como fixo o **DeslocamentoEmX que já é o REAL**. Assim se produzirá um desenho inclinado.
         - No segundo caso, serve tanto par calcular o **REAL DeslocamentoEmY** quanto o **REAL DeslocamentoEmX**. Foi passado para o aplicativo apenas o comprimento do eixo do desenho, mas não suas medidas globais de "deslocamento". O app faz tal cálculo.
-        - Considera-se:
-            - deslocamentoX =  deslocamentoLogitudinal  vezes coseno(ângulo de inclinação).
-            - deslocamentoLogitudinal = deslocamentoX dividido por coseno(ângulo de inclinação).
+        - Por trigonometria básica, considera-se:
+            - deslocamentoX =  deslocamentoLogitudinal multiplicado por coseno(ângulo de inclinação).
     - Todos os comandos refletem a realidade do trabalho de cadastramento e faz os cálculos necesssários para o processamento da computação gráfica do Blender.
     - Assim como o comando DeslocamentoEmX, todos os demais comandos devem ser informados de forma intuitiva e sintética. A *engine* tcarviAI terá condições de processar a entrada de dados e gerar imagens, animações, filmes e interatividades.
 - Começo do cadastramento:
