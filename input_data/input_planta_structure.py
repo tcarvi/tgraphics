@@ -17,6 +17,7 @@ class InputPlantaStruture:
         t_structure = []
         with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data\\input_planta_structure.json') as json_data_file:
             t_json_structure = json.load(json_data_file)
+            json_data_file.close().close()
             for obj in t_json_structure["comandos"]:
                 t_structure.append(
                     [
