@@ -30,7 +30,7 @@ module.exports = {
           label: 'Tutorial',
         },
         {
-          href: 'https://github.com/tcarvi',
+          href: 'https://github.com/tcarvi/tgraphics',
           label: 'GitHub',
           position: 'right',
         },
