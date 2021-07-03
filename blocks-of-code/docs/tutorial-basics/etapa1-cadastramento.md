@@ -1,0 +1,46 @@
+---
+title: "Etapa 1 - Cadastramento"
+---
+- Ambiente geométrico a ser pensado:
+    - Eixo tridimensional X que segue positivo da sua frente para posição direita ortogonal.
+    - Eixo tridimensional Y que segue positivo da sua frente para posição mais em frente, seguindo em reta.
+    - Eixo tridimensional Z que segue positivo da sua frente para posição acima (superior) ortogonal.
+    - O deslocamento pode ser informado tanto nos eixos X,Y e Z quanto no próprio eixo do desenho. É obrigatório informar o ângulo da sequência do desenho. O aplicativo calculará o deslocamento real nos eixos X e Y e criará o desenho inclinado. 
+        - Exemplo 1 de instrução:
+            - comando:  `DeslocarEmX`, 
+            - deslocamento: `3 metros`,
+            - anguloRadiano: `4/3`
+        - É igual à instrução:
+            - comando: `DeslocarEmXInclinado`,
+            - deslocamento: `5 metros`,
+            - anguloRadiano: `4/3`
+        - No primeiro caso, o ângulo serve para calcular o **REAL DeslocamentoEmY**, considerando como fixo o **DeslocamentoEmX que já é o REAL**. Assim se produzirá um desenho inclinado.
+        - No segundo caso, serve tanto par calcular o **REAL DeslocamentoEmY** quanto o **REAL DeslocamentoEmX**. Foi passado para o aplicativo apenas o comprimento do eixo do desenho, mas não suas medidas globais de "deslocamento". O app faz tal cálculo.
+        - Considera-se:
+            - deslocamentoX =  deslocamentoLogitudinal  vezes coseno(ângulo de inclinação).
+            - deslocamentoLogitudinal = deslocamentoX dividido por coseno(ângulo de inclinação).
+    - Todos os comandos refletem a realidade do trabalho de cadastramento e faz os cálculos necesssários para o processamento da computação gráfica do Blender.
+    - Assim como o comando DeslocamentoEmX, todos os demais comandos devem ser informados de forma intuitiva e sintética. A *engine* tcarviAI terá condições de processar a entrada de dados e gerar imagens, animações, filmes e interatividades.
+- Começo do cadastramento:
+    - Escolhe-se posição esquerda na frente, onde estará o centro do eixo tridimensional.
+- Fluxo de desenho:
+    - Informa-se o comando a ser passado para a solução de AI (tcarviAI):
+    - `Comando`: `text`
+        - Sendo `text`
+            - DeslocarEmX
+            - DeslocarEmY
+            - DeslocarEmZ
+            - DeslocarEmXInclinado
+            - DeslocarEmYInclinado
+            - DeslocarEmZInclinado
+            - DesenharRetanguloEmX
+            - DesenharRetanguloEmY
+            - DesenharRetanguloEmZ
+            - DesenharRetanguloEmXInclinado
+            - DesenharRetanguloEmYInclinado
+            - DesenharRetanguloEmZInclinado
+    - `SubcomandoNecessário`: `value`
+        - Sendo `SubcomandoNecessário`
+            - Nome de subcomando necessário para processamento do comando pai indicado. 
+        - Sendo `value`
+            - Número inteiro ou float

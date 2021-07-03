@@ -108,5 +108,11 @@ temp/
 render_output/r1.png
 blender_projects/f1.blend
 
+# Local WebSite
+blocks-of-code/build/
+blocks-of-code/.docusaurus
+blocks-of-code/node_modules
+blocks-of-code/yarn.lock
+
 # VS Code
 .vscode/
