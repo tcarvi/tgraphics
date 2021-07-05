@@ -171,12 +171,6 @@ def _add_parede(t_value_x: float, t_value_y: float, t_value_inclinacao: float):
     if t_value_x < 0:
         t_value_y *= -1
     t_data = bpy.data.meshes.new(name="meshData")
-    # data is a <class 'bpy_types.Mesh'>
-    # print("t_data = ", t_data)
-    # print("t_data.values() = ", t_data.values())
-    # print("bpy.context.scene.cursor.location[0] = ", bpy.context.scene.cursor.location[0])
-    # print("bpy.context.scene.cursor.location[1] = ", bpy.context.scene.cursor.location[1])
-    # print("bpy.context.scene.cursor.location[2] = ", bpy.context.scene.cursor.location[2])
     t_data.from_pydata(
         [
             Vector(
@@ -219,21 +213,13 @@ def _add_parede(t_value_x: float, t_value_y: float, t_value_inclinacao: float):
         name="meshObject",
         object_data=t_data
     )
-    # print("bpy.context.scene.cursor.location[0] = ", bpy.context.scene.cursor.location[0])
-    # print("t_object = ", t_object)
     verts = len(t_data.vertices)
-    # print("verts INCLINADO = ", verts)
     print("verts0 = ", t_data.vertices[0].co)
     print("verts1 = ", t_data.vertices[1].co)
     print("verts2 = ", t_data.vertices[2].co)
     print("verts3 = ", t_data.vertices[3].co)
-
-    # object is a <class 'bpy_types.Object'>
     AddMaterial.add(t_object, "MaterialParedeBranca")
     bpy.context.scene.collection.objects.link(t_object)
-    # horiRot = rotMat(theta, 3, 'X')
-    #                             vertRot = rotMat(phi, 3, 'Z')
-    #                             basisVecX.rotate(horiRot)
 
 
 # To register
@@ -249,6 +235,7 @@ def unregister():
 # Se este script for chamado pelo próprio arquivo, 
 #   como fluxo de execução "$ python file_name",
 #   executa-se apenas a função register().
+# Deve-se conseguir instalar bpy em sys.path para executar teste local!
 if __name__ == "__main__":
     # register()
     # Teste

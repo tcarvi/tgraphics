@@ -18,6 +18,9 @@ title: "Etapa 1 - Cadastramento"
         - No segundo caso, serve tanto par calcular o **REAL DeslocamentoEmY** quanto o **REAL DeslocamentoEmX**. Foi passado para o aplicativo apenas o comprimento do eixo do desenho, mas não suas medidas globais de "deslocamento". O app faz tal cálculo.
         - Por trigonometria básica, considera-se:
             - deslocamentoX =  deslocamentoLogitudinal multiplicado por coseno(ângulo de inclinação).
+            - Mas, depois de localizar o *script* em uma estrutura de boa legibilidade em projeto Pytho, o "script" deve ser melhorado com o uso de:
+                - https://en.wikipedia.org/wiki/Rotation_formalisms_in_three_dimensions#Quaternions
+                - https://docs.blender.org/api/249PythonDoc/Mathutils.Quaternion-class.html
     - Todos os comandos refletem a realidade do trabalho de cadastramento e faz os cálculos necesssários para o processamento da computação gráfica do Blender.
     - Assim como o comando DeslocamentoEmX, todos os demais comandos devem ser informados de forma intuitiva e sintética. A *engine* tcarviAI terá condições de processar a entrada de dados e gerar imagens, animações, filmes e interatividades.
 - Começo do cadastramento:
