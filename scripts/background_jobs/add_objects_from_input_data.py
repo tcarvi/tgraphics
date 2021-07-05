@@ -40,7 +40,7 @@ class AddObjetcsFromInputData:
 
 
 # non-public method
-def generate_objects_from_structure():
+def _generate_objects_from_structure():
     # Clear existing objects.
     bpy.ops.wm.read_factory_settings(use_empty=True)
     # Adding new objects
@@ -57,7 +57,7 @@ def generate_objects_from_structure():
 # non-public method
 def run_no_args():
     # print("\nrun_no_args()...")
-    generate_objects_from_structure()
+    _generate_objects_from_structure()
     t_default_save_file_name = "f1.blend"
     SaveBlenderFile.save(t_blender_file_name=t_default_save_file_name)
     t_default_render_output_name = "r1"
@@ -67,7 +67,7 @@ def run_no_args():
 # non-public method
 def run_with_args(t_save_file_name, t_render_output_name):
     # print("\nrun_with_args()...")
-    generate_objects_from_structure()
+    _generate_objects_from_structure()
     if t_save_file_name is None:
         t_default_save_file_name = "f1.blend"
         SaveBlenderFile.save(t_blender_file_name=t_default_save_file_name)
@@ -205,4 +205,5 @@ def _add_objects():
 #   como fluxo de execução "$ python file_name", 
 #   executa-se apenas a função AddObjetcsFromInputData.add().
 if __name__ == "__main__":
+    # Test
     AddObjetcsFromInputData.add()

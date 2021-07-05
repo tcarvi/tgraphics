@@ -2,48 +2,18 @@
     "comandos": [
         {
             "comando":"DesenharRetanguloEmXInclinado",
-            "deslocamento":"8.80",
-            "angulo":"6.0"
-        },
-        {
-            "comando":"DeslocarEmXInclinado",
-            "deslocamento":"3.00",
-            "angulo":"6.0"
-        },
-        {
-            "comando":"DesenharRetanguloEmXInclinado",
-            "deslocamento":"8.30",
-            "angulo":"6.0"
-        },
-        {
-            "comando":"DesenharRetanguloEmY",
-            "deslocamento":"22.90",
-            "angulo":"0.0"
+            "deslocamento":"10",
+            "angulo":"60"
         },
         {
             "comando":"DesenharRetanguloEmX",
-            "deslocamento":"-20.00",
+            "deslocamento":"-10",
             "angulo":"0.0"
         },
         {
-            "comando":"DeslocarEmY",
-            "deslocamento":"-3.00",
-            "angulo":"0.0"
-        },
-        {
-            "comando":"DesenharRetanguloEmY",
-            "deslocamento":"-21.85",
-            "angulo":"0.0"
-        },
-        {
-            "comando":"DeslocarEmY",
-            "deslocamento":"-0.8",
-            "angulo":"0.0"
-        },
-        {
-            "comando":"DesenharRetanguloEmXInclinado",
-            "deslocamento":"20.10",
-            "angulo":"6.0"
+            "comando":"DesenharRetanguloEmYInclinado",
+            "deslocamento":"-10",
+            "angulo":"120"
         }
     ]
 }

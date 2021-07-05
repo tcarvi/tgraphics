@@ -22,6 +22,8 @@ title: "Etapa 1 - Cadastramento"
     - Assim como o comando DeslocamentoEmX, todos os demais comandos devem ser informados de forma intuitiva e sintética. A *engine* tcarviAI terá condições de processar a entrada de dados e gerar imagens, animações, filmes e interatividades.
 - Começo do cadastramento:
     - Escolhe-se posição esquerda na frente, onde estará o centro do eixo tridimensional.
+        - Medidas positivas para direira e para cima. 
+        - E **também positiva entrando no espaço do desenho, seguindo para o fundo do mesmo**.
 - Fluxo de desenho:
     - Informa-se o comando a ser passado para a solução de AI (tcarviAI):
     - `Comando`: `text`

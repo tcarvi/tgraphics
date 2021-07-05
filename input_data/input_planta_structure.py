@@ -10,7 +10,7 @@ class InputPlantaStruture:
 
     # Class execution
     @classmethod
-    def receive(cls) -> list:
+    def receive(cls):
         t_diretorio_input_planta = 'C:\\libs\\python\\src\\github.com\\tgraphics\\input_data'
         if(sys.platform.startswith('linux') or sys.platform.startswith('darwin')):
             t_diretorio_input_planta = _update_path_to_unix(t_diretorio_input_planta)
@@ -47,6 +47,9 @@ def unregister():
 
 # Se este script for chamado pelo próprio arquivo, 
 #   como fluxo de execução "$ python file_name",
-#   executa-se apenas a função register().
+#   executa-se apenas a função register()
+# Pode-se também incluir testes neste método
 if __name__ == "__main__":
     register()
+    #TESTE
+    # InputPlantaStruture.receive()
