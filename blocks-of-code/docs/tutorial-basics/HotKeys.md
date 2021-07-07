@@ -60,4 +60,5 @@ position: 1
 
 
 ### Janelas de Trabalho
-- `N`  -> Janela de Propriedade
+- `T`  -> Toolbar (Janela screen esquerda)
+- `N`  -> Properties Panel (Janela screen direita)
