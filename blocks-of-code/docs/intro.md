@@ -1,4 +1,6 @@
 ---
-title: "Blocks of code"
+title: "Blender Preferences"
 ---
-Veja tutoriais ao lado
+- Acesso em `Edit` -> `Preferences`
+- **NAVIGATION** -> **ORBIT & PAN**
+    - Check `Orbit Around Selection`
