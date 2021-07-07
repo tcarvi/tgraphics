@@ -1,5 +1,6 @@
 ---
 title: "Hot Keys"
+position: 1
 ---
 
 ### Visualização
@@ -24,8 +25,10 @@ title: "Hot Keys"
 
 ### Seleção
 - `LMB-CLICK SELEÇÃO`-> Selecionar objeto
-- `LMB-CLICK SELEÇÃO` e `SHIFT LMB-CLICK SELEÇÃO` -> Selecionar vários objetos
-- `A`- Selecionar todos objetos
+- `SHIFT LMB-CLICK SELEÇÃO` -> Adicionar novo objeto em seleção, ou retirar existente.
+- `A`-> Selecionar todos os objetos
+- `ALT` `A` -> Deselecionar todos os objetos
+- `CTRL` `RMB-DRAG` -> Seleção de laço
 
 ### Transformação Rápida
 - **G**:
@@ -41,12 +44,20 @@ title: "Hot Keys"
     - `S` `Y` `mover mouse` `LMB-CLICK` -> Escalar rápido em Y
     - `S` `Z` `mover mouse` `LMB-CLICK` -> Escalar rápido em Z
 
-#### 
+#### Alterações:
+- `SHIFT` `SPACE` `CTRL` `R` -> Loop Cut and Slide
+- `E` -> Extrude
 
 ### Interface para Comandos
 - `CTRL` `Z` -> Desfazer comando
 - `SHIFT` `C` -> Centralizar "***3D Cursor***"
+- `B` -> Mostrar eixo ortogonal para ajudar alinhamento
 - `SHIFT` `A` -> Janela de adicionar
+- `TAB`-> "*Object Mode*" or "*Edit Mode*"
+- `*Edit Mode*` `1` -> Vertex selection mode
+- `*Edit Mode*` `2` -> Edge selection mode
+- `*Edit Mode*` `3` -> Face selection mode
+
 
 ### Janelas de Trabalho
 - `N`  -> Janela de Propriedade
