@@ -7,22 +7,23 @@ position: 1
 - Área ampla para trabalho:
     - Criar nova *workspace* duplicando *workspace Layout*.
     - Manter a janela central de modelagem e apagar demais janelas. (Para apagar, selecione canto inferior da janela e arraste sobre aquela que se quer apagar.)
-    - Desativar `Menu Windows`-> `Submenu Default Status Bar`
+    - Desativar `Menu Windows`-> `Submenu Show Status Bar`
     - `T`  -> Toolbar (show/hide)
     - `N`  -> Properties Panel (show/hide)
-- 1, 2, 3
-    - `1`  -> FRONT
+- Tipo de visualização:
+    - `5`  -> PERSPECTIVE ou ORTOGRAPHIC
+- Rotações de toda a Cena:
     - `2`  -> ROTATE no eixo X, para trás
-    - `3`  -> RIGHT 
-- 4, 5, 6
-    - `4`  -> ROTATE no eixo Z, para esquerda
-    - `5`  -> PERSPECTIVE OR ORTOGRAPHIC
-    - `6`  -> ROTATE no eixo Z, para direita
-- 7, 8, 9
-    - `7`  -> TOP
+    - `4`  -> ROTATE no eixo Z, para direita
+    - `6`  -> ROTATE no eixo Z, para esquerda
     - `8`  -> ROTATE no eixo X, para frente
+- Posição da view
+    - `1`  -> FRONT
+    - `3`  -> RIGHT
+    - `7`  -> TOP
     - `9`  -> ROTATE no eixo X, 180º
-- `CTRL` `ALT` `Q` -> Toggle Quad View
+- Ver em 4 Views
+    - `CTRL` `ALT` `Q` -> Toggle Quad View
 
 ### Movimentação da Visualização:
 - `SHFT` `MMB-CLICK` -> PAN
