@@ -13,10 +13,10 @@ position: 1
 - Tipo de visualização:
     - `5`  -> PERSPECTIVE ou ORTOGRAPHIC
 - Rotações de toda a Cena:
-    - `2`  -> ROTATE no eixo X, para trás
-    - `4`  -> ROTATE no eixo Z, para direita
-    - `6`  -> ROTATE no eixo Z, para esquerda
-    - `8`  -> ROTATE no eixo X, para frente
+    - `2`  -> ROTATE no eixo X, para baixo
+    - `4`  -> ROTATE no eixo Z, para esquerda
+    - `6`  -> ROTATE no eixo Z, para direita
+    - `8`  -> ROTATE no eixo X, para cima
 - Posição da view
     - `1`  -> FRONT
     - `3`  -> RIGHT
