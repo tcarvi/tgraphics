@@ -60,6 +60,7 @@ sidebar_position: 1
     - ["Alita: Battle Angel", análise dos criadores](https://www.youtube.com/watch?v=J1SO6tOBA8Y&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=12)
     - ["Alita: Battle Angel", cenários](https://www.youtube.com/watch?v=U3D2vmWD88w&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=8)
     - ["Alita: Battle Angel", photorealism](https://www.youtube.com/watch?v=hOMuRopLgxg&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=15)
+    - ["Alita: Battle Angel", character and behaviour realism](https://www.youtube.com/watch?v=e3xdGx7Xa4w&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=22)
     - ["Alita: Battle Angel", expression of emotion](https://www.youtube.com/watch?v=1AKW2aNSRs8&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=13)
     - ["Alita: Battle Angel", expression of hero morality](https://www.youtube.com/watch?v=6PPTM1zRTy4&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=21)
 
@@ -69,6 +70,7 @@ sidebar_position: 1
 - Modelo:
     - ["Alita: Battle Angel", cena com falas](https://www.youtube.com/watch?v=hZi3Jx2EZFU&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=17)
     - ["Alita: Battle Angel", soundtrack - análise dos criadores](https://www.youtube.com/watch?v=5yBV0Fjtma8&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=10)
+    - ["Alita: Battle Angel", trailer](https://www.youtube.com/watch?v=w7pYhpJaJW8&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=24)
 
 ---
 
@@ -76,3 +78,6 @@ sidebar_position: 1
 - Modelo:
     - ["Alita: Battle Angel", com música empolgante (1)](https://www.youtube.com/watch?v=l264SGk15O0&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=37)
     - ["Alita: Battle Angel", com música empolgante (2)](https://www.youtube.com/watch?v=ZKkzEBtIoH8&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=38)
+
+#### Referência de Excelente Qualidade
+- ["Alita: Battle Angel", the creators](https://www.youtube.com/watch?v=pYwjokFLKx4&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=26)
