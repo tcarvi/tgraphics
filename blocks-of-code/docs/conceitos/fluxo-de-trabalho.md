@@ -4,7 +4,8 @@ sidebar_position: 1
 ---
 
 ### Pensar nos cenários e nos objetos
-- Definir distâncias e objetos
+- Criar roteiro do enredo, com desenho de cenas e com detalhamentos necessários.
+- Compilar o roteiro com definição de cenas: objetos e posição geométrica.
 
 ### Automatizar criação de cenários e objetos Low Poly
 - Identificar comandos a serem passados para engine tcarviAI
@@ -52,6 +53,12 @@ sidebar_position: 1
     - ["Alita: Battle Angel", cena de Luta (1)](https://www.youtube.com/watch?v=Um8i-glXSzY&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=34&t=10s)
     - ["Alita: Battle Angel", cena de Luta (2)](https://www.youtube.com/watch?v=G95jgdwyq_Q&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=35)
     - ["Alita: Battle Angel", cena de Luta (3)](https://www.youtube.com/watch?v=Q0mNooEcpk0&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=36)
+- Tecnologias: 
+    - Live-action com imagens geradas por computador
+    - Fusion Camera System, performance de captura facial
+    - Simulcam
+    - Pintura, modelagem, fotografia, texturização, animação e vídeo digital 
+    - Efeitos visuais de pós-produção
 
 ---
 
