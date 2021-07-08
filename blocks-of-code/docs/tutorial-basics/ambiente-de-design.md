@@ -22,10 +22,9 @@ position: 1
         - `CTRL` `7` -> BOTTOM
 - Rotações de toda a Cena:
     - `2`  -> ROTATE no eixo X, para baixo
-    - `4`  -> ROTATE no eixo Z, para esquerda
-    - `6`  -> ROTATE no eixo Z, para direita
+    - `4`  -> ROTATE no eixo Z, para direita
+    - `6`  -> ROTATE no eixo Z, para esquerda
     - `8`  -> ROTATE no eixo X, para cima
-    - `9`  -> ROTATE no eixo X, 180º
 - Dividir janela em 4 Views
     - `CTRL` `ALT` `Q` -> Toggle Quad View
 
