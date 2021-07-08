@@ -12,15 +12,19 @@ position: 1
     - `N`  -> Properties Panel (show/hide)
 - Tipo de visualização:
     - `5`  -> PERSPECTIVE ou ORTOGRAPHIC
+- Escolha da View
+    - `0` -> CAMERA
+    - `1` -> FRONT
+        - `CTRL` `1` -> BACK
+    - `3`  -> RIGHT
+        - `CTRL` `3` -> LEFT
+    - `7`  -> TOP
+        - `CTRL` `7` -> BOTTOM
 - Rotações de toda a Cena:
     - `2`  -> ROTATE no eixo X, para baixo
     - `4`  -> ROTATE no eixo Z, para esquerda
     - `6`  -> ROTATE no eixo Z, para direita
     - `8`  -> ROTATE no eixo X, para cima
-- Posição da view
-    - `1`  -> FRONT
-    - `3`  -> RIGHT
-    - `7`  -> TOP
     - `9`  -> ROTATE no eixo X, 180º
 - Dividir janela em 4 Views
     - `CTRL` `ALT` `Q` -> Toggle Quad View
@@ -28,7 +32,7 @@ position: 1
 ### Movimentação da Visualização:
 - `SHFT` `MMB-CLICK` -> PAN
 - `MMB-CLICK`-> ROTATE
-- `MMB-DRAG`-> ZOOM
+- `MMB-SCROLL`-> ZOOM
 
 ### Seleção
 - `LMB-CLICK SELEÇÃO`-> Selecionar objeto
