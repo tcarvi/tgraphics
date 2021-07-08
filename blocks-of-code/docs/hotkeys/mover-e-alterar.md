@@ -24,9 +24,9 @@ sidebar_position: 2
     - `S` `Y` `mover mouse` `LMB-CLICK` -> Escalar em Y
     - `S` `Z` `mover mouse` `LMB-CLICK` -> Escalar em Z
 
-## Alterar Edges:
-- `SHIFT` `SPACE` `CTRL` `R` -> Loop Cut and Slide
-- `SELECT EDGE` `E` -> Extrude Edge
+## Extrude:
+- `SELECT Object` `Tab Edit Mode` `2` `SELECT EDGE` `E` -> Extrude Edge
+- `SELECT Object` `Tab Edit Mode` `3` `SELECT FACE` `E` -> Extrude Face
 
-## Alterar Faces:
-- `SELECT FACE` `E` -> Extrude Face
+## New Edges
+- `SHIFT` `SPACE` `CTRL` `R` -> Loop Cut and Slide
