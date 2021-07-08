@@ -22,7 +22,7 @@ position: 1
     - `3`  -> RIGHT
     - `7`  -> TOP
     - `9`  -> ROTATE no eixo X, 180º
-- Ver em 4 Views
+- Dividir janela em 4 Views
     - `CTRL` `ALT` `Q` -> Toggle Quad View
 
 ### Movimentação da Visualização:
