@@ -61,6 +61,7 @@ sidebar_position: 1
     - ["Alita: Battle Angel", cenários](https://www.youtube.com/watch?v=U3D2vmWD88w&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=8)
     - ["Alita: Battle Angel", photorealism](https://www.youtube.com/watch?v=hOMuRopLgxg&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=15)
     - ["Alita: Battle Angel", expression of emotion](https://www.youtube.com/watch?v=1AKW2aNSRs8&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=13)
+    - ["Alita: Battle Angel", expression of hero morality](https://www.youtube.com/watch?v=6PPTM1zRTy4&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=21)
 
 ---
 
