@@ -58,12 +58,15 @@ sidebar_position: 1
 #### Renderização do Visual
 - Modelo:
     - ["Alita: Battle Angel", análise dos criadores](https://www.youtube.com/watch?v=J1SO6tOBA8Y&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=12)
+    - ["Alita: Battle Angel", cenários](https://www.youtube.com/watch?v=U3D2vmWD88w&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=8)
+    - ["Alita: Battle Angel", photorealism](https://www.youtube.com/watch?v=hOMuRopLgxg&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=15)
 
 ---
 
-#### Edição do áudio: soundtrack
+#### Edição do áudio: falas e soundtrack
 - Modelo:
     - ["Alita: Battle Angel", análise dos criadores](https://www.youtube.com/watch?v=5yBV0Fjtma8&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=10)
+    - ["Alita: Battle Angel", cena com falas e soundtrack](youtube.com/watch?v=qWYXMDiCRD8&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=4)
 
 ---
 
