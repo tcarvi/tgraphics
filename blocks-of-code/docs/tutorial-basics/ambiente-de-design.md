@@ -1,21 +1,27 @@
 ---
-title: "Hot Keys"
+title: "Ambiente"
 position: 1
 ---
 
 ### Visualização
+- Área ampla para trabalho:
+    - Criar nova *workspace* duplicando *workspace Layout*.
+    - Manter a janela central de modelagem e apagar demais janelas. (Para apagar, selecione canto inferior da janela e arraste sobre aquela que se quer apagar.)
+    - Desativar `Menu Windows`-> `Submenu Default Status Bar`
+    - `T`  -> Toolbar (show/hide)
+    - `N`  -> Properties Panel (show/hide)
 - 1, 2, 3
     - `1`  -> FRONT
-    - `2`  -> ROTATE COM X FIXO, PARA TRÁS
-    - `3`  -> RIGHT ORTHOGRAPHIC
+    - `2`  -> ROTATE no eixo X, para trás
+    - `3`  -> RIGHT 
 - 4, 5, 6
-    - `4`  -> ROTATE COM Z FIXO, PARA ESQUERDA
+    - `4`  -> ROTATE no eixo Z, para esquerda
     - `5`  -> PERSPECTIVE OR ORTOGRAPHIC
-    - `6`  -> ROTATE COM Z FIXO, PARA DIREITA
+    - `6`  -> ROTATE no eixo Z, para direita
 - 7, 8, 9
     - `7`  -> TOP
-    - `8`  -> ROTATE COM X FIXO, PARA FRENTE
-    - `9`  -> ROTATE COM X FIXO, 180 GRAUS
+    - `8`  -> ROTATE no eixo X, para frente
+    - `9`  -> ROTATE no eixo X, 180º
 - `CTRL` `ALT` `Q` -> Toggle Quad View
 
 ### Movimentação da Visualização:
@@ -60,5 +66,4 @@ position: 1
 
 
 ### Janelas de Trabalho
-- `T`  -> Toolbar (Janela screen esquerda)
-- `N`  -> Properties Panel (Janela screen direita)
+
