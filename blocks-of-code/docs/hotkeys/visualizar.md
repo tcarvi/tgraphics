@@ -36,6 +36,12 @@ sidebar_position: 1
 ## Ver em 4 Views
 - `CTRL` `ALT` `Q` -> Toggle Quad View
 
+## Escolher Visualização dos Objetos
+- `Z` `2` -> Material Preview
+- `Z` `4` -> Wireframe
+- `Z` `6` -> Solid
+- `Z` `8` -> Rendered
+
 ## Uso de Referências com PureRef
 - Jogar todas as imagens para dentro da janela do PureRef
 - Limitar bordas da janela apenas para imagem de referência
