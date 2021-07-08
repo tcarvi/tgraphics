@@ -41,8 +41,8 @@ sidebar_position: 1
 - `Z` `4` -> Wireframe
 - `Z` `6` -> Solid
 - `Z` `8` -> Rendered
-- `Shade Smooth` <- `Select Object`/`Object`/`Shade Smooth`
-- `Shade Flat` <- `Select Object`/`Object`/`Shade Flat`
+- `Select Object`/`Menu Object`/`Shade Smooth` -> Shade Smooth
+- `Select Object`/`Menu Object`/`Shade Flat` -> Shade Flat
 
 ## Uso de Referências com PureRef
 - Jogar todas as imagens para dentro da janela do PureRef
