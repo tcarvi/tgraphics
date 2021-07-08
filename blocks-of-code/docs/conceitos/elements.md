@@ -1,6 +1,6 @@
 ---
-title: "Tecnologia"
-position: 2
+title: Elementos
+sidebar_position: 1
 ---
 
 ### Elementos de edição:

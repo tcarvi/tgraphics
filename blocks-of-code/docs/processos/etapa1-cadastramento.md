@@ -1,6 +1,6 @@
 ---
 title: "Etapa 1 - Cadastramento"
-position: 3
+sidebar_position: 3
 ---
 - Ambiente geométrico a ser pensado:
     - Eixo tridimensional X que segue positivo da sua frente para posição direita ortogonal.
