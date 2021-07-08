@@ -36,3 +36,13 @@ sidebar_position: 1
 ## Ver em 4 Views
 - `CTRL` `ALT` `Q` -> Toggle Quad View
 
+## Uso de Referências com PureRef
+- Jogar todas as imagens para dentro da janela do PureRef
+- Limitar bordas da janela apenas para imagem de referência
+- `RMB-DRAG` -> Mover janela do PureRef
+- Ignorar Mouse:
+    - `CTRL` `T` -> Transparente ao Mouse
+    - `Selecionar app PureRef` `CTRL` `T` -> Desativar Transparência ao Mouse
+- Posição na Tela:
+    - `CTRL` `SHIFT` `A`-> Posição Superior ao Blender
+    - `CTRL` `SHIFT` `B`-> Posição Inferior ao Blender
