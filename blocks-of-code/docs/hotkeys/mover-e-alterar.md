@@ -17,3 +17,7 @@ sidebar_position: 3
 - `S` `X` `mover mouse` `LMB-CLICK` -> Escalar em X
 - `S` `Y` `mover mouse` `LMB-CLICK` -> Escalar em Y
 - `S` `Z` `mover mouse` `LMB-CLICK` -> Escalar em Z
+
+## Copiar e Colar
+- `Select Object` `CTRL` `C` -> Copiar
+- `CTRL` `V` -> Colar no mesmo lugar, selecionando apenas o colado.
