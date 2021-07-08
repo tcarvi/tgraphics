@@ -6,7 +6,7 @@ sidebar_position: 1
 ## Organizar Views
 - Criar nova *workspace* duplicando *workspace Layout*.
 - Manter janela central de modelagem e apagar demais janelas. (Para apagar, selecione canto inferior da janela e arraste sobre aquela que se quer apagar.)
-- Desativar *check* de `Menu Windows`-> `Show Status Bar`
+- Desativar *check* de `Menu Windows`/`Show Status Bar`
 - `T`  -> TOOLBAR (*show*/*hide*)
 - `N`  -> PROPERTIES PANEL (*show*/*hide*)
 
