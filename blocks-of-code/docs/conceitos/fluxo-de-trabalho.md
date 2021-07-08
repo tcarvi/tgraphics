@@ -48,7 +48,7 @@ sidebar_position: 1
 ---
 
 #### Animação de Movimentos 
-- Modelo da animação:
+- Modelo:
     - [Movimento da Cena de Luta (1)](https://www.youtube.com/watch?v=Um8i-glXSzY&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=34&t=10s)
     - [Movimento da Cena de Luta (2)](https://www.youtube.com/watch?v=G95jgdwyq_Q&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=35)
     - [Movimento da Cena de Luta (3)](https://www.youtube.com/watch?v=Q0mNooEcpk0&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=36)
@@ -56,16 +56,18 @@ sidebar_position: 1
 ---
 
 #### Renderização do Visual
-- Modelo da renderização:
+- Modelo:
+    - [Cinematic Experience](https://www.youtube.com/watch?v=J1SO6tOBA8Y&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=12)
 
 ---
 
-#### Edição do áudio da comunicação:
-- Modelo de Comunicação:
+#### Edição do áudio soundtrack:
+- Modelo:
+    - [Alita: Battle Angel](https://www.youtube.com/watch?v=5yBV0Fjtma8&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=10)
 
 ---
 
 #### Edição do Áudio Musical
-- Modelo de Música:
+- Modelo:
     - [Música empolgante (1)](https://www.youtube.com/watch?v=l264SGk15O0&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=37)
     - [Música empolgante (2)](https://www.youtube.com/watch?v=ZKkzEBtIoH8&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=38)
