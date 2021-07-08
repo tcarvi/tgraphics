@@ -49,25 +49,25 @@ sidebar_position: 1
 
 #### Animação de Movimentos 
 - Modelo:
-    - [Movimento da Cena de Luta (1)](https://www.youtube.com/watch?v=Um8i-glXSzY&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=34&t=10s)
-    - [Movimento da Cena de Luta (2)](https://www.youtube.com/watch?v=G95jgdwyq_Q&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=35)
-    - [Movimento da Cena de Luta (3)](https://www.youtube.com/watch?v=Q0mNooEcpk0&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=36)
+    - ["Alita: Battle Angel", cena de Luta (1)](https://www.youtube.com/watch?v=Um8i-glXSzY&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=34&t=10s)
+    - ["Alita: Battle Angel", cena de Luta (2)](https://www.youtube.com/watch?v=G95jgdwyq_Q&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=35)
+    - ["Alita: Battle Angel", cena de Luta (3)](https://www.youtube.com/watch?v=Q0mNooEcpk0&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=36)
 
 ---
 
 #### Renderização do Visual
 - Modelo:
-    - [Cinematic Experience](https://www.youtube.com/watch?v=J1SO6tOBA8Y&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=12)
+    - ["Alita: Battle Angel", análise dos criadores](https://www.youtube.com/watch?v=J1SO6tOBA8Y&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=12)
 
 ---
 
-#### Edição do áudio soundtrack:
+#### Edição do áudio: soundtrack
 - Modelo:
-    - [Alita: Battle Angel](https://www.youtube.com/watch?v=5yBV0Fjtma8&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=10)
+    - ["Alita: Battle Angel", análise dos criadores](https://www.youtube.com/watch?v=5yBV0Fjtma8&list=PLfPBohF1uFwrLlEa2PG097NzK9Om0ywft&index=10)
 
 ---
 
-#### Edição do Áudio Musical
+#### Edição de áudio: música
 - Modelo:
-    - [Música empolgante (1)](https://www.youtube.com/watch?v=l264SGk15O0&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=37)
-    - [Música empolgante (2)](https://www.youtube.com/watch?v=ZKkzEBtIoH8&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=38)
+    - ["Alita: Battle Angel", com música empolgante (1)](https://www.youtube.com/watch?v=l264SGk15O0&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=37)
+    - ["Alita: Battle Angel", com música empolgante (2)](https://www.youtube.com/watch?v=ZKkzEBtIoH8&list=PLHZr_2UlXu7DQGrSztRSCzNEYpk6Nso4f&index=38)
