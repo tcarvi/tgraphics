@@ -5,10 +5,15 @@ sidebar_position: 1
 
 ## Organizar Views
 - Criar nova *workspace* duplicando *workspace Layout*.
-- Manter janela central de modelagem e apagar demais janelas. (Para apagar, selecione canto inferior da janela e arraste sobre aquela que se quer apagar.)
+- Manter janela central de modelagem e apagar demais janelas. (Para apagar, selecione canto da janela e arraste sobre aquela que se quer apagar.)
 - Desativar *check* de `Menu Windows`/`Show Status Bar`
 - `T`  -> TOOLBAR (*show*/*hide*)
 - `N`  -> PROPERTIES PANEL (*show*/*hide*)
+
+## Movimentar View:
+- `SHFT` `MMB-CLICK` -> PAN
+- `MMB-CLICK`-> ROTATE
+- `MMB-SCROLL`-> ZOOM
 
 ## Alternar Tipo de View :
 - `5`  -> PERSPECTIVE ou ORTOGRAPHIC
@@ -31,7 +36,3 @@ sidebar_position: 1
 ## Ver em 4 Views
 - `CTRL` `ALT` `Q` -> Toggle Quad View
 
-## Movimentar View:
-- `SHFT` `MMB-CLICK` -> PAN
-- `MMB-CLICK`-> ROTATE
-- `MMB-SCROLL`-> ZOOM
