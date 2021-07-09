@@ -45,7 +45,7 @@ sidebar_position: 1
 - `Select Object`/`Menu Object`/`Shade Flat` -> Shade Flat
 
 ## Uso de Referências com PureRef
-- Jogar todas as imagens para dentro da janela do PureRef
+- Jogar todas as imagens para dentro da janela do app PureRef
 - Limitar bordas da janela apenas para imagem de referência
 - `RMB-DRAG` -> Mover janela do PureRef
 - Ignorar Mouse:
