@@ -7,7 +7,7 @@ sidebar_position: 3
     - Eixo tridimensional Y que segue positivo da sua frente para posição mais em frente, seguindo em reta.
     - Eixo tridimensional Z que segue positivo da sua frente para posição acima (superior) ortogonal.
     - O deslocamento pode ser informado tanto nos eixos X,Y e Z quanto no próprio eixo do desenho. É obrigatório informar o ângulo da sequência do desenho. O aplicativo calculará o deslocamento real nos eixos ortogonais e criará o desenho inclinado. 
-        - Exemplo 1 de instrução:
+        - Exemplo de instrução:
             - comando:  `DeslocarEmX`, 
             - deslocamento: `3 metros`,
             - anguloRadiano: `4/3`
@@ -19,11 +19,11 @@ sidebar_position: 3
         - No segundo caso, serve tanto par calcular o **REAL DeslocamentoEmY** quanto o **REAL DeslocamentoEmX**. Foi passado para o aplicativo apenas o comprimento do eixo do desenho, mas não suas medidas globais de "deslocamento". O app faz tal cálculo.
         - Por trigonometria básica, considera-se:
             - deslocamentoX =  deslocamentoLogitudinal multiplicado por coseno(ângulo de inclinação).
-            - Mas, depois de localizar o *script* em uma estrutura de boa legibilidade em projeto Pytho, o "script" deve ser melhorado com o uso de:
+            - Mas, depois de localizar o *script* em uma estrutura de boa legibilidade em projeto Python, o *script* deve ser melhorado com o uso de:
                 - https://en.wikipedia.org/wiki/Rotation_formalisms_in_three_dimensions#Quaternions
                 - https://docs.blender.org/api/249PythonDoc/Mathutils.Quaternion-class.html
-    - Todos os comandos refletem a realidade do trabalho de cadastramento e faz os cálculos necesssários para o processamento da computação gráfica do Blender.
-    - Assim como o comando DeslocamentoEmX, todos os demais comandos devem ser informados de forma intuitiva e sintética. A *engine* tcarviAI terá condições de processar a entrada de dados e gerar imagens, animações, filmes e interatividades.
+    - Todos os comandos refletem a realidade do trabalho de cadastramento arquitetônico e faz os cálculos necesssários para o processamento da computação gráfica do Blender.
+    - Assim como o comando DeslocamentoEmX, todos os demais comandos devem ser informados de forma intuitiva e sintética. A *engine* tcarviAI terá condições de processar a entrada de dados e gerar imagens, animações, vídeos e interatividades.
 - Começo do cadastramento:
     - Escolhe-se posição esquerda na frente, onde estará o centro do eixo tridimensional.
         - Medidas positivas para direira e para cima. 
