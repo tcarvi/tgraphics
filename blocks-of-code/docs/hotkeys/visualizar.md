@@ -54,3 +54,5 @@ sidebar_position: 1
 - Posição na Tela:
     - `CTRL` `SHIFT` `A`-> Posição Superior ao Blender
     - `CTRL` `SHIFT` `B`-> Posição Inferior ao Blender
+- Opacidade:
+    - `CTRL` `ALT` `SHIFT` `LMB-DRAG` -> Diminuir ou aumentar opacidade de imagens selecionada, com movimento do mouse em X.
