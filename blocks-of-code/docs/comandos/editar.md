@@ -23,3 +23,10 @@ sidebar_position: 4
 - Polígono sem profundidade
 - Polígono com ligação apenas nos cantos da seleção inicial de faces. 
     - `Tab Edit Mode` `3` `CTRL` `F` `N`
+
+## Bevel
+- Pode ser aplicado sobre Edges e sobre Faces
+- `Tab Edit Mode` `2` `SELECT EDGE` `CRTL` `B` -> Criação paralela de Bevel
+    - Depois abrir janela de configuração do bevel.
+- `Tab Edit Mode` `3` `SELECT FACE` `CRTL` `B` -> Criação menor de Bevel, para fora ou para dentro.
+    - Depois abrir janela de configuração do bevel.
