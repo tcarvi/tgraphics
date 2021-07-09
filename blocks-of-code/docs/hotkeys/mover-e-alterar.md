@@ -14,6 +14,7 @@ sidebar_position: 3
 - `R` `Z` `mover mouse` `LMB-CLICK` -> Rotate em Z
 
 ## Escalar
+- `S` `mover mouse` `LMB-CLICK` -> Escalar em XYZ 
 - `S` `X` `mover mouse` `LMB-CLICK` -> Escalar em X
 - `S` `Y` `mover mouse` `LMB-CLICK` -> Escalar em Y
 - `S` `Z` `mover mouse` `LMB-CLICK` -> Escalar em Z
