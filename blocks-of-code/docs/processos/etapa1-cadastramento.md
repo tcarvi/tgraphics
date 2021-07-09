@@ -6,7 +6,7 @@ sidebar_position: 3
     - Eixo tridimensional X que segue positivo da sua frente para posição direita ortogonal.
     - Eixo tridimensional Y que segue positivo da sua frente para posição mais em frente, seguindo em reta.
     - Eixo tridimensional Z que segue positivo da sua frente para posição acima (superior) ortogonal.
-    - O deslocamento pode ser informado tanto nos eixos X,Y e Z quanto no próprio eixo do desenho. É obrigatório informar o ângulo da sequência do desenho. O aplicativo calculará o deslocamento real nos eixos X e Y e criará o desenho inclinado. 
+    - O deslocamento pode ser informado tanto nos eixos X,Y e Z quanto no próprio eixo do desenho. É obrigatório informar o ângulo da sequência do desenho. O aplicativo calculará o deslocamento real nos eixos ortogonais e criará o desenho inclinado. 
         - Exemplo 1 de instrução:
             - comando:  `DeslocarEmX`, 
             - deslocamento: `3 metros`,

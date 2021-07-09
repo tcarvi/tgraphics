@@ -7,8 +7,12 @@ sidebar_position: 5
 - `CTRL` `Z` -> Desfazer comando
 
 ## Posição para comandos
-- `SHIFT` `C` -> Centralizar "***3D Cursor***" e *view"
-- `SHIFT` `A` -> Janela de adicionar
+- `SHIFT` `SPACEBAR` `SPACEBAR` -> Clicar em nova posição para ***3D Cursor***
+- `SHIFT` `C` -> Centralizar ***3D Cursor*** e *view"
+
+## Janela de Interatividade
+- `SHIFT` `A` -> Janela de adicionar objetos
+- `SHIFT` `SPACEBAR` -> Janela de atalhos de seleção
 
 ## Auxílio para Edição
 - `B` -> Mostrar eixo ortogonal para ajudar alinhamento
