@@ -13,8 +13,13 @@ sidebar_position: 4
     - `Tab Edit Mode` `3` `SELECT FACE` `E` `Y` -> Extrude Face em Y
     - `Tab Edit Mode` `3` `SELECT FACE` `E` `Z` -> Extrude Face em Z
 
-## Criar Loops de Edges
-- `Tab Edit Mode` `CTRL` `R` `Slide`-> Loop Cut and Slide
+## Loop Cut and Slide
+- Criar Edges em um Loop do objeto.
+- Posição do loop é escolhida com arrasto do mouse.
+    - `Tab Edit Mode` `CTRL` `R` `Slide`
 
-## Criar Inset dentro de Face
-- `Tab Edit Mode` `3` `CTRL` `F` `N`-> Inset Faces
+## Inset Face
+- Cria polígono interno
+- Polígono sem profundidade
+- Polígono com ligação apenas nos cantos da seleção inicial de faces. 
+    - `Tab Edit Mode` `3` `CTRL` `F` `N`
