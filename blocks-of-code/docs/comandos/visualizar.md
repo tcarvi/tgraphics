@@ -44,6 +44,10 @@ sidebar_position: 1
 - `Select Object`/`Menu Object`/`Shade Smooth` -> Shade Smooth
 - `Select Object`/`Menu Object`/`Shade Flat` -> Shade Flat
 
+## Visualização apenas de 1 seleção
+- `SELECT OBJECTS` `SHIFT` `H` -> Ocultar todos os objetos, com exceção da seleção.
+- `ALT``H` -> Desativar o Hide (ocultação), selecionando tudo.
+
 ## Uso de Referências com PureRef
 - Jogar todas as imagens para dentro da janela do app PureRef
 - Limitar bordas da janela apenas para imagem de referência

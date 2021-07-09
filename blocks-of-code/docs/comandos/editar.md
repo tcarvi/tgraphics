@@ -15,3 +15,6 @@ sidebar_position: 4
 
 ## Criar Loops de Edges
 - `Tab Edit Mode` `CTRL` `R` `Slide`-> Loop Cut and Slide
+
+## Criar Inset dentro de Face
+- `Tab Edit Mode` `3` `CTRL` `F` `Inset`-> Inset Faces
