@@ -7,14 +7,16 @@ sidebar_position: 1
 - https://youtu.be/1jHUY3qoBu8?t=57
 
 ## Organizar Views
-- Criar 2 novas *workspaces*, duplicando *workspace Layout*.
-- Workspace 1: (espaço de modelagem livre)
-    - Janela única de modelagem
-        - . Para apagar demais janelas, selecione canto da janela e arraste sobre aquela que se quer apagar.
-- Workspace 2: (espaço de edição da modelagem)
+- `SELECT CAMERA` `SHIFT-SELECT LIGHT` `X` -> Delete camera and light
+- Renomerar Workspace *Layout* para ***Model-Editor***: 
     - Janela esquerda de modelagem, 
     - Janela superior direita com Outliner
     - Janela inferior direita com Properties Area
+        - Para apagar demais janelas, selecione canto da janela e arraste sobre aquela que se quer apagar.
+- Reorganizar Workspace ***Modeling***: (espaço de modelagem livre)
+    - Janela única de modelagem
+        - Para apagar demais janelas, selecione canto da janela e arraste sobre aquela que se quer apagar.
+- Exclua demais *workspaces*.
 - Interatividades:
     - `Menu Windows`/`Show Status Bar` (*check*/*uncheck*)
     - `T`  -> TOOLBAR (*show*/*hide*)
