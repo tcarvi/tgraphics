@@ -3,12 +3,22 @@ title: Visualizar
 sidebar_position: 1
 ---
 
+## Revisão em Vídeo
+- https://youtu.be/1jHUY3qoBu8?t=57
+
 ## Organizar Views
-- Criar nova *workspace* duplicando *workspace Layout*.
-- Manter janela central de modelagem e apagar demais janelas. (Para apagar, selecione canto da janela e arraste sobre aquela que se quer apagar.)
-- Desativar *check* de `Menu Windows`/`Show Status Bar`
-- `T`  -> TOOLBAR (*show*/*hide*)
-- `N`  -> PROPERTIES PANEL (*show*/*hide*)
+- Criar 2 novas *workspaces*, duplicando *workspace Layout*.
+- Workspace 1: (espaço de modelagem livre)
+    - Janela única de modelagem
+        - . Para apagar demais janelas, selecione canto da janela e arraste sobre aquela que se quer apagar.
+- Workspace 2: (espaço de edição da modelagem)
+    - Janela esquerda de modelagem, 
+    - Janela superior direita com Outliner
+    - Janela inferior direita com Properties Area
+- Interatividades:
+    - `Menu Windows`/`Show Status Bar` (*check*/*uncheck*)
+    - `T`  -> TOOLBAR (*show*/*hide*)
+    - `N`  -> PROPERTIES BAR (*show*/*hide*)
 
 ## Movimentar View:
 - `SHFT` `MMB-CLICK` -> PAN

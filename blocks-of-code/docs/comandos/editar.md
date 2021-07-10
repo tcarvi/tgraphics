@@ -3,6 +3,9 @@ title: "Editar"
 sidebar_position: 4
 ---
 
+## Delete
+- `SELECT` `X` -> Delete selection
+
 ## Extrude em X, Y ou Z
 - Extrude EDGE:
     - `Tab Edit Mode` `2` `SELECT EDGE` `E` `X` -> Extrude Edge em X
