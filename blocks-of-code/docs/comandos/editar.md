@@ -30,6 +30,9 @@ sidebar_position: 4
 ## Bevel
 - Pode ser aplicado sobre Edges e sobre Faces
 - `Tab Edit Mode` `2` `SELECT EDGE` `CRTL` `B` -> Criação paralela de Bevel
-    - Depois abrir janela de configuração do bevel.
+    - Depois abrir janela de configuração do bevel com `F6`.
 - `Tab Edit Mode` `3` `SELECT FACE` `CRTL` `B` -> Criação menor de Bevel, para fora ou para dentro.
-    - Depois abrir janela de configuração do bevel.
+    - Depois abrir janela de configuração do bevel com `F6`.
+
+## Ver Subdivision Surface
+    - TODO
