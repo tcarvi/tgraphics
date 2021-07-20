@@ -1,0 +1,56 @@
+---
+title: "Sistema W3 de Cores"
+sidebar_position: 1
+---
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+
+I can write **Markdown** alongside my _JSX_!
+
+- Color Specification:
+    - https://www.color.org/ICC1v42_2006-05.pdf
+    - CIE System of Tristimulus Values XYZ
+        - Simples e completo, mas equipamentos não processam todas as cores possíves deste sistema.
+        - Há outros sistemas que limitam a escolha das cores ou que até mesmo transformam uma cor em uma outra; mas todas as cores podem ser expressas em rgb(X, Y, Z).
+            - Por exemplo: um rgb com transparência torna-se um outro rgb, muitas vezes ocultado nos aplicativos de *color-picker*.
+        - A escrita das cores devem seguir o padrão tristimulus XYZ, indicado em rgb(X, Y, Z).
+        - A escolha das cores, entretanto, deve seguir padrões dos demais sistemas, tanto em processos de percepção visual quanto no desenvolvimento de algoritmos de seleção.
+            - O trabalho de design deve ocorrer fora do escopo da escrita de cores.
+            - E o trabalho de transformação das cores também deve ocorrer fora do escopo da escrita de cores.
+    - Para concluir, a base lógica, em PyTHON ou em REACT, para qualquer componente de cor, deve ser:
+        - REACT: 
+        ```
+        <tagEscolhida cor=rgb(r,g,b) />`
+        ```
+        - [Blender Python](https://docs.blender.org/api/current/bpy.types.Material.html): 
+        ```
+        material = bpy.data.materials.new(name="MaterialName") # Set new material to variable
+        material.diffuse_color = (1, 0, 0) # Diffuse color of the material
+        material.specular_color = (1, 0, 0) # Specular color of the material
+        activeObject = bpy.context.active_object # Set active object to variable
+        activeObject.data.materials.append(material) # Add the material to the object
+        bpy.context.object.active_material.diffuse_color = (1, 0, 0) # Change diffuse color
+        ```
+- Tipos:
+    - Primary: (não são criadas a partir de outras cores)
+        - In the ***additive color space***, space where colors **emit light**, there are three primary colors.
+        - In the subtractive color space, space where colors **do not emit light**, there are again three primary colors.
+            - CYAN (C)
+            - MAGENTA (M)
+            - YELLOW (Y)
+            CMY are the complementary colors of RGB.
+    - Secondary: (criadas a partir da mistura de cores primárias)
+        - Green
+        - Orange
+        - Purple

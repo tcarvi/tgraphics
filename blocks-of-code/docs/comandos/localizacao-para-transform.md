@@ -13,9 +13,9 @@ sidebar_position: 5
 - `Origin to 3D cursor`
     - Ponto da operação de *transform* passa a se localizar no 3D cursor
 - `Origin to center of Mass (Surface)`
-- Ponto da operação de *transform* passa a se localizar no Centro de Massa calculado para a área de superfície do objeto selecionado.
+    - Ponto da operação de *transform* passa a se localizar no Centro de Massa calculado para a área de superfície do objeto selecionado.
 - `Origin to center of Mass (Volume)`
-- Ponto da operação de *transform* passa a se localizar no Centro de Massa calculado para o volume do objeto selecionado.
+    - Ponto da operação de *transform* passa a se localizar no Centro de Massa calculado para o volume do objeto selecionado.
 
 ## 3D Cursor
 - `SHIFT` `SPACEBAR` `SPACEBAR` -> Clicar em nova posição para ***3D Cursor***.

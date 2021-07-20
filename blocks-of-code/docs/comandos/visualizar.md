@@ -23,8 +23,8 @@ sidebar_position: 1
     - `N`  -> PROPERTIES BAR (*show*/*hide*)
 
 ## Movimentar View:
-- `SHFT` `MMB-CLICK` -> PAN
-- `MMB-CLICK`-> ROTATE
+- `SHFT` `MMB-CLICK-DRAG` -> PAN
+- `MMB-CLICK-DRAG`-> ROTATE
 - `MMB-SCROLL`-> ZOOM
 
 ## Alternar Tipo de View :
@@ -58,7 +58,7 @@ sidebar_position: 1
 
 ## Visualização apenas de 1 seleção
 - `SELECT OBJECTS` `SHIFT` `H` -> Ocultar todos os objetos, com exceção da seleção.
-- `ALT``H` -> Desativar o Hide (ocultação), selecionando tudo.
+- `ALT` `H` -> Desativar o Hide (ocultação), selecionando tudo.
 
 ## Uso de Referências com PureRef
 - Jogar todas as imagens para dentro da janela do app PureRef

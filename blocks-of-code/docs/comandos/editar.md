@@ -25,7 +25,7 @@ sidebar_position: 4
 - Cria polígono interno
 - Polígono sem profundidade
 - Polígono com ligação apenas nos cantos da seleção inicial de faces. 
-    - `Tab Edit Mode` `3` `CTRL` `F` `N`
+    - `Tab Edit Mode` `3` `SELECT FACE` `CTRL` `F` `N`
 
 ## Bevel
 - Pode ser aplicado sobre Edges e sobre Faces
