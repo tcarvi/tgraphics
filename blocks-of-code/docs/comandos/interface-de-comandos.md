@@ -13,4 +13,4 @@ sidebar_position: 6
 
 ## Histórico
 - `CTRL` `Z` -> Desfazer comando
-
+- `CTRL` `SHIFT` `Z` -> Refazer comando
