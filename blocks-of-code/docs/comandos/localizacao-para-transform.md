@@ -7,7 +7,7 @@ sidebar_position: 5
 **SELECT Object > Menu Object > Set Origin**  
 ![](objectSetOrigin.png)
 - `Geometry to origin`
-    - Ponto da operação de *transform* passa a se localizar no **centro original padrão** do tipo do objeto selecionado.
+    - Centro da geometria, junto com todo o objeto, é movido para ponto atual do centro do objeto.
 - `Origin to geometry`
     - Ponto da operação de *transform* passa a se localizar no centro geométrico calculado para o objeto selecionado, considerando o ponto de pivot, por exemplo.
 - `Origin to 3D cursor`

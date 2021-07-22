@@ -60,9 +60,6 @@ sidebar_position: 1
 - `SELECT OBJECTS` `SHIFT` `H` -> Ocultar todos os objetos, com exceção da seleção.
 - `ALT` `H` -> Desativar o Hide (ocultação), selecionando tudo.
 
-## Ver ambiente oclusion
-    - TODO
-
 ## Uso de Referências com PureRef
 - Jogar todas as imagens para dentro da janela do app PureRef
 - Limitar bordas da janela apenas para imagem de referência

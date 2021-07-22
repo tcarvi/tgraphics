@@ -4,7 +4,7 @@ sidebar_position: 4
 ---
 
 ## Delete
-- `SELECT` `X` -> Delete selection
+- `SELECT` `X` `D` -> Delete selection
 
 ## Extrude em X, Y ou Z
 - Extrude EDGE:
@@ -32,7 +32,3 @@ sidebar_position: 4
 - `Tab Edit Mode` `2` `SELECT EDGE` `CRTL` `B` -> Criação paralela de Bevel
     - Depois abrir janela de configuração do bevel com `F6`.
 - `Tab Edit Mode` `3` `SELECT FACE` `CRTL` `B` -> Criação menor de Bevel, para fora ou para dentro.
-    - Depois abrir janela de configuração do bevel com `F6`.
-
-## Ver Subdivision Surface
-    - TODO

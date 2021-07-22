@@ -4,11 +4,11 @@ sidebar_position: 6
 ---
 
 ## Janela de Interatividade
-- `SHIFT` `A` -> Janela de adicionar objetos
-- `SHIFT` `SPACEBAR` -> Janela de atalhos de seleção
-- `CTRL` `V` -> Janela de atalhos para Edição de Vertex
-- `CTRL` `E` -> Janela de atalhos para Edição de Edges
-- `CTRL` `F` -> Janela de atalhos para Edição de Faces
+- `SHIFT` `A` -> Adicionar objetos
+- `SHIFT` `SPACEBAR` -> Atalhos do Toolbox
+- `Tab Edit Mode` `CTRL` `V` -> Janela de atalhos para Edição de Vertex
+- `Tab Edit Mode` `CTRL` `E` -> Janela de atalhos para Edição de Edges
+- `Tab Edit Mode` `CTRL` `F` -> Janela de atalhos para Edição de Faces
 
 
 ## Histórico
