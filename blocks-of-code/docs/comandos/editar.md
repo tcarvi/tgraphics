@@ -22,6 +22,10 @@ sidebar_position: 4
 - Polígono com ligação apenas nos cantos da seleção inicial de faces. 
     - `Tab Edit Mode` `3` `SELECT FACE` `I`
 
+## Criar edge com knife
+- `Tab Edit Mode` `1` `K` `SELECT VERTEX origem` `SELECT VERTEX fim`
+- `Tab Edit Mode` `1` `K` `SELECT EDGE Ponto origem` `SELECT EDGE Ponto fim`
+
 ## Loop Cut and Slide
 - Criar Edges em um Loop do objeto.
 - Posição do loop é escolhida com arrasto do mouse.

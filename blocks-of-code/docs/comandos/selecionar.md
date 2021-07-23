@@ -14,7 +14,9 @@ sidebar_position: 2
 - `SHIFT LMB-CLICK SELEÇÃO` -> Adicionar algo em seleção, ou retirá-lo da seleção.
 - `A`-> Selecionar todos as entidades selecionáveis.
 - `ALT` `A` -> Deselecionar todos as entidades selecionadas.
+- `B` -> Ativar Selecão região retangular
 - `LMB-CLICK-DRAG` `Área retangular" -> Selecionar dentro de área retangular.
+- `SELECAO origin` `CTRL-SHIFT` `SELECAO final` -> Seleção de intervalo de faces, entre faces clicadas. 
 - `CTRL` `RMB-DRAG` -> Selecionar, com laço, entidades selecionáveis
 - `SHIFT` `CTRL` `RMB-DRAG` -> Retirar da Seleção, com laço, entidades selecionadas.
 - `CTRL` `I` -> Inverter seleção

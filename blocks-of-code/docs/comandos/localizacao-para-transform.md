@@ -25,7 +25,3 @@ sidebar_position: 5
 
 ## Escolha de Eixos Cartesianos
 ![](espacoCartesianoParaTransform.png)
-
-
-#### Auxílio para Edição
-- `B` -> Mostrar eixo ortogonal para ajudar alinhamento.
