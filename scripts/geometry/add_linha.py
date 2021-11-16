@@ -3,6 +3,7 @@ import sys
 import bpy
 import json
 import math
+import bmesh
 from mathutils import Vector, Matrix
 from add_material import AddMaterial
 from move_entry_point import MoveEntryPoint
@@ -78,8 +79,8 @@ def _add_linha_15_centimetros_em_Y(t_value_y: float):
 def _add_linha(t_value_x: float, t_value_y: float, t_value_inclinacaoX: float, t_value_inclinacaoY: float):
     # if t_value_x < 0:
     #     t_value_y *= -1
-    t_data = bpy.data.meshes.new(name="meshData")
-    t_data.from_pydata(
+    t_data_MeshesInitial = bpy.data.meshes.new(name="t_data_MeshesInitial")
+    t_data_MeshesInitial.from_pydata(
         [
             Vector(
                 (
@@ -103,16 +104,32 @@ def _add_linha(t_value_x: float, t_value_y: float, t_value_inclinacaoX: float, t
             
         ]
     )
-    print(t_data)
-    t_object = bpy.data.objects.new(
-        name="meshObject",
-        object_data=t_data
+    
+    t_bmesh = bmesh.new(use_operators=True)
+    t_bmesh.from_mesh(t_data_MeshesInitial)
+
+    #
+    # Operações no BMESH
+    #
+
+    bmesh.ops.extrude_edge_only(t_bmesh)
+    # t_bmesh.from_object(object=t_object, depsgraph=bpy.context.evaluated_depsgraph_get())
+    # modifier = t_object.modifiers.new(name="Skin", type='SKIN')
+
+    # Finish up, write the bmesh into a new mesh and free the bmesh
+    t_data_meshe = bpy.data.meshes.new("t_data_Meshe")
+    t_bmesh.to_mesh(t_data_meshe)
+    t_bmesh.free()
+    
+    t_data_object = bpy.data.objects.new(
+        name="t_data_object",
+        object_data=t_data_meshe
     )
-    verts = len(t_data.vertices)
-    print("verts0 = ", t_data.vertices[0].co)
-    print("verts1 = ", t_data.vertices[1].co)
-    AddMaterial.add(t_object, "MaterialretanguloBranca")
-    bpy.context.scene.collection.objects.link(t_object)
+    print(t_data_object)
+    print("verts0 = ", t_data_meshe.vertices[0].co)
+    print("verts1 = ", t_data_meshe.vertices[1].co)
+    AddMaterial.add(t_data_object, "MaterialretanguloBranca")
+    bpy.context.scene.collection.objects.link(t_data_object)
 
 
 # To register
