@@ -1,25 +1,19 @@
 - Comandos:
-    - Deslocamento: 0-2
-        - DeslocarEmX = 0
-        - DeslocarEmY = 1
-        - DeslocarEmZ = 2
-    - Descolamento inclinado: 10-12
-        - DeslocarEmXInclinado = 10
-        - DeslocarEmYInclinado = 11
-        - DeslocarEmZInclinado = 12
-    - Desenho linear: 20-22
-        - DesenharLinhaEmX = 20
-        - DesenharLinhaEmY = 21
-        - DesenharLinhaEmZ = 22
-    - Desenho linear inclinado: 30-32
-        - DesenharLinhaEmXInclinado = 30
-        - DesenharLinhaEmYInclinado = 31
-        - DesenharLinhaEmZInclinado = 32
-    - Desenho retangular: 40-42
-        - DesenharRetanguloEmX = 40
-        - DesenharRetanguloEmY = 41
-        - DesenharRetanguloEmZ = 42
-    - Desenho retangular inclinado: 50-52
-        - DesenharRetanguloEmXInclinado = 30
-        - DesenharRetanguloEmYInclinado = 31
-        - DesenharRetanguloEmZInclinado = 32
+    - DeslocarRetoEmX
+    - DeslocarRetoEmY
+    - DeslocarRetoEmZ
+    - DeslocarInclinadoEmX
+    - DeslocarInclinadoEmY
+    - DeslocarInclinadoEmZ
+    - DesenharRetoLinhaEmX
+    - DesenharRetoLinhaEmY
+    - DesenharRetoLinhaEmZ
+    - DesenharInclinadoLinhaEmX
+    - DesenharInclinadoLinhaEmY
+    - DesenharInclinadoLinhaEmZ
+    - DesenharRetanguloEmX
+    - DesenharRetanguloEmY
+    - DesenharRetanguloEmZ
+    - DesenharParalelogramoEmX
+    - DesenharParalelogramoEmY
+    - DesenharParalelogramoEmZ
