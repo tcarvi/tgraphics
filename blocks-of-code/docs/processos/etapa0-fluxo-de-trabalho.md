@@ -1,6 +1,6 @@
 ---
 title: Fluxo de Trabalho
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 ### Pensar nos cenários e nos objetos

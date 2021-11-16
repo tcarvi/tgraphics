@@ -1,8 +1,18 @@
 # <pep8-80 compliant>
 import sys
 import json
-from comando_desenho import EnumComandoDesenho
 
+t_adding_paths = \
+    'C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\background_jobs'
+if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
+    t_adding_paths = t_adding_paths.replace('C:', '')
+    t_adding_paths = t_adding_paths.replace('\\', '/')
+if t_adding_paths not in sys.path:
+    sys.path.append(t_adding_paths)
+from add_path import AddPath
+AddPath.add()
+
+from desenho import Desenho
 
 # Class
 class InputPlantaStruture:
@@ -14,18 +24,12 @@ class InputPlantaStruture:
         t_diretorio_input_planta = 'C:\\libs\\python\\src\\github.com\\tgraphics\\input_data'
         if(sys.platform.startswith('linux') or sys.platform.startswith('darwin')):
             t_diretorio_input_planta = _update_path_to_unix(t_diretorio_input_planta)
-        t_structure = []
+        estrutura = []
         with open('C:\\libs\\python\\src\\github.com\\tgraphics\\input_data\\input_planta_structure.json') as json_data_file:
             t_json_structure = json.load(json_data_file)
-            for obj in t_json_structure["comandos"]:
-                t_structure.append(
-                    [
-                        EnumComandoDesenho[obj["comando"]].value,
-                        float(obj["deslocamento"]),
-                        float(obj["angulo"])
-                    ]
-                )
-        return t_structure
+            desenho = Desenho(t_json_structure)
+            estrutura = desenho.estrutura
+        return estrutura
 
 
 # non-public method
@@ -50,6 +54,6 @@ def unregister():
 #   executa-se apenas a função register()
 # Pode-se também incluir testes neste método
 if __name__ == "__main__":
-    register()
-    #TESTE
-    # InputPlantaStruture.receive()
+    # register()
+    input = InputPlantaStruture()
+    print(input.receive())

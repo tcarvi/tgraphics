@@ -1,19 +1,12 @@
 {
     "comandos": [
         {
-            "comando":"DesenharRetanguloEmXInclinado",
-            "deslocamento":"10",
-            "angulo":"60"
+            "comando":"DesenharRetoLinhaEmX",
+            "deslocamento":"10"
         },
         {
-            "comando":"DesenharRetanguloEmX",
-            "deslocamento":"-10",
-            "angulo":"0.0"
-        },
-        {
-            "comando":"DesenharRetanguloEmYInclinado",
-            "deslocamento":"-10",
-            "angulo":"120"
+            "comando":"DesenharRetoLinhaEmY",
+            "deslocamento":"12"
         }
     ]
 }

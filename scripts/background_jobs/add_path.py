@@ -10,8 +10,10 @@ class AddPath:
     def add(cls):
         _dir_src_add()
         _dir_src_evaluate()
+        _dir_src_geometry()
         _dir_src_io()
         _dir_src_list()
+        _dir_src_model()
         _dir_src_move()
         _dir_src_input_data()
         return {'FINISHED'}
@@ -43,6 +45,14 @@ def _dir_src_evaluate():
     if t_dir_src_evaluate not in sys.path:
         sys.path.append(t_dir_src_evaluate)
 
+# non-public method
+def _dir_src_geometry():
+    t_dir_src_geometry = \
+        "C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\geometry"
+    if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
+        t_dir_src_geometry = _update_path_to_unix(t_dir_src_geometry)
+    if t_dir_src_geometry not in sys.path:
+        sys.path.append(t_dir_src_geometry)
 
 # non-public method
 def _dir_src_io():
@@ -62,6 +72,16 @@ def _dir_src_list():
         t_dir_src_list = _update_path_to_unix(t_dir_src_list)
     if t_dir_src_list not in sys.path:
         sys.path.append(t_dir_src_list)
+
+
+# non-public method
+def _dir_src_model():
+    t_dir_src_model = \
+        "C:\\libs\\python\\src\\github.com\\tgraphics\\scripts\\model"
+    if sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
+        t_dir_src_model = _update_path_to_unix(t_dir_src_model)
+    if t_dir_src_model not in sys.path:
+        sys.path.append(t_dir_src_model)
 
 
 # non-public method

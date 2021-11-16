@@ -41,7 +41,7 @@ sidebar_position: 4
 - `Tab Edit Mode` `2` `SELECT EDGE` `SHIFT` `SELECT-SECOND-EDGE` `CRTL` `E` `OPTION BRIDGE EDGE LOOP` -> Select edges paralelos, depois cria bridge com limite dos edges selecionados.
 
 ## Make Edge Face
-- `TAB Edit Mode` `2` `ALT` `LMB-CLICK em EDGE` `F` -> Select edge loop, depois cria face com limite dos edges.
+- `TAB Edit Mode` `2` `LMB-CLICK em EDGE 1` `SHIFT` `LMB-CLICK em EDGE 2` `F` -> Select edge loop, depois cria face com limite dos edges.
 
 ## Proportional Editing
 - 

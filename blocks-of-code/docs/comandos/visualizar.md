@@ -7,7 +7,7 @@ sidebar_position: 1
 - https://youtu.be/1jHUY3qoBu8?t=57
 
 ## Organizar Views
-- `SELECT CAMERA` `SHIFT-SELECT LIGHT` `X` -> Delete camera and light
+- `SELECT CAMERA/LIGHT` `SHIFT-SELECT LIGHT` `X` -> Delete
 - Renomerar Workspace *Layout* para ***Model-Editor***: 
     - Janela esquerda de modelagem, 
     - Janela superior direita com Outliner
@@ -27,17 +27,16 @@ sidebar_position: 1
 - `MMB-CLICK-DRAG`-> ROTATE
 - `MMB-SCROLL`-> ZOOM
 
-## Alternar Tipo de View :
-- `5`  -> PERSPECTIVE ou ORTOGRAPHIC
-
 ## Escolher View:
-- `0` -> CAMERA
-- `1` -> FRONT
-    - `CTRL` `1` -> BACK
-- `3`  -> RIGHT
-    - `CTRL` `3` -> LEFT
-- `7`  -> TOP
-    - `CTRL` `7` -> BOTTOM
+- `'` `8` -> TOP
+- `'` `7` -> FRONT
+- `'` `9` -> BACK
+- `'` `4` -> LEFT
+- `'` `6` -> RIGHT
+- `'` `2` -> BOTTOM
+- `'` `1` -> VIEW CAMERA 
+- `'` `3` -> VIEW SELECTED
+- `5` -> Alternar entre Perspective e Orthographic views
 
 ## Rotacionar View:
 - `2`  -> ROTATE no eixo X, para baixo
@@ -56,19 +55,10 @@ sidebar_position: 1
 - `Select Object`/`Menu Object`/`Shade Smooth` -> Shade Smooth
 - `Select Object`/`Menu Object`/`Shade Flat` -> Shade Flat
 
-## Visualização apenas de 1 seleção
+## Ocultação (hide)
+- `SELECT OBJECTS` `H` -> Ocultar objeto selecionado.
 - `SELECT OBJECTS` `SHIFT` `H` -> Ocultar todos os objetos, com exceção da seleção.
 - `ALT` `H` -> Desativar o Hide (ocultação), selecionando tudo.
 
-## Uso de Referências com PureRef
-- Jogar todas as imagens para dentro da janela do app PureRef
-- Limitar bordas da janela apenas para imagem de referência
-- `RMB-DRAG` -> Mover janela do PureRef
-- Ignorar Mouse:
-    - `CTRL` `T` -> Transparente ao Mouse
-    - `Selecionar app PureRef` `CTRL` `T` -> Desativar Transparência ao Mouse
-- Posição na Tela:
-    - `CTRL` `SHIFT` `A`-> Posição Superior ao Blender
-    - `CTRL` `SHIFT` `B`-> Posição Inferior ao Blender
-- Opacidade:
-    - `CTRL` `ALT` `SHIFT` `LMB-DRAG` -> Diminuir ou aumentar opacidade de imagens selecionada, com movimento do mouse em X.
+## Medir distância
+- `TAB EDIT MODE` `1 VERTEX MODE` `Shift SPACE M` `SELECT AND DRAG WTH SNAP` -> Medição da distância

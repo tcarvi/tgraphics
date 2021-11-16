@@ -3,7 +3,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Blocks of Code',
+  title: 'Instruções Blender',
   tagline: 'blender',
   url: 'http://tcarvi.com.br',
   baseUrl: '/',
@@ -17,7 +17,7 @@ module.exports = {
   },
   themeConfig: {
     navbar: {
-      title: 'Blocks of Code',
+      title: 'Modelagem e Animação com Blender',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -25,7 +25,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'configuracoes',
+          docId: 'comandos/visualizar',
           position: 'left',
           label: 'Tutorial',
         },
